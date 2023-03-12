@@ -1,10 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Marcellus&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arimo&family=Marcellus&display=swap');
+
+
 :root {
-	--pl-serif: 'Marcellus', Georgia, Times, serif;
-    --pl-sans: 'Arimo', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue',
-    Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+	--pl-serif: 'Marcellus', serif;
+    --pl-sans: 'Arimo', sans-serif;
 
     --pl-black: #000000;
-    --pl-grenn : #8BFF7A;
+    --pl-green : #8BFF7A;
     --pl-blue : #191CE4;
     --pl-red : #E01705;
     --pl-sky : #86C4CE;

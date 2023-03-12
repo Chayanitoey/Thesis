@@ -1,9 +1,21 @@
 <script>
 	import Scroller from './Scroller.svelte';
 
+	/**
+	 * @type {number}
+	 */
 	let count;
+	/**
+	 * @type {number}
+	 */
 	let index;
+	/**
+	 * @type {any}
+	 */
 	let offset;
+	/**
+	 * @type {any}
+	 */
 	let progress;
 	let top = 0; // 0 - 1
 	let threshold = 0.5; // 0 - 1

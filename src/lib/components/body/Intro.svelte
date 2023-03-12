@@ -1,1 +1,3 @@
-<svelte:head />
+<script> 
+
+</script>
