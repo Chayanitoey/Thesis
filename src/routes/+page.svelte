@@ -1,7 +1,6 @@
 <script>
    import ProgressBar from '$lib/components/helpers/ProgressBar.svelte';
    import Hamburger from '$lib/components/helpers/Hamburger.svelte';
-
    import Scrollyintro from '$lib/components/helpers/Scrolly/Scrollyintro.svelte';
 
 

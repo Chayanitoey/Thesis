@@ -3,12 +3,6 @@
 	import '$lib/styles/global.css';
 	import { fly } from 'svelte/transition';
 	import { fade } from 'svelte/transition';
-
-
-
-
-
-
 	/**
 	 * @type {number}
 	 */
