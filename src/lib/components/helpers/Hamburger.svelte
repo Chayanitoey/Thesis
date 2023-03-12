@@ -15,7 +15,7 @@
 	<Hamburger 
 		bind:open 
 		--color= var(--pl-green) />
-		<Menu bind:open />
+	<Menu bind:open />
 
 </div>
 
@@ -26,5 +26,6 @@
 		position:fixed;
 		top:0;
 		left:0;
+		z-index: 10;
 	}
 </style>

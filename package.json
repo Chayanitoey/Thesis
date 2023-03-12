@@ -44,6 +44,7 @@
 		"nvm": "0.0.4",
 		"svelte-feather-icons": "^4.0.0",
 		"svelte-hamburgers": "^4.0.1",
-		"svelte-progress-bar": "^3.0.2"
+		"svelte-progress-bar": "^3.0.2",
+		"svelthree": "^0.119.0-5"
 	}
 }
