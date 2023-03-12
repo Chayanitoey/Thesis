@@ -27,22 +27,26 @@
   
 
     .menu {
-        font-family:var(--pl-sans);
+        height:100vh;
+        width:100vw;
+        justify-content: center;
+
         background:var(--pl-black);
         text-align: center;
-        font-size: 1.5em;
+        font-size: 2rem;
         letter-spacing: 0.15em;
-        padding: 8em;
+        padding-top: 30vh;
         top:0;
-        color: var(--pl-white);
+        color: var(--pl-green);
     }
     p {
-        font-family:var(--pl-sans);
+        font-family:var(--pl-serif);
         cursor: pointer;
         width: max-content;
         margin: 1rem auto;
     }
     p:hover {
+        color: var(--pl-white);
         text-decoration: underline;
     }
     .bar {

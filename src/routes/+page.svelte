@@ -43,7 +43,7 @@
       letter-spacing: -0.01em;
    }
    .for-scroll {
-      width: 2000px;
+      /* width: 2000px; */
       height: 2000px;
   }
 
