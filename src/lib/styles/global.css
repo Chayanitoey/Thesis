@@ -1,0 +1,17 @@
+:root {
+	--pl-serif: 'Marcellus', Georgia, Times, serif;
+    --pl-sans: 'Arimo', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue',
+    Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+
+    --pl-black: #000000;
+    --pl-grenn : #8BFF7A;
+    --pl-blue : #191CE4;
+    --pl-red : #E01705;
+    --pl-sky : #86C4CE;
+    --pl-yellow : #F9AF4A;
+    --pl-mint : #09A08C;
+    --pl-grey : #DED9D9;
+    --pl-white : #FFFFFF;
+
+}
+

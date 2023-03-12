@@ -1,0 +1,76 @@
+/*Marcellus*/
+
+@font-face {
+	font-family: Marcellus;
+	src: url('../fonts/Marcellus-Regular.ttf') format('ttf');
+	font-weight: 400;
+	font-style: normal;
+	font-stretch: normal;
+	font-display: swap;
+}
+
+/*Arimo*/
+@font-face {
+	font-family: Arimo;
+	src: url('../fonts/Arimo-Bold.ttf') format('ttf');
+	font-weight: 700;
+	font-style: normal;
+	font-stretch: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: Arimo;
+	src: url('../fonts/Arimo-BoldItalic.ttf') format('ttf');
+	font-weight: 700;
+	font-style: italic;
+	font-stretch: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: Arimo;
+	src: url('../fonts/Arimo-Italic.ttf') format('ttf');
+	font-weight: 400;
+	font-style: italic;
+	font-stretch: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: Arimo;
+	src: url('../fonts/Arimo-Medium.ttf') format('ttf');
+	font-weight: 500;
+	font-style: normal;
+	font-stretch: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: Arimo;
+	src: url('../fonts/Arimo-MediumItalic.ttf') format('ttf');
+	font-weight: 500;
+	font-style: italic;
+	font-stretch: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: Arimo;
+	src: url('../fonts/Arimo-Regular.ttf') format('ttf');
+	font-weight: 400;
+	font-style: normal;
+	font-stretch: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: Arimo;
+	src: url('../fonts/Arimo-SemiBold.ttf') format('ttf');
+	font-weight: 600;
+	font-style: normal;
+	font-stretch: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: Arimo;
+	src: url('../fonts/Arimo-SemiBoldItalic.ttf') format('ttf');
+	font-weight: 600;
+	font-style: italic;
+	font-stretch: normal;
+	font-display: swap;
+}
