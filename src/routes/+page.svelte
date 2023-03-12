@@ -2,6 +2,9 @@
    import ProgressBar from '$lib/components/helpers/ProgressBar.svelte';
    import Hamburger from '$lib/components/helpers/Hamburger.svelte';
    import Scrollyintro from '$lib/components/helpers/Scrolly/Scrollyintro.svelte';
+   import ScrollyChapter1 from '$lib/components/helpers/Scrolly/ScrollyChapter1.svelte';
+   import ScrollyFacts from '$lib/components/helpers/Scrolly/ScrollyFacts.svelte';
+
 
 
 
@@ -12,8 +15,12 @@
 </script>
 
 <ProgressBar />
-<Scrollyintro />
 <Hamburger />
+<Scrollyintro />
+<ScrollyChapter1 />
+<ScrollyFacts />
+
+
 
 
 <div class="for-scroll"></div>
