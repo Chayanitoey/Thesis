@@ -24,37 +24,46 @@
 	let bottom = 1; // 0 - 1
 </script>
 
-<div class="scrollyGraphic">
-	<div class = "sticky-head" in:fly ="{{ y: 150, duration: 1000 }}" >
-		<div class = "intro-text" >
-			<h1>Chapter I: The environmental impact</h1>
-		</div>
-		<div class = "intro-text" >
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vitae tortor efficitur, porttitor nibh id, suscipit ex. Fusce massa leo, mattis non bibendum sed, porttitor vitae neque.
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vitae tortor efficitur, porttitor nibh id, suscipit ex. Fusce massa leo, mattis non bibendum sed, porttitor vitae neque.
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vitae tortor efficitur, porttitor nibh id, suscipit ex. Fusce massa leo, mattis non bibendum sed, porttitor vitae neque.</p>
-
-		</div>
-	 </div>
-	<Scroller {top} {threshold} {bottom} bind:count bind:index bind:offset bind:progress>
+<div class="scrollyGraphic" in:fly ="{{ y: 150, duration: 1000 }}">
+	 <Scroller {top} {threshold} {bottom} bind:count bind:index bind:offset bind:progress>
 		<div slot="background">
 			
-			<div class="background-content">
+			<div class="background-content" >
 				{#if index == 0}
-					<p>Common reasons why garments have been discard... 
-					<strong>{index + 1}/{count}</strong>
-				</p>
-				<progress value={count ? (index + 1) / count : 0} />
+				<div class = "intro-text">
+						<h1>Chapter I: The environmental impact</h1>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vitae tortor efficitur, porttitor nibh id, suscipit ex. Fusce massa leo, mattis non bibendum sed, porttitor vitae neque.
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vitae tortor efficitur, porttitor nibh id, suscipit ex. Fusce massa leo, mattis non bibendum sed, porttitor vitae neque.
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vitae tortor efficitur, porttitor nibh id, suscipit ex. Fusce massa leo, mattis non bibendum sed, porttitor vitae neque.</p>
+
+						<p>Common reasons why garments have been discard... 
+						<strong>{index + 1}/{count}</strong>
+					    </p>
+					    <progress value={count ? (index + 1) / count : 0} />
+				</div>
+
 				{:else if index == 1}
-				<p>... then they end up here 
-					<strong>{index + 1}/{count}</strong>
-				</p>
-				<progress value={count ? (index + 1) / count : 0} />
+				<div class = "intro-text" >
+						<h1>Chapter I: The environmental impact</h1>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vitae tortor efficitur, porttitor nibh id, suscipit ex. Fusce massa leo, mattis non bibendum sed, porttitor vitae neque.
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vitae tortor efficitur, porttitor nibh id, suscipit ex. Fusce massa leo, mattis non bibendum sed, porttitor vitae neque.
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vitae tortor efficitur, porttitor nibh id, suscipit ex. Fusce massa leo, mattis non bibendum sed, porttitor vitae neque.</p>
+					    <p>... then they end up here 
+						<strong>{index + 1}/{count}</strong>
+					    </p>
+					<progress value={count ? (index + 1) / count : 0} />
+				</div>
 				{:else if index == 2}
-				<p>...which is equal to X amount of CO2 in our atmosphere that leads to Global Warming.
-					<strong>{index + 1}/{count}</strong>
-				</p>
-				<progress value={count ? (index + 1) / count : 0} />
+				<div class = "intro-text" >
+						<h1>Chapter I: The environmental impact</h1>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vitae tortor efficitur, porttitor nibh id, suscipit ex. Fusce massa leo, mattis non bibendum sed, porttitor vitae neque.
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vitae tortor efficitur, porttitor nibh id, suscipit ex. Fusce massa leo, mattis non bibendum sed, porttitor vitae neque.
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vitae tortor efficitur, porttitor nibh id, suscipit ex. Fusce massa leo, mattis non bibendum sed, porttitor vitae neque.</p>
+					<p>...which is equal to X amount of CO2 in our atmosphere that leads to Global Warming.
+						<strong>{index + 1}/{count}</strong>
+					</p>
+					<progress value={count ? (index + 1) / count : 0} />
+				</div>
 
 				{/if}
 
@@ -95,26 +104,31 @@
 </div>
 
 <style>
-	.sticky-head{
+	
+	/* .sticky-head{
 		position: -webkit-sticky;
   		position: sticky;
 		z-index: 9;
 		padding-top: 5vh;
 		top:10px;
 		background-color: var(--pl-black);
-	}
+	} */
 	.intro-text{
-      display: flex;
+      /* display: flex; */
       align-items: center;
       justify-content: center;
-	  max-width: 60vw;
-	  margin-left: 20%;
-      /* margin-top:40vh; */
+	  width: 56vw;
+	  top:0;
    }
 	h1{
     font-family: var(--pl-serif);
-    justify-content: center;
-    text-align: center;
+	text-align: center;
+	justify-content: center;
+	align-items: center;
+	text-align: center;	
+	position: relative;
+	top:0;
+	width:100%;
     color: var(--pl-white);
     font-weight: 400;
     font-style: normal;
@@ -125,12 +139,12 @@
 	  font-family: var(--pl-sans);
 	  justify-content: center;
 	  align-items: center;
-	  text-align: center;
+	  text-align: justify;
       color: var(--pl-white);
       font-weight: 400;
       font-style: normal;
-      font-size:1em;
-	  line-height: 1.7rem;
+	  font-size: 16px;
+	  line-height: 20px;
       letter-spacing: 0.01em;
 	  padding-bottom: 10px;
    }
@@ -154,7 +168,7 @@
 		overflow: hidden;
 		padding: 1em 4em;
 		/* this works only for 1920 screen width needs to do break views*/
-		margin-top: -8vh;
+		margin-top: -20vh;
 	}
 
 

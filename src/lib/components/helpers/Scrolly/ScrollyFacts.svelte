@@ -86,7 +86,7 @@
    h1{
       font-family: var(--pl-serif);
 	  text-align: left;
-      color: var(--pl-white);
+      color: var(--pl-black);
       font-weight: 400;
       font-style: normal;
       font-size: 5vw;
@@ -136,5 +136,7 @@
 
 	.scrollyGraphic{
 		z-index: 1;
+		background: linear-gradient(180deg, rgba(0, 255, 10, 0) 0%, #7AFF7F 53.12%, rgba(0, 255, 10, 0) 100%);
+		width:100vw;
     }
 </style>

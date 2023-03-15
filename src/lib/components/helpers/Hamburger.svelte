@@ -14,7 +14,9 @@
 <div class ="leftnav">
 	<Hamburger 
 		bind:open 
-		--color= var(--pl-green) />
+		typee = springl
+		--color= var(--pl-green)
+		/>
 	<Menu bind:open />
 
 </div>

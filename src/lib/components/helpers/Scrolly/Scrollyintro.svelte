@@ -92,7 +92,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-	  max-width: 60vw;
+	  max-width: 56vw;
       /* margin-top:40vh; */
    }
  
@@ -109,12 +109,12 @@
    p{
 	  font-family: var(--pl-sans);
 	  justify-content: center;
-	  text-align: center;
+	  text-align: justify;
       color: var(--pl-white);
       font-weight: 400;
       font-style: normal;
-      font-size: 1.2rem;
-	  line-height: 1.7rem;
+      font-size: 16px;
+	  line-height: 20px;
       letter-spacing: 0.01em;
    }
 

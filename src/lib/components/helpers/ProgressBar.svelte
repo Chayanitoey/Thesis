@@ -41,6 +41,7 @@
   top:0;
   left:0;
   width: 100%;
+  z-index: 1000;
 }
 
 #progress-bar {
@@ -50,6 +51,8 @@
   left:0;
   height: 10px;
   width: 0%;
+  z-index: 1000;
+
 }
 
 </style>
