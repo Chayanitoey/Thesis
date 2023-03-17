@@ -1,16 +1,23 @@
 <script>
+  // @ts-nocheck
+
   import Scroller from "./Scroller.svelte";
   import "$lib/styles/global.css";
   import { fly } from "svelte/transition";
   import { fade } from "svelte/transition";
   import { onMount } from "svelte";
   import * as d3 from "d3";
+  import Chart1 from "$lib/components/helpers/Chart1.svelte";
 
   // let data;
   // onMount(async () => {
-  //   data = await d3.csv("$lib/data/reasonsWhyPeopleDiscardGarment.csv");
+  //   data = await d3.csv(
+  //     "https://raw.githubusercontent.com/Chayanitoey/Thesis/main/src/lib/data/reasonsWhyPeopleDiscardGarment.csv?token=GHSAT0AAAAAACAEX75EWXNES3BWF2HRP6AMZAT2FIA"
+  //   );
   // });
   // $: console.log(data);
+
+  // let el;
 
   /**
    * @type {number}
@@ -47,65 +54,78 @@
       <div class="background-content">
         {#if index == 0}
           <div class="intro-text">
-            <h1>Chapter I: The environmental impact</h1>
+            <h3>
+              <span class="span-line" style="margin-left:-80px;" />
+              CHAPTER I
+              <span class="span-line" style="margin-left:15px;" />
+            </h3>
+
+            <h1>The Environmental Impact</h1>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
-              vitae tortor efficitur, porttitor nibh id, suscipit ex. Fusce
-              massa leo, mattis non bibendum sed, porttitor vitae neque. Lorem
-              ipsum dolor sit amet, consectetur adipiscing elit. Morbi vitae
-              tortor efficitur, porttitor nibh id, suscipit ex. Fusce massa leo,
-              mattis non bibendum sed, porttitor vitae neque. Lorem ipsum dolor
-              sit amet, consectetur adipiscing elit. Morbi vitae tortor
-              efficitur, porttitor nibh id, suscipit ex. Fusce massa leo, mattis
-              non bibendum sed, porttitor vitae neque.
+              One of the most common ways that mishandling laundry can result in
+              economic loss is through the premature deterioration of clothing.
+              When garments are not washed or dried properly, the fabric can
+              become worn, faded, or stretched, leading to a shorter lifespan
+              for the garment. This means that individuals must replace their
+              clothing more frequently, resulting in additional expenses for new
+              clothing purchases.
             </p>
 
-            <p>
-              Common reasons why garments have been discard...
-              <strong>{index + 1}/{count}</strong>
+            <p style="margin-top:8vh;text-align:center;font-weight:600;">
+              Here are some common reasons why garments have been discarded...
+              <!-- <strong>{index + 1}/{count}</strong> -->
             </p>
-            <progress value={count ? (index + 1) / count : 0} />
+            <Chart1 />
+
+            <!-- <progress value={count ? (index + 1) / count : 0} /> -->
           </div>
         {:else if index == 1}
           <div class="intro-text">
-            <h1>Chapter I: The environmental impact</h1>
+            <h3>
+              <span class="span-line" style="margin-left:-80px;" />
+              CHAPTER I
+              <span class="span-line" style="margin-left:15px;" />
+            </h3>
+
+            <h1>The Environmental Impact</h1>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
-              vitae tortor efficitur, porttitor nibh id, suscipit ex. Fusce
-              massa leo, mattis non bibendum sed, porttitor vitae neque. Lorem
-              ipsum dolor sit amet, consectetur adipiscing elit. Morbi vitae
-              tortor efficitur, porttitor nibh id, suscipit ex. Fusce massa leo,
-              mattis non bibendum sed, porttitor vitae neque. Lorem ipsum dolor
-              sit amet, consectetur adipiscing elit. Morbi vitae tortor
-              efficitur, porttitor nibh id, suscipit ex. Fusce massa leo, mattis
-              non bibendum sed, porttitor vitae neque.
+              Mishandling laundry can also contribute to waste generation. When
+              clothing is not properly cared for, it may become damaged,
+              stained, or ill-fitting, leading individuals to dispose of the
+              garment and purchase a replacement. This not only creates
+              additional waste but also contributes to the consumption of
+              resources needed to produce new clothing.
             </p>
-            <p>
+            <p style="margin-top:8vh;text-align:center;font-weight:600;">
               ... then they end up here
-              <strong>{index + 1}/{count}</strong>
+              <!-- <strong>{index + 1}/{count}</strong> -->
             </p>
-            <progress value={count ? (index + 1) / count : 0} />
+            <Chart1 />
+            <!-- <progress value={count ? (index + 1) / count : 0} /> -->
           </div>
         {:else if index == 2}
           <div class="intro-text">
-            <h1>Chapter I: The environmental impact</h1>
+            <h3>
+              <span class="span-line" style="margin-left:-80px;" />
+              CHAPTER I
+              <span class="span-line" style="margin-left:15px;" />
+            </h3>
+            <h1>The Environmental Impact</h1>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
-              vitae tortor efficitur, porttitor nibh id, suscipit ex. Fusce
-              massa leo, mattis non bibendum sed, porttitor vitae neque. Lorem
-              ipsum dolor sit amet, consectetur adipiscing elit. Morbi vitae
-              tortor efficitur, porttitor nibh id, suscipit ex. Fusce massa leo,
-              mattis non bibendum sed, porttitor vitae neque. Lorem ipsum dolor
-              sit amet, consectetur adipiscing elit. Morbi vitae tortor
-              efficitur, porttitor nibh id, suscipit ex. Fusce massa leo, mattis
-              non bibendum sed, porttitor vitae neque.
+              It is clear that mishandling laundry has a significant impact on
+              sustainability and the environment. To reduce these negative
+              effects, individuals must learn proper laundry techniques and take
+              the time to care for their clothing properly. By doing so, we can
+              reduce our carbon footprint, minimize pollution, and promote more
+              sustainable practices in our daily lives.
             </p>
-            <p>
+            <p style="margin-top:8vh;text-align:center;font-weight:600;">
               ...which is equal to X amount of CO2 in our atmosphere that leads
               to Global Warming.
-              <strong>{index + 1}/{count}</strong>
+              <!-- <strong>{index + 1}/{count}</strong> -->
             </p>
-            <progress value={count ? (index + 1) / count : 0} />
+            <Chart1 />
+            <!-- <progress value={count ? (index + 1) / count : 0} /> -->
           </div>
         {/if}
 
@@ -153,6 +173,16 @@
 		top:10px;
 		background-color: var(--pl-black);
 	} */
+  /* .chapter {
+    position: relative;
+    width: 300px;
+  } */
+  .span-line {
+    position: absolute;
+    width: 60px;
+    margin-top: 13px;
+    border: 1px solid #ffffff;
+  }
   .intro-text {
     /* display: flex; */
     align-items: center;
@@ -175,6 +205,16 @@
     font-size: 50px;
     letter-spacing: -0.01em;
   }
+  h3 {
+    font-family: var(--pl-sans);
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 29px;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.01em;
+    color: var(--pl-white);
+  }
   p {
     font-family: var(--pl-sans);
     justify-content: center;
@@ -187,6 +227,10 @@
     line-height: 20px;
     letter-spacing: 0.01em;
     padding-bottom: 10px;
+    padding-right: 10%;
+    padding-left: 10%;
+
+    /* max-width: 40vw; */
   }
   [slot="background"] {
     display: flex;
