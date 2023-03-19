@@ -37,9 +37,10 @@
   .footnote {
     margin: auto;
     width: 56vw;
-    height: 120vh;
-    padding-left: 4rem;
-    padding-right: 5rem;
+    /* height: 100vh; */
+    /* /* padding-left: 4rem; */
+    /* padding-right: 5rem; */
+    padding-bottom: 20rem;
   }
   span {
     margin: auto;
