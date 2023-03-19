@@ -9,16 +9,6 @@
   import * as d3 from "d3";
   import Chart1 from "$lib/components/helpers/Chart1.svelte";
 
-  // let data;
-  // onMount(async () => {
-  //   data = await d3.csv(
-  //     "https://raw.githubusercontent.com/Chayanitoey/Thesis/main/src/lib/data/reasonsWhyPeopleDiscardGarment.csv?token=GHSAT0AAAAAACAEX75EWXNES3BWF2HRP6AMZAT2FIA"
-  //   );
-  // });
-  // $: console.log(data);
-
-  // let el;
-
   /**
    * @type {number}
    */
@@ -61,21 +51,23 @@
             </h3>
 
             <h1>The Environmental Impact</h1>
-            <p>
-              One of the most common ways that mishandling laundry can result in
-              economic loss is through the premature deterioration of clothing.
-              When garments are not washed or dried properly, the fabric can
-              become worn, faded, or stretched, leading to a shorter lifespan
-              for the garment. This means that individuals must replace their
-              clothing more frequently, resulting in additional expenses for new
-              clothing purchases.
-            </p>
+            <div class="transition" in:fade={{ duration: 1000 }}>
+              <p>
+                One of the most common ways that mishandling laundry can result
+                in economic loss is through the premature deterioration of
+                clothing. When garments are not washed or dried properly, the
+                fabric can become worn, faded, or stretched, leading to a
+                shorter lifespan for the garment. This means that individuals
+                must replace their clothing more frequently, resulting in
+                additional expenses for new clothing purchases.
+              </p>
 
-            <p style="margin-top:8vh;text-align:center;font-weight:600;">
-              Here are some common reasons why garments have been discarded...
-              <!-- <strong>{index + 1}/{count}</strong> -->
-            </p>
-            <Chart1 />
+              <p style="margin-top:8vh;text-align:center;font-weight:600;">
+                Here are some common reasons why garments have been discarded...
+                <!-- <strong>{index + 1}/{count}</strong> -->
+              </p>
+              <Chart1 bind:index />
+            </div>
 
             <!-- <progress value={count ? (index + 1) / count : 0} /> -->
           </div>
@@ -88,20 +80,20 @@
             </h3>
 
             <h1>The Environmental Impact</h1>
-            <p>
-              Mishandling laundry can also contribute to waste generation. When
-              clothing is not properly cared for, it may become damaged,
-              stained, or ill-fitting, leading individuals to dispose of the
-              garment and purchase a replacement. This not only creates
-              additional waste but also contributes to the consumption of
-              resources needed to produce new clothing.
-            </p>
-            <p style="margin-top:8vh;text-align:center;font-weight:600;">
-              ... then they end up here
-              <!-- <strong>{index + 1}/{count}</strong> -->
-            </p>
-            <Chart1 />
-            <!-- <progress value={count ? (index + 1) / count : 0} /> -->
+            <div class="transition" in:fade={{ duration: 1000 }}>
+              <p>
+                Mishandling laundry can also contribute to waste generation.
+                When clothing is not properly cared for, it may become damaged,
+                stained, or ill-fitting, leading individuals to dispose of the
+                garment and purchase a replacement. This not only creates
+                additional waste but also contributes to the consumption of
+                resources needed to produce new clothing.
+              </p>
+              <p style="margin-top:8vh;text-align:center;font-weight:600;">
+                ... then they end up here
+              </p>
+              <Chart1 bind:index />
+            </div>
           </div>
         {:else if index == 2}
           <div class="intro-text">
@@ -111,21 +103,21 @@
               <span class="span-line" style="margin-left:15px;" />
             </h3>
             <h1>The Environmental Impact</h1>
-            <p>
-              It is clear that mishandling laundry has a significant impact on
-              sustainability and the environment. To reduce these negative
-              effects, individuals must learn proper laundry techniques and take
-              the time to care for their clothing properly. By doing so, we can
-              reduce our carbon footprint, minimize pollution, and promote more
-              sustainable practices in our daily lives.
-            </p>
-            <p style="margin-top:8vh;text-align:center;font-weight:600;">
-              ...which is equal to X amount of CO2 in our atmosphere that leads
-              to Global Warming.
-              <!-- <strong>{index + 1}/{count}</strong> -->
-            </p>
-            <Chart1 />
-            <!-- <progress value={count ? (index + 1) / count : 0} /> -->
+            <div class="transition" in:fade={{ duration: 1000 }}>
+              <p>
+                It is clear that mishandling laundry has a significant impact on
+                sustainability and the environment. To reduce these negative
+                effects, individuals must learn proper laundry techniques and
+                take the time to care for their clothing properly. By doing so,
+                we can reduce our carbon footprint, minimize pollution, and
+                promote more sustainable practices in our daily lives.
+              </p>
+              <p style="margin-top:8vh;text-align:center;font-weight:600;">
+                ...which is equal to X amount of CO2 in our atmosphere that
+                leads to Global Warming.
+              </p>
+              <Chart1 bind:index />
+            </div>
           </div>
         {/if}
 
