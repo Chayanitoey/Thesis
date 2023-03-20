@@ -84,7 +84,7 @@
     <div slot="foreground">
       <section>
         <div class="left-align-text">
-          <h2>1. Learning The Care Label</h2>
+          <h2>Learning The Care Label</h2>
           <p class="p-left">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vitae
             tortor efficitur, porttitor nibh id, suscipit ex. Fusce massa leo,
@@ -238,7 +238,7 @@
     color: var(--pl-white);
   }
   h2 {
-    font-family: var(--pl-sans);
+    font-family: var(--pl-serif);
     font-weight: 400;
     font-size: 1.5rem;
     line-height: 38px;

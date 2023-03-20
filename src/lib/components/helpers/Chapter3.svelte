@@ -105,6 +105,6 @@
       rgba(0, 255, 10, 0) 100%
     );
     width: 100vw;
-    height: 150vh;
+    height: 170vh;
   }
 </style>

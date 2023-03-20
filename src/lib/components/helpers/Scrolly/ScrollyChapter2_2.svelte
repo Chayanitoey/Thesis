@@ -52,11 +52,21 @@
 
     <div slot="foreground">
       <section>
-        <div class="step">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum atque
-          maxime porro voluptatem impedit ex dicta modi iusto ipsam odit
-          accusamus ad hic nemo expedita debitis, repellendus eius cum! Numquam!
-        </div>
+        <!-- <div class="step"> -->
+        <h2>Remembering the rule of thumb</h2>
+        <p>
+          Sort by <span style="background-color:var(--pl-blue);">color</span> or
+          <span style="background-color:var(--pl-red);">fabric type</span>:
+          Sorting the laundry has to happen, and it's a good place not to cut
+          corners by performing a rush job. Sorting is the time when you can
+          treat and prevent all kinds of problems, so make it a habit to
+          practice your due diligence when sorting.**Credit to
+          <a
+            href="https://www.nytimes.com/guides/smarterliving/how-to-do-laundry"
+            >NYT**</a
+          >
+        </p>
+        <!-- </div> -->
       </section>
       <section>
         <div class="step">
@@ -87,11 +97,19 @@
 </div>
 
 <style>
+  h2 {
+    font-family: var(--pl-serif);
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 38px;
+    letter-spacing: 0.01em;
+    color: var(--pl-green);
+  }
   p {
     font-family: var(--pl-sans);
-    justify-content: center;
-    align-items: center;
-    text-align: justify;
+    /* justify-content: left;
+    align-items: left;
+    text-align: justify; */
     color: var(--pl-white);
     font-weight: 400;
     font-style: normal;
@@ -100,7 +118,7 @@
     letter-spacing: 0.01em;
     padding-bottom: 10px;
     padding-right: 10%;
-    padding-left: 10%;
+    /* padding-left: 10%; */
 
     /* max-width: 40vw; */
   }
@@ -123,20 +141,23 @@
   }
   [slot="foreground"] {
     pointer-events: none;
-    max-width: 640px;
+    max-width: 56vw;
     margin: 0 auto;
     font-size: 16px;
   }
 
   .step {
-    font-size: 1em;
+    font-size: 16px;
     box-sizing: border-box;
-    padding: 1em 1.25em;
-    background-color: hsla(0, 0%, 100%, 0.8);
+    padding: 2em 2em;
+    background-color: var(--pl-black);
+    color: var(--pl-white);
     backdrop-filter: blur(10px);
     border-radius: 1em;
     border: 1px solid #333;
     pointer-events: auto;
+    max-width: 50vw;
+    margin: auto;
   }
 
   [slot="foreground"] section {
