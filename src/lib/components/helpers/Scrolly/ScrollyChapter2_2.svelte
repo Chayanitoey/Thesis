@@ -3,6 +3,8 @@
 
   import Scroller from "./Scroller.svelte";
   import "$lib/styles/global.css";
+  import FabricGroup from "$lib/components/helpers/FabricGroup.svelte";
+
   import { fly } from "svelte/transition";
   import { fade } from "svelte/transition";
 
@@ -27,6 +29,25 @@
   let bottom = 1; // 0 - 1
 </script>
 
+<!-- <section> -->
+<div class="sort_fabric">
+  <h2>Remembering the rule of thumb</h2>
+  <p>
+    Sort by <span style="background-color:var(--pl-blue);">color</span> or
+    <span style="background-color:var(--pl-blue);">fabric type</span>: Sorting
+    the laundry has to happen, and it's a good place not to cut corners by
+    performing a rush job. Sorting is the time when you can treat and prevent
+    all kinds of problems, so make it a habit to practice your due diligence
+    when sorting.**Credit to
+    <a href="https://www.nytimes.com/guides/smarterliving/how-to-do-laundry"
+      >NYT**</a
+    >
+  </p>
+  <h3>Sort by color:</h3>
+  <FabricGroup />
+</div>
+<!-- </section> -->
+
 <div class="scrollyGraphic">
   <Scroller
     {top}
@@ -39,6 +60,7 @@
   >
     <div slot="background">
       <div class="background-content">
+        <h3>Sort by fabric type:</h3>
         <p>current section: <strong>{index + 1}/{count}</strong></p>
         <progress value={count ? (index + 1) / count : 0} />
 
@@ -52,21 +74,14 @@
 
     <div slot="foreground">
       <section>
-        <!-- <div class="step"> -->
-        <h2>Remembering the rule of thumb</h2>
-        <p>
-          Sort by <span style="background-color:var(--pl-blue);">color</span> or
-          <span style="background-color:var(--pl-red);">fabric type</span>:
-          Sorting the laundry has to happen, and it's a good place not to cut
-          corners by performing a rush job. Sorting is the time when you can
-          treat and prevent all kinds of problems, so make it a habit to
-          practice your due diligence when sorting.**Credit to
-          <a
-            href="https://www.nytimes.com/guides/smarterliving/how-to-do-laundry"
-            >NYT**</a
-          >
-        </p>
-        <!-- </div> -->
+        <!-- <div class="step">
+          <div class="step">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi
+            fugiat possimus repudiandae blanditiis temporibus. Assumenda, itaque
+            in! Illo est, dolorem repellendus rerum quisquam suscipit facilis
+            vel ut tempore magnam? Dolores!
+          </div>
+        </div> -->
       </section>
       <section>
         <div class="step">
@@ -97,6 +112,13 @@
 </div>
 
 <style>
+  .sort_fabric {
+    height: 80vh;
+    max-width: 56vw;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+  }
   h2 {
     font-family: var(--pl-serif);
     font-weight: 400;
@@ -104,6 +126,16 @@
     line-height: 38px;
     letter-spacing: 0.01em;
     color: var(--pl-green);
+  }
+  h3 {
+    font-family: var(--pl-sans);
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 29px;
+    align-items: left;
+    text-align: left;
+    letter-spacing: 0.01em;
+    color: var(--pl-white);
   }
   p {
     font-family: var(--pl-sans);

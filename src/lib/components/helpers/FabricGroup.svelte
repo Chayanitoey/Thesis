@@ -10,7 +10,7 @@
   const rKey = "value";
   const zKey = "category";
 
-  let groupBy = "true";
+  let groupBy = "false";
 
   const seriesNameSet = new Set();
   const seriesColors = ["#f0c", "#0cf", "#fc0"];
@@ -30,10 +30,11 @@
 
 <div class="input-container">
   <label
-    ><input type="radio" bind:group={groupBy} value="true" />Group by category</label
+    ><input type="radio" bind:group={groupBy} value="false" />Unsorted Laundry</label
   >
   <label
-    ><input type="radio" bind:group={groupBy} value="false" />Clump together</label
+    ><input type="radio" bind:group={groupBy} value="true" />Sorted Laundry By
+    Color</label
   >
 </div>
 
@@ -70,10 +71,23 @@
 	*/
   .chart-container {
     width: 100%;
-    height: 100%;
+    height: 80%;
   }
   label {
     cursor: pointer;
+    color: var(--pl-white);
+    font-family: var(--pl-sans);
+    /* justify-content: left;
+    align-items: left;
+    text-align: justify; */
+    color: var(--pl-white);
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.01em;
+    padding-bottom: 10px;
+    padding-right: 10%;
   }
   input {
     margin-right: 7px;
