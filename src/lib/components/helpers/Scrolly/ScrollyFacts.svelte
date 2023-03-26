@@ -3,6 +3,9 @@
   import "$lib/styles/global.css";
   import { fly } from "svelte/transition";
   import { fade } from "svelte/transition";
+  import * as d3 from "d3";
+  import { onMount } from "svelte";
+
   /**
    * @type {number}
    */
@@ -45,9 +48,22 @@
               {arr}
             </h1>
           </div>
+          <div class="main">
+            <div class="circle0" />
+          </div>
         {:else if index == 2}
           <div class="intro-text" in:fly={{ y: 150, duration: 1000 }}>
             <h1>We can do better.</h1>
+          </div>
+          <div class="main">
+            <div class="circle" />
+            <div class="circle1" />
+            <div class="circle2" />
+            <div class="circle3" />
+            <div class="circle4" />
+            <div class="circle5" />
+            <div class="circle6" />
+            <div class="circle7" />
           </div>
         {/if}
 
@@ -148,5 +164,228 @@
       rgba(0, 255, 10, 0) 100%
     );
     width: 100vw;
+  }
+
+  /* for circle animations */
+  .main {
+    width: 330px;
+    height: 330px;
+    border: 1px solid black;
+    position: absolute;
+    top: 0;
+    bottom: 20%;
+    left: 40%;
+    right: 0;
+    margin: auto;
+    border-radius: 50%;
+  }
+  .circle0 {
+    width: 30px;
+    height: 30px;
+    background: var(--pl-black);
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    margin: auto;
+    animation: circle0 6s linear;
+    animation-iteration-count: 1;
+  }
+
+  .circle {
+    width: 30px;
+    height: 30px;
+    background: var(--pl-black);
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    margin: auto;
+    animation: circle 6s linear infinite;
+  }
+  .circle1 {
+    width: 30px;
+    height: 30px;
+    background: var(--pl-black);
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    margin: auto;
+    animation: circle1 6s linear infinite;
+  }
+  .circle2 {
+    width: 30px;
+    height: 30px;
+    background: var(--pl-black);
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    margin: auto;
+    animation: circle2 6s linear infinite;
+  }
+  .circle3 {
+    width: 30px;
+    height: 30px;
+    background: var(--pl-black);
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    margin: auto;
+    animation: circle3 6s linear infinite;
+  }
+  .circle4 {
+    width: 30px;
+    height: 30px;
+    background: var(--pl-black);
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    margin: auto;
+    animation: circle4 6s linear infinite;
+  }
+
+  .circle5 {
+    width: 30px;
+    height: 30px;
+    background: var(--pl-black);
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    margin: auto;
+    animation: circle5 6s linear infinite;
+  }
+
+  .circle6 {
+    width: 30px;
+    height: 30px;
+    background: var(--pl-black);
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    margin: auto;
+    animation: circle6 6s linear infinite;
+  }
+  .circle7 {
+    width: 30px;
+    height: 30px;
+    background: var(--pl-black);
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    margin: auto;
+    animation: circle7 6s linear infinite;
+  }
+
+  @keyframes circle0 {
+    0% {
+      transform: rotate(0deg) translate(-165px) rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg) translate(-165px) rotate(-360deg);
+    }
+  }
+  @keyframes circle {
+    0% {
+      transform: rotate(0deg) translate(-165px) rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg) translate(-165px) rotate(-360deg);
+    }
+  }
+
+  @keyframes circle1 {
+    0% {
+      transform: rotate(-45deg) translate(-165px) rotate(-45deg);
+    }
+    100% {
+      transform: rotate(315deg) translate(-165px) rotate(-315deg);
+    }
+  }
+
+  @keyframes circle2 {
+    0% {
+      transform: rotate(-90deg) translate(-165px) rotate(-90deg);
+    }
+    100% {
+      transform: rotate(270deg) translate(-165px) rotate(-270deg);
+    }
+  }
+
+  @keyframes circle3 {
+    0% {
+      transform: rotate(-135deg) translate(-165px) rotate(-135deg);
+    }
+    100% {
+      transform: rotate(225deg) translate(-165px) rotate(-225deg);
+    }
+  }
+
+  @keyframes circle4 {
+    0% {
+      transform: rotate(-180deg) translate(-165px) rotate(-180deg);
+    }
+    100% {
+      transform: rotate(180deg) translate(-165px) rotate(-180deg);
+    }
+  }
+  @keyframes circle5 {
+    0% {
+      transform: rotate(-225deg) translate(-165px) rotate(-225deg);
+    }
+    100% {
+      transform: rotate(135deg) translate(-165px) rotate(-135deg);
+    }
+  }
+
+  @keyframes circle6 {
+    0% {
+      transform: rotate(-270deg) translate(-165px) rotate(-270deg);
+    }
+    100% {
+      transform: rotate(90deg) translate(-165px) rotate(-90deg);
+    }
+  }
+
+  @keyframes circle7 {
+    0% {
+      transform: rotate(-315deg) translate(-165px) rotate(-315deg);
+    }
+    100% {
+      transform: rotate(45deg) translate(-165px) rotate(-45deg);
+    }
   }
 </style>
