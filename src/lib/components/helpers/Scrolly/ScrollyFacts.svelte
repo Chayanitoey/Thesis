@@ -173,7 +173,7 @@
     border: 1px solid black;
     position: absolute;
     top: 0;
-    bottom: 20%;
+    bottom: 40%;
     left: 40%;
     right: 0;
     margin: auto;

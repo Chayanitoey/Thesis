@@ -29,11 +29,41 @@
   let bottom = 1; // 0 - 1
 </script>
 
+<div class="intro-text">
+  <h3>
+    <span class="span-line" style="margin-left:-80px;" />
+    CHAPTER III
+    <span class="span-line" style="margin-left:15px;" />
+  </h3>
+  <h1>The Key Is In Sorting</h1>
+</div>
+
 <!-- <section> -->
 <div class="sort_fabric">
-  <h2>Remembering the rule of thumb</h2>
+  <h2>Sorting by Color</h2>
+
   <p>
-    Sort by <span style="background-color:var(--pl-blue);">color</span> or
+    Sort by <span style="background-color:var(--pl-blue);">color</span> :
+    Sorting the laundry has to happen, and it's a good place not to cut corners
+    by performing a rush job. Sorting is the time when you can treat and prevent
+    all kinds of problems, so make it a habit to practice your due diligence
+    when sorting.**Credit to
+    <a href="https://www.nytimes.com/guides/smarterliving/how-to-do-laundry"
+      >NYT**</a
+    >
+    <br />
+    <br />
+    <br />
+    <b>Sort by color:</b>
+  </p>
+  <FabricGroup />
+</div>
+
+<div class="sort_fabric_type">
+  <h2>Sorting by Fabric Type</h2>
+
+  <p>
+    Sort by
     <span style="background-color:var(--pl-blue);">fabric type</span>: Sorting
     the laundry has to happen, and it's a good place not to cut corners by
     performing a rush job. Sorting is the time when you can treat and prevent
@@ -42,9 +72,11 @@
     <a href="https://www.nytimes.com/guides/smarterliving/how-to-do-laundry"
       >NYT**</a
     >
+    <br />
+    <br />
+    <br />
+    <b>Sort by fabric:</b>
   </p>
-  <h3>Sort by color:</h3>
-  <FabricGroup />
 </div>
 <!-- </section> -->
 
@@ -112,6 +144,36 @@
 </div>
 
 <style>
+  .span-line {
+    position: absolute;
+    width: 60px;
+    margin-top: 13px;
+    border: 1px solid #ffffff;
+  }
+  .intro-text {
+    /* display: flex; */
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    width: 56vw;
+    top: 0;
+  }
+  h1 {
+    font-family: var(--pl-serif);
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    top: 0;
+    width: 100%;
+    color: var(--pl-white);
+    font-weight: 400;
+    font-style: normal;
+    font-size: 50px;
+    letter-spacing: -0.01em;
+  }
+
   .sort_fabric {
     height: 80vh;
     max-width: 56vw;
@@ -132,8 +194,8 @@
     font-weight: 700;
     font-size: 1rem;
     line-height: 29px;
-    align-items: left;
-    text-align: left;
+    align-items: center;
+    text-align: center;
     letter-spacing: 0.01em;
     color: var(--pl-white);
   }
