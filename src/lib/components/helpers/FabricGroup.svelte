@@ -1,6 +1,7 @@
 <script>
   import { LayerCake, Svg, Html } from "layercake";
   import { scaleOrdinal, scaleBand } from "d3-scale";
+  import { Input } from "sveltestrap";
 
   import ForceLayout from "./ForceLayout.svelte";
 
@@ -13,7 +14,7 @@
   let groupBy = "false";
 
   const seriesNameSet = new Set();
-  const seriesColors = ["#f0c", "#0cf", "#fc0"];
+  const seriesColors = ["#FFFFFF", "#E01705", "#86C4CE"];
 
   data.forEach((d) => {
     seriesNameSet.add(d[zKey]);
@@ -30,8 +31,10 @@
 
 <div class="input-container">
   <label
-    ><input type="radio" bind:group={groupBy} value="false" />Unsorted Laundry</label
-  >
+    ><input type="radio" bind:group={groupBy} value="false" />
+    Unsorted Laundry
+  </label>
+
   <label
     ><input type="radio" bind:group={groupBy} value="true" />Sorted Laundry By
     Color</label

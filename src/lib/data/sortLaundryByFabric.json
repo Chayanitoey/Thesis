@@ -1,0 +1,44 @@
+{
+  "nodes": [
+    {"name": "Hot", "group": 1},
+    {"name": "Warm", "group": 1},
+    {"name": "Cold", "group": 1},
+    {"name": "Hand-Wash", "group": 1},
+    {"name": "Air-Dry", "group": 2},
+    {"name": "Low-Heat", "group": 2},
+    {"name": "Medium-Heat", "group": 2},
+    {"name": "High-Heat", "group": 2},
+    {"name": "Dry-Clean", "group": 3}
+  ],
+  "links": [
+    {"source": "Cold", "target": "Hand-Wash", "value": 1, "fabric":"Cotton"},
+    {"source": "Hand-Wash", "target": "Medium-Heat", "value": 1, "fabric":"Cotton"},
+    {"source": "Medium-Heat", "target": "Low-Heat", "value": 1, "fabric":"Cotton"},
+
+    {"source": "Cold", "target": "Hand-Wash", "value": 1, "fabric":"Linen"},
+    {"source": "Hand-Wash", "target": "Air-Dry", "value": 1, "fabric":"Linen"},
+
+    {"source": "Hot", "target": "Warm", "value": 1, "fabric":"Nylon"},
+    {"source": "Warm", "target": "Cold", "value": 1, "fabric":"Nylon"},
+    {"source": "Cold", "target": "Air-Dry", "value": 1, "fabric":"Nylon"},
+    
+    {"source": "Hot", "target": "Warm", "value": 1, "fabric":"Polyester"},
+    {"source": "Warm", "target": "Cold", "value": 1, "fabric":"Polyester"},
+    {"source": "Cold", "target": "Medium-Heat", "value": 1, "fabric":"Polyester"},
+    {"source": "Medium-Heat", "target": "Low-Heat", "value": 1, "fabric":"Polyester"},
+
+
+    {"source": "Dry-Clean", "target": "Dry-Clean", "value": 1, "fabric":"Rayon"},
+
+    {"source": "Hand-Wash", "target": "Dry-Clean", "value": 1, "fabric":"Silk"},
+
+    {"source": "Hot", "target": "Warm", "value": 1, "fabric":"Spandex"},
+    {"source": "Warm", "target": "Cold", "value": 1, "fabric":"Spandex"},
+    {"source": "Cold", "target": "Low-Heat", "value": 1, "fabric":"Spandex"},
+    {"source": "Low-Heat", "target": "Air-Dry", "value": 1, "fabric":"Spandex"},
+
+    {"source": "Cold", "target": "Hand-Wash", "value": 1, "fabric":"Wools"},
+    {"source": "Hand-Wash", "target": "Air-Dry", "value": 1, "fabric":"Wools"}
+
+  ]
+}

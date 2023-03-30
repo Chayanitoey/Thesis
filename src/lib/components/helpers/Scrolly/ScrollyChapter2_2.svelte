@@ -4,6 +4,7 @@
   import Scroller from "./Scroller.svelte";
   import "$lib/styles/global.css";
   import FabricGroup from "$lib/components/helpers/FabricGroup.svelte";
+  import SortLaundryArcDiagram from "$lib/components/helpers/SortLaundryArcDiagram.svelte";
 
   import { fly } from "svelte/transition";
   import { fade } from "svelte/transition";
@@ -39,7 +40,7 @@
 </div>
 
 <!-- <section> -->
-<div class="sort_fabric">
+<div class="sort_color">
   <h2>Sorting by Color</h2>
 
   <p>
@@ -91,7 +92,8 @@
     bind:progress
   >
     <div slot="background">
-      <div class="background-content">
+      <SortLaundryArcDiagram />
+      <!-- <div class="background-content">
         <h3>Sort by fabric type:</h3>
         <p>current section: <strong>{index + 1}/{count}</strong></p>
         <progress value={count ? (index + 1) / count : 0} />
@@ -101,7 +103,7 @@
 
         <p>total progress</p>
         <progress value={progress || 0} />
-      </div>
+      </div> -->
     </div>
 
     <div slot="foreground">
@@ -174,10 +176,18 @@
     letter-spacing: -0.01em;
   }
 
-  .sort_fabric {
+  .sort_color {
     height: 80vh;
     max-width: 56vw;
     margin: auto;
+    justify-content: center;
+    align-items: center;
+  }
+  .sort_fabric_type {
+    height: 5vh;
+    max-width: 56vw;
+    margin: auto;
+    margin-top: 10%;
     justify-content: center;
     align-items: center;
   }

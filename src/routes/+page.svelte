@@ -23,6 +23,7 @@
 <ScrollyChapter2_2 />
 <Chapter3 />
 <Footnote />
+<a href="/app">Click here</a>
 
 <!-- <div class="for-scroll" /> -->
 <style>
