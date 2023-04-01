@@ -11,34 +11,34 @@
     {"name": "Dry-Clean", "group": 3}
   ],
   "links": [
-    {"source": "Cold", "target": "Hand-Wash", "value": 1, "fabric":"Cotton"},
-    {"source": "Hand-Wash", "target": "Medium-Heat", "value": 1, "fabric":"Cotton"},
-    {"source": "Medium-Heat", "target": "Low-Heat", "value": 1, "fabric":"Cotton"},
+    {"source": "Cold", "target": "Hand-Wash", "value": 1, "fabric":"Cotton","color": "#FF294C"},
+    {"source": "Hand-Wash", "target": "Medium-Heat", "value": 1, "fabric":"Cotton","color": "#FF294C"},
+    {"source": "Medium-Heat", "target": "Low-Heat", "value": 1, "fabric":"Cotton","color": "#FF294C"},
 
-    {"source": "Cold", "target": "Hand-Wash", "value": 1, "fabric":"Linen"},
-    {"source": "Hand-Wash", "target": "Air-Dry", "value": 1, "fabric":"Linen"},
+    {"source": "Cold", "target": "Hand-Wash", "value": 1, "fabric":"Linen","color": "#7BDBFF"},
+    {"source": "Hand-Wash", "target": "Air-Dry", "value": 1, "fabric":"Linen","color": "#7BDBFF"},
 
-    {"source": "Hot", "target": "Warm", "value": 1, "fabric":"Nylon"},
-    {"source": "Warm", "target": "Cold", "value": 1, "fabric":"Nylon"},
-    {"source": "Cold", "target": "Air-Dry", "value": 1, "fabric":"Nylon"},
+    {"source": "Hot", "target": "Warm", "value": 1, "fabric":"Nylon","color": "#A6E7FF"},
+    {"source": "Warm", "target": "Cold", "value": 1, "fabric":"Nylon","color": "#A6E7FF"},
+    {"source": "Cold", "target": "Air-Dry", "value": 1, "fabric":"Nylon","color": "#A6E7FF"},
     
-    {"source": "Hot", "target": "Warm", "value": 1, "fabric":"Polyester"},
-    {"source": "Warm", "target": "Cold", "value": 1, "fabric":"Polyester"},
-    {"source": "Cold", "target": "Medium-Heat", "value": 1, "fabric":"Polyester"},
-    {"source": "Medium-Heat", "target": "Low-Heat", "value": 1, "fabric":"Polyester"},
+    {"source": "Hot", "target": "Warm", "value": 1, "fabric":"Polyester","color": "#09A08C"},
+    {"source": "Warm", "target": "Cold", "value": 1, "fabric":"Polyester","color": "#09A08C"},
+    {"source": "Cold", "target": "Medium-Heat", "value": 1, "fabric":"Polyester","color": "#09A08C"},
+    {"source": "Medium-Heat", "target": "Low-Heat", "value": 1, "fabric":"Polyester","color": "#09A08C"},
 
 
-    {"source": "Dry-Clean", "target": "Dry-Clean", "value": 1, "fabric":"Rayon"},
+    {"source": "Dry-Clean", "target": "Dry-Clean", "value": 1, "fabric":"Rayon","color": "#FFFFFF"},
 
-    {"source": "Hand-Wash", "target": "Dry-Clean", "value": 1, "fabric":"Silk"},
+    {"source": "Hand-Wash", "target": "Dry-Clean", "value": 1, "fabric":"Silk","color": "#191CE4"},
 
-    {"source": "Hot", "target": "Warm", "value": 1, "fabric":"Spandex"},
-    {"source": "Warm", "target": "Cold", "value": 1, "fabric":"Spandex"},
-    {"source": "Cold", "target": "Low-Heat", "value": 1, "fabric":"Spandex"},
-    {"source": "Low-Heat", "target": "Air-Dry", "value": 1, "fabric":"Spandex"},
+    {"source": "Hot", "target": "Warm", "value": 1, "fabric":"Spandex","color": "#FF9083"},
+    {"source": "Warm", "target": "Cold", "value": 1, "fabric":"Spandex","color": "#FF9083"},
+    {"source": "Cold", "target": "Low-Heat", "value": 1, "fabric":"Spandex","color": "#FF9083"},
+    {"source": "Low-Heat", "target": "Air-Dry", "value": 1, "fabric":"Spandex","color": "#FF9083"},
 
-    {"source": "Cold", "target": "Hand-Wash", "value": 1, "fabric":"Wools"},
-    {"source": "Hand-Wash", "target": "Air-Dry", "value": 1, "fabric":"Wools"}
+    {"source": "Cold", "target": "Hand-Wash", "value": 1, "fabric":"Wools","color": "#FAC83C"},
+    {"source": "Hand-Wash", "target": "Air-Dry", "value": 1, "fabric":"Wools","color": "#FAC83C"}
 
   ]
 }

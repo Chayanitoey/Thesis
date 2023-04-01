@@ -31,8 +31,6 @@
   let scale = 1;
   let translate_x = 0;
   let translate_y = 0;
-
-  console.log(index);
 </script>
 
 <div class="intro-text">
@@ -296,7 +294,7 @@
   [slot="background"] {
     display: flex;
     justify-content: right;
-    background-color: rgba(250, 250, 250, 1);
+    /* background-color: rgba(250, 250, 250, 1); */
     align-items: right;
     height: 100vh;
     font-size: 16px;

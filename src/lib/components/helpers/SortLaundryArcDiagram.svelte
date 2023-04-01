@@ -4,6 +4,13 @@
   import { extent, least } from "d3-array";
   import { scalePoint } from "d3-scale";
 
+  export let index = 0;
+  /**
+   * @type {any}
+   */
+  let links;
+  $: scrollIndex = index;
+
   import data from "$lib/data/sortLaundryByFabric.json";
 
   let labels = [
@@ -17,11 +24,19 @@
     { fabric: "Spandex", color: "#FF9083" },
     { fabric: "Blends", color: "#D9D9D9" },
   ];
+  /**
+   * @type {any}
+   */
+  let svg;
   // import data from "$lib/data/testdata.json";
 
   const margin = { top: 20, right: 30, bottom: 50, left: 30 };
   const width = 1000 - margin.left - margin.right;
   const height = 500 - margin.top - margin.bottom;
+
+  /**
+   * @type {number}
+   */
 
   // let data;
 
@@ -36,7 +51,7 @@
 
     const x = d3.scalePoint().range([0, width]).domain(allNodes);
 
-    const svg = d3
+    svg = d3
       .select("#my_dataviz")
       .append("svg")
       .attr("width", width + margin.left + margin.right + 100)
@@ -44,14 +59,14 @@
       .append("g")
       .attr("transform", `translate(${margin.left},${margin.top})`);
 
-    const nodes = svg
-      .selectAll("mynodes")
-      .data(data.nodes)
-      .join("circle")
-      .attr("cx", (d) => x(d.name))
-      .attr("cy", height - 30)
-      .attr("r", 8)
-      .style("fill", "#09A08C");
+    // const nodes = svg
+    //   .selectAll("mynodes")
+    //   .data(data.nodes)
+    //   .join("circle")
+    //   .attr("cx", (d) => x(d.name))
+    //   .attr("cy", height - 30)
+    //   .attr("r", 8)
+    //   .style("fill", "#09A08C");
 
     const labels = svg
       .selectAll("mylabels")
@@ -82,6 +97,26 @@
       .attr("stroke", "white");
     // .attr("fill", "red");
 
+    // Add the label dry to the rect
+    svg
+      .append("text")
+      .attr("x", 650)
+      .attr("y", height + 25)
+      .style("font-size", 19)
+      .text("Dry")
+      .style("fill", "white")
+      .style("text-anchor", "middle");
+
+    // Add the label dry to the rect
+    svg
+      .append("text")
+      .attr("x", 200)
+      .attr("y", height + 25)
+      .style("font-size", 19)
+      .text("Wash")
+      .style("fill", "white")
+      .style("text-anchor", "middle");
+
     const idToNode = {};
     data.nodes.forEach(function (n) {
       idToNode[n.name] = n;
@@ -111,8 +146,11 @@
           height - 30,
         ].join(" ");
       })
+      .attr("class", (d) => d.fabric)
       .style("fill", "none")
-      .attr("stroke", "white");
+      .attr("stroke", (d) => d.color)
+      .style("stroke-width", 2)
+      .attr("visibility", "visible");
 
     // nodes.on("mouseover", function (event, d) {
     //   nodes.style("fill", "#B8B8B8");
@@ -130,7 +168,57 @@
     //   nodes.style("fill", "#69b3a2");
     //   links.style("stroke", "black").style("stroke-width", "1");
     // });
+    console.log(scrollIndex);
   });
+
+  $: if (svg) {
+    //showing all paths first index
+    if (scrollIndex == 0) {
+      svg.selectAll("path").attr("visibility", "visible");
+    }
+    //showing just cotton paths in the second index
+    else if (scrollIndex == 1) {
+      svg.selectAll("path").attr("visibility", "hidden");
+      svg.selectAll(".Cotton").attr("visibility", "visible");
+    }
+    //showing just linen paths in the second index
+    else if (scrollIndex == 2) {
+      svg.selectAll("path").attr("visibility", "hidden");
+      svg.selectAll(".Linen").attr("visibility", "visible");
+    }
+    //showing just wool paths in the second index
+    else if (scrollIndex == 3) {
+      svg.selectAll("path").attr("visibility", "hidden");
+      svg.selectAll(".Wools").attr("visibility", "visible");
+    }
+    //showing just silk paths in the second index
+    else if (scrollIndex == 4) {
+      svg.selectAll("path").attr("visibility", "hidden");
+      svg.selectAll(".Silk").attr("visibility", "visible");
+    }
+    //showing just rayon paths in the second index
+    else if (scrollIndex == 5) {
+      svg.selectAll("path").attr("visibility", "hidden");
+      svg.selectAll(".Rayon").attr("visibility", "visible");
+    }
+    //showing just nylon paths in the second index
+    else if (scrollIndex == 6) {
+      svg.selectAll("path").attr("visibility", "hidden");
+      svg.selectAll(".Nylon").attr("visibility", "visible");
+    }
+    //showing just polyester paths in the second index
+    else if (scrollIndex == 7) {
+      svg.selectAll("path").attr("visibility", "hidden");
+      svg.selectAll(".Polyester").attr("visibility", "visible");
+    }
+    //showing just polyester paths in the second index
+    else if (scrollIndex == 8) {
+      svg.selectAll("path").attr("visibility", "hidden");
+      svg.selectAll(".Spandex").attr("visibility", "visible");
+    } else {
+      svg.selectAll("path").attr("visibility", "visible");
+    }
+  }
 </script>
 
 <div id="legend_arc">

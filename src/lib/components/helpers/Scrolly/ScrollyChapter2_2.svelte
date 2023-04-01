@@ -92,7 +92,7 @@
     bind:progress
   >
     <div slot="background">
-      <SortLaundryArcDiagram />
+      <SortLaundryArcDiagram bind:index />
       <!-- <div class="background-content">
         <h3>Sort by fabric type:</h3>
         <p>current section: <strong>{index + 1}/{count}</strong></p>
@@ -118,28 +118,31 @@
         </div> -->
       </section>
       <section>
-        <div class="step">
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi fugiat
-          possimus repudiandae blanditiis temporibus. Assumenda, itaque in! Illo
-          est, dolorem repellendus rerum quisquam suscipit facilis vel ut
-          tempore magnam? Dolores!
-        </div>
+        <div class="step">Cotton</div>
       </section>
       <section>
-        <div class="step">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat
-          soluta, consequatur sunt facilis illo error suscipit rem rerum sint
-          doloribus praesentium similique et? Fuga illum est ipsum accusantium
-          necessitatibus alias?
-        </div>
+        <div class="step">Linen</div>
       </section>
       <section>
-        <div class="step">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui fuga
-          ratione iure numquam nisi blanditiis optio, minus soluta quaerat esse
-          aliquam exercitationem temporibus autem mollitia maxime facilis
-          tempore officiis maiores.
-        </div>
+        <div class="step">Wools</div>
+      </section>
+      <section>
+        <div class="step">Silk</div>
+      </section>
+      <section>
+        <div class="step">Rayon</div>
+      </section>
+      <section>
+        <div class="step">Nylon</div>
+      </section>
+      <section>
+        <div class="step">Polyester</div>
+      </section>
+      <section>
+        <div class="step">Spandex</div>
+      </section>
+      <section>
+        <div class="step">Blends</div>
       </section>
     </div>
   </Scroller>
