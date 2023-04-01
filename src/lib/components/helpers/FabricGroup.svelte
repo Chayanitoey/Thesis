@@ -49,7 +49,7 @@
     z={zKey}
     xScale={scaleBand()}
     xDomain={seriesNames}
-    rRange={[3, 12]}
+    rRange={[4, 30]}
     zScale={scaleOrdinal()}
     zDomain={seriesNames}
     zRange={seriesColors}

@@ -3,8 +3,8 @@
   import "$lib/styles/global.css";
   import { fly } from "svelte/transition";
   import { fade } from "svelte/transition";
-  import Jacket from "$lib/components/helpers/Jacket.svelte";
-  import { Canvas } from "@threlte/core";
+  import Image from "$lib/images/OriginalSweater.png";
+  // import Jacket from "$lib/components/helpers/Jacket.svelte";
 
   /**
    * @type {number}
@@ -27,6 +27,9 @@
   let bottom = 1; // 0 - 1
 </script>
 
+<!-- <div class="jacketobject"> -->
+<!-- <Jacket /> -->
+<!-- </div> -->
 <div class="scrollyGraphic">
   <Scroller
     {top}
@@ -38,11 +41,8 @@
     bind:progress
   >
     <div slot="background">
+      <img src={Image} alt="Loading..." />
       <div class="background-content">
-        <Canvas>
-          <Jacket />
-        </Canvas>
-
         {#if index == 0}
           <div class="intro-text" in:fly={{ y: 150, duration: 1000 }}>
             <h1>Lost Shape</h1>
@@ -109,6 +109,15 @@
 </div>
 
 <style>
+  /* .jacketobject {
+    position: sticky;
+  } */
+  img {
+    max-width: 100vw;
+    max-height: 100vh;
+    position: absolute;
+    z-index: -1;
+  }
   .intro-text {
     display: flex;
     align-items: center;

@@ -79,7 +79,8 @@
   const pos = tweened(0, { easing: cubicOut, duration: 800 });
 </script>
 
-{#if index == 0}
+{#if index < 2}
+  <h2>Common reasons why garments are discarded</h2>
   <div class="chart">
     <Pancake.Chart x1={0} x2={max} y1={0} y2={1}>
       <!-- <Pancake.Grid horizontal count={1} let:value let:first>
@@ -105,12 +106,16 @@
             <span class="label"
               >{@html reasons[i].split("_").join("&nbsp;")}</span
             >
+            <span class="numlabel"
+              >{@html (((d.end - d.start) * 100) / 364).toFixed(1)}%</span
+            >
           </Pancake.Box>
         {/each}
       {/each}
     </Pancake.Chart>
   </div>
-{:else if index == 1}
+{:else if index == 2}
+  <!-- <h2>How do people dispose garment?</h2>
   <div class="chart">
     <Pancake.Chart x1={0} x2={max_1} y1={0} y2={1}>
       {#each stacks_1 as stack_1, i}
@@ -130,8 +135,34 @@
         {/each}
       {/each}
     </Pancake.Chart>
+  </div> -->
+  <h2>Common reasons why garments are discarded</h2>
+  <div class="chart">
+    <div id="rectangle" />
+    <Pancake.Chart x1={0} x2={max} y1={0} y2={1}>
+      {#each stacks as stack, i}
+        {#each stack.values as d}
+          <Pancake.Box x1={d.start} x2={d.end} y1={d.i - 1} y2={d.i}>
+            <div
+              class="box"
+              id={reasons[i]}
+              style="background-color: {colorsReasons[
+                i
+              ]}; border-color: {colorsDestinations[i]};"
+            />
+            <span class="label"
+              >{@html reasons[i].split("_").join("&nbsp;")}</span
+            >
+            <span class="numlabel"
+              >{@html (((d.end - d.start) * 100) / 364).toFixed(1)}%</span
+            >
+          </Pancake.Box>
+        {/each}
+      {/each}
+    </Pancake.Chart>
   </div>
 {:else}
+  <h2>Where their final destination is</h2>
   <div class="chart">
     <Pancake.Chart x1={0} x2={max_2} y1={0} y2={1}>
       {#each stacks_2 as stack_2, i}
@@ -147,6 +178,7 @@
             <span class="label"
               >{@html final_destinations[i].split("_").join("&nbsp;")}</span
             >
+            <span class="numlabel">{@html (d.end - d.start).toFixed(1)}%</span>
           </Pancake.Box>
         {/each}
       {/each}
@@ -155,23 +187,28 @@
 {/if}
 
 <style>
+  #rectangle {
+    position: absolute;
+    padding: 3 em;
+    border-radius: 1em;
+    width: 42vw;
+    height: 20vh;
+    border: 1px solid var(--pl-white);
+  }
   .chart {
     height: 100px;
     padding: 1em 0 0em 3em;
     margin: 0 0 36px 0;
     margin-left: calc(-3em);
   }
-  /* 
-  .grid-line {
-    position: relative;
-    display: block;
+  h2 {
+    font-family: var(--pl-serif);
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 38px;
+    letter-spacing: 0.01em;
+    color: var(--pl-white);
   }
-
-  .grid-line.vertical {
-    height: 100%;
-    border-left: 0px dashed #ccc;
-    
-  } */
 
   .label {
     position: absolute;
@@ -183,17 +220,17 @@
     color: #999;
     text-align: center;
   }
-
-  /* .x-label {
+  .numlabel {
     position: absolute;
-    width: 4em;
-    left: -2em;
-    bottom: -40px;
+    left: 0.3em;
+    top: 11em;
+    bottom: -20px;
     font-family: var(--pl-sans);
-    font-size: 10px;
+    font-weight: 400;
+    font-size: 0.5em;
     color: #999;
     text-align: center;
-  } */
+  }
 
   .box {
     position: absolute;

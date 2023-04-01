@@ -30,6 +30,27 @@
   let bottom = 1; // 0 - 1
 </script>
 
+<div class="intro-text">
+  <h3>
+    <span class="span-line" style="margin-left:-80px;" />
+    CHAPTER I
+    <span class="span-line" style="margin-left:15px;" />
+  </h3>
+  <h1>The Environmental Impact</h1>
+  <p>
+    One of the most common ways that mishandling laundry can result in economic
+    loss is through the premature deterioration of clothing. When garments are
+    not washed or dried properly, the fabric can become worn, faded, or
+    stretched, leading to a shorter lifespan for the garment. This means that
+    individuals must replace their clothing more frequently, resulting in
+    additional expenses for new clothing purchases.
+  </p>
+  <p style="margin-top:8vh;text-align:center;font-weight:600;">
+    Here are some common reasons why garments have been discarded...
+    <!-- <strong>{index + 1}/{count}</strong> -->
+  </p>
+</div>
+
 <div class="scrollyGraphic" in:fly={{ y: 150, duration: 1000 }}>
   <Scroller
     {top}
@@ -42,37 +63,16 @@
   >
     <div slot="background">
       <div class="background-content">
-        {#if index == 0}
-          <div class="intro-text">
-            <h3>
-              <span class="span-line" style="margin-left:-80px;" />
-              CHAPTER I
-              <span class="span-line" style="margin-left:15px;" />
-            </h3>
-
-            <h1>The Environmental Impact</h1>
-            <div class="transition" in:fade={{ duration: 1000 }}>
-              <p>
-                One of the most common ways that mishandling laundry can result
-                in economic loss is through the premature deterioration of
-                clothing. When garments are not washed or dried properly, the
-                fabric can become worn, faded, or stretched, leading to a
-                shorter lifespan for the garment. This means that individuals
-                must replace their clothing more frequently, resulting in
-                additional expenses for new clothing purchases.
-              </p>
-
-              <p style="margin-top:8vh;text-align:center;font-weight:600;">
-                Here are some common reasons why garments have been discarded...
-                <!-- <strong>{index + 1}/{count}</strong> -->
-              </p>
-              <Chart1 bind:index />
-            </div>
-
-            <!-- <progress value={count ? (index + 1) / count : 0} /> -->
+        <!-- {#if index == 0} -->
+        <div class="intro-text">
+          <div class="transition" in:fade={{ duration: 1000 }}>
+            <Chart1 bind:index />
           </div>
-        {:else if index == 1}
-          <div class="intro-text">
+
+          <!-- <progress value={count ? (index + 1) / count : 0} /> -->
+        </div>
+        <!-- {:else if index == 1} -->
+        <!-- <div class="intro-text">
             <h3>
               <span class="span-line" style="margin-left:-80px;" />
               CHAPTER I
@@ -94,9 +94,9 @@
               </p>
               <Chart1 bind:index />
             </div>
-          </div>
-        {:else if index == 2}
-          <div class="intro-text">
+          </div> -->
+        <!-- {:else if index == 2} -->
+        <!-- <div class="intro-text">
             <h3>
               <span class="span-line" style="margin-left:-80px;" />
               CHAPTER I
@@ -119,7 +119,8 @@
               <Chart1 bind:index />
             </div>
           </div>
-        {/if}
+         -->
+        <!-- {/if} -->
 
         <!-- 
 				<p>offset in current section</p>
@@ -133,24 +134,33 @@
     <div slot="foreground">
       <section>
         <!-- <div class="step">
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum atque maxime porro
-					voluptatem impedit ex dicta modi iusto ipsam odit accusamus ad hic nemo expedita debitis,
-					repellendus eius cum! Numquam!
-				</div> -->
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum atque
+          maxime porro voluptatem impedit ex dicta modi iusto ipsam odit
+          accusamus ad hic nemo expedita debitis, repellendus eius cum! Numquam!
+        </div> -->
       </section>
       <section>
-        <!-- <div class="step">
-					Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi fugiat possimus
-					repudiandae blanditiis temporibus. Assumenda, itaque in! Illo est, dolorem repellendus
-					rerum quisquam suscipit facilis vel ut tempore magnam? Dolores!
-				</div> -->
+        <div class="step">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum atque
+          maxime porro voluptatem impedit ex dicta modi iusto ipsam odit
+          accusamus ad hic nemo expedita debitis, repellendus eius cum! Numquam!
+        </div>
       </section>
       <section>
-        <!-- <div class="step">
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat soluta, consequatur sunt
-					facilis illo error suscipit rem rerum sint doloribus praesentium similique et? Fuga illum
-					est ipsum accusantium necessitatibus alias?
-				</div> -->
+        <div class="step">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi fugiat
+          possimus repudiandae blanditiis temporibus. Assumenda, itaque in! Illo
+          est, dolorem repellendus rerum quisquam suscipit facilis vel ut
+          tempore magnam? Dolores!
+        </div>
+      </section>
+      <section>
+        <div class="step">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat
+          soluta, consequatur sunt facilis illo error suscipit rem rerum sint
+          doloribus praesentium similique et? Fuga illum est ipsum accusantium
+          necessitatibus alias?
+        </div>
       </section>
     </div>
   </Scroller>
@@ -176,7 +186,7 @@
     border: 1px solid #ffffff;
   }
   .intro-text {
-    /* display: flex; */
+    margin: auto;
     align-items: center;
     justify-content: center;
     width: 56vw;
@@ -209,7 +219,6 @@
   }
   p {
     font-family: var(--pl-sans);
-    justify-content: center;
     align-items: center;
     text-align: justify;
     color: var(--pl-white);
@@ -246,27 +255,31 @@
     margin-top: -20vh;
   }
 
-  /* [slot='foreground'] {
-		pointer-events: none;
-		max-width: 640px;
-		margin: 0 auto;
-		font-size: 16px;
-	} */
+  [slot="foreground"] {
+    pointer-events: none;
+    max-width: 640px;
+    margin: 0 auto;
+    font-size: 16px;
+  }
 
-  /* .step {
-		font-size: 1em;
-		box-sizing: border-box;
-		padding: 1em 1.25em;
-		background-color: hsla(0, 0%, 100%, 0.8);
-		backdrop-filter: blur(10px);
-		border-radius: 1em;
-		border: 1px solid #333;
-		pointer-events: auto;
-	} */
+  .step {
+    font-size: 16px;
+    box-sizing: border-box;
+    padding: 2em 2em;
+    background-color: var(--pl-black);
+    color: var(--pl-white);
+    backdrop-filter: blur(10px);
+    border-radius: 1em;
+    border: 1px solid #333;
+    pointer-events: auto;
+    max-width: 50vw;
+    margin: auto;
+    font-family: var(--pl-sans);
+  }
 
   [slot="foreground"] section {
     pointer-events: all;
-    height: 80vh;
+    height: 120vh;
     /* padding: 1em; */
     /* margin: 0 0 2em 0; */
     font-family: var(--sans);
@@ -274,13 +287,16 @@
   }
 
   [slot="foreground"] section:last-of-type {
-    height: 100vh;
+    height: 120vh;
   }
 
-  progress {
+  /* progress {
     display: block;
     width: 100%;
     height: 1rem;
     position: relative;
+  } */
+  .scrollyGraphic {
+    margin-top: -5%;
   }
 </style>

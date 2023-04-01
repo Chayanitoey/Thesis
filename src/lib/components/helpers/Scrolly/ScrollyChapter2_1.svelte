@@ -5,6 +5,7 @@
   import "$lib/styles/global.css";
   import { fly } from "svelte/transition";
   import { fade } from "svelte/transition";
+  import Sweater from "$lib/images/Sweater_desktop.png";
 
   /**
    * @type {number}
@@ -25,6 +26,13 @@
   let top = 0; // 0 - 1
   let threshold = 0.5; // 0 - 1
   let bottom = 1; // 0 - 1
+  //this is for zooming image
+  let transform = 0;
+  let scale = 1;
+  let translate_x = 0;
+  let translate_y = 0;
+
+  console.log(index);
 </script>
 
 <div class="intro-text">
@@ -56,14 +64,19 @@
   >
     <div slot="background">
       <div class="background-content">
-        {#if index == 0}
-          <p>mock 0</p>
-        {:else if index == 1}
-          <p>Highlighting Cotton</p>
+        {#if index < 4}
+          <!-- <p>mock {index}</p> -->
+          <img
+            src={Sweater}
+            alt="A green sweater from COS"
+            style="transform: scale({index + 1},{index + 1}"
+          />
+          <!-- {:else if index == 1}
+          <p>Highlighting Cotton {index}</p>
         {:else if index == 2}
-          <p>Highlighting Nylon</p>
+          <p>Highlighting Nylon {index}</p>
         {:else if index == 3}
-          <p>Highlighting Spandex</p>
+          <p>Highlighting Spandex {index}</p> -->
         {:else if index == 4}
           <p>Care Label</p>
         {:else if index == 5}
@@ -198,6 +211,12 @@
 </div>
 
 <style>
+  img {
+    display: block;
+    width: 100%;
+    transition: transform 0.25s, visibility 0.25s ease-in;
+    /* margin-top: -10vh; */
+  }
   .span-line {
     position: absolute;
     width: 60px;
@@ -262,11 +281,14 @@
 
     /* max-width: 40vw; */
   }
+  /* .background-content p {
+    color: var(--pl-black);
+  } */
   .p-left {
     justify-content: left;
     align-items: left;
     text-align: justify;
-    color: var(--pl-white);
+    color: var(--pl-black);
     padding-bottom: 10px;
     padding-right: 0%;
     padding-left: 0%;
@@ -274,6 +296,7 @@
   [slot="background"] {
     display: flex;
     justify-content: right;
+    background-color: rgba(250, 250, 250, 1);
     align-items: right;
     height: 100vh;
     font-size: 16px;
@@ -284,9 +307,11 @@
 
   .background-content {
     /* background-color: hsla(210, 100%, 50%, 0.1); */
-    border-top: 2px solid var(--blue3);
-    border-bottom: 2px solid var(--blue3);
+    /* border-top: 2px solid var(--blue3);
+    border-bottom: 2px solid var(--blue3); */
     font-size: 1.4em;
+    max-width: 100vw;
+    max-height: 80vh;
     overflow: hidden;
     padding: 1em 4em;
     /* this works only for 1920 screen width needs to do break views*/
