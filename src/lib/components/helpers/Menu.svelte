@@ -13,7 +13,7 @@
 
 {#if open}
   <div class="menu">
-    {#each ["About", "Perfect Laundry Day App Beta", "Contact"] as link, i}
+    {#each ["About", "Perfect Laundry Day", "Contact"] as link, i}
       <p transition:fly={{ y: -15, delay: 50 * i }}>
         {link}
       </p>
@@ -34,7 +34,7 @@
 
     background: var(--pl-black);
     text-align: center;
-    font-size: 2rem;
+    font-size: 1rem;
     letter-spacing: 0.15em;
     padding-top: 30vh;
     top: 0;

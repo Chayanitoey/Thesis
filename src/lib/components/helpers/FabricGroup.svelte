@@ -2,6 +2,8 @@
   import { LayerCake, Svg, Html } from "layercake";
   import { scaleOrdinal, scaleBand } from "d3-scale";
   import { Input } from "sveltestrap";
+  import Radio from "@smui/radio";
+  import FormField from "@smui/form-field";
 
   import ForceLayout from "./ForceLayout.svelte";
 
@@ -30,15 +32,21 @@
 </script>
 
 <div class="input-container">
-  <label
-    ><input type="radio" bind:group={groupBy} value="false" />
+  <!-- <label
+    >
+    <input type="radio" bind:group={groupBy} value="false" />
     Unsorted Laundry
-  </label>
+  </label> -->
 
-  <label
-    ><input type="radio" bind:group={groupBy} value="true" />Sorted Laundry By
-    Color</label
-  >
+  <FormField>
+    <Radio bind:group={groupBy} value="false" />
+    <span slot="label">Unsorted Laundry</span>
+  </FormField>
+
+  <FormField>
+    <Radio bind:group={groupBy} value="true" />
+    <span slot="label">Sorted Laundry By Color</span>
+  </FormField>
 </div>
 
 <div class="chart-container">
@@ -76,23 +84,12 @@
     width: 100%;
     height: 80%;
   }
-  label {
-    cursor: pointer;
+  span {
     color: var(--pl-white);
     font-family: var(--pl-sans);
-    /* justify-content: left;
-    align-items: left;
-    text-align: justify; */
-    color: var(--pl-white);
     font-weight: 400;
-    font-style: normal;
     font-size: 16px;
     line-height: 20px;
     letter-spacing: 0.01em;
-    padding-bottom: 10px;
-    padding-right: 10%;
-  }
-  input {
-    margin-right: 7px;
   }
 </style>

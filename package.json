@@ -8,11 +8,15 @@
 		"build": "vite build",
 		"preview": "vite preview",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./jsconfig.json",
-		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./jsconfig.json --watch"
+		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./jsconfig.json --watch",
+		"prepare": "npm run smui-theme",
+		"smui-theme": "smui-theme compile static/smui.css -i src/theme"
 	},
 	"devDependencies": {
 		"@rgossiaux/svelte-headlessui": "^1.0.2",
 		"@rollup/plugin-dsv": "^2.0.2",
+		"@smui/form-field": "^7.0.0-beta.0",
+		"@smui/radio": "^7.0.0-beta.0",
 		"@sveltejs/adapter-auto": "^2.0.0",
 		"@sveltejs/adapter-cloudflare": "^2.2.0",
 		"@sveltejs/adapter-static": "1.0.0",
@@ -22,6 +26,7 @@
 		"@typescript-eslint/parser": "^5.8.0",
 		"lodash.debounce": "^4.0.8",
 		"sass": "^1.59.3",
+		"smui-theme": "^7.0.0-beta.0",
 		"svelte": "^3.57.0",
 		"svelte-check": "^3.0.1",
 		"svelte-hamburgers": "^4.0.1",

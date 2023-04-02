@@ -104,7 +104,8 @@
       #7aff7f 65.12%,
       rgba(0, 255, 10, 0) 100%
     );
-    width: 100vw;
+    width: 100%;
+    margin-left: 0;
     height: 170vh;
   }
 </style>

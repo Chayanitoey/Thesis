@@ -12,8 +12,8 @@
   ],
   "links": [
     {"source": "Cold", "target": "Hand-Wash", "value": 1, "fabric":"Cotton","color": "#FF294C"},
-    {"source": "Hand-Wash", "target": "Medium-Heat", "value": 1, "fabric":"Cotton","color": "#FF294C"},
-    {"source": "Medium-Heat", "target": "Low-Heat", "value": 1, "fabric":"Cotton","color": "#FF294C"},
+    {"source": "Hand-Wash", "target": "Low-Heat", "value": 1, "fabric":"Cotton","color": "#FF294C"},
+    {"source": "Low-Heat", "target": "Medium-Heat", "value": 1, "fabric":"Cotton","color": "#FF294C"},
 
     {"source": "Cold", "target": "Hand-Wash", "value": 1, "fabric":"Linen","color": "#7BDBFF"},
     {"source": "Hand-Wash", "target": "Air-Dry", "value": 1, "fabric":"Linen","color": "#7BDBFF"},
@@ -24,8 +24,8 @@
     
     {"source": "Hot", "target": "Warm", "value": 1, "fabric":"Polyester","color": "#09A08C"},
     {"source": "Warm", "target": "Cold", "value": 1, "fabric":"Polyester","color": "#09A08C"},
-    {"source": "Cold", "target": "Medium-Heat", "value": 1, "fabric":"Polyester","color": "#09A08C"},
-    {"source": "Medium-Heat", "target": "Low-Heat", "value": 1, "fabric":"Polyester","color": "#09A08C"},
+    {"source": "Cold", "target": "Low-Heat", "value": 1, "fabric":"Polyester","color": "#09A08C"},
+    {"source": "Low-Heat", "target": "Medium-Heat", "value": 1, "fabric":"Polyester","color": "#09A08C"},
 
 
     {"source": "Dry-Clean", "target": "Dry-Clean", "value": 1, "fabric":"Rayon","color": "#FFFFFF"},
@@ -34,8 +34,8 @@
 
     {"source": "Hot", "target": "Warm", "value": 1, "fabric":"Spandex","color": "#FF9083"},
     {"source": "Warm", "target": "Cold", "value": 1, "fabric":"Spandex","color": "#FF9083"},
-    {"source": "Cold", "target": "Low-Heat", "value": 1, "fabric":"Spandex","color": "#FF9083"},
-    {"source": "Low-Heat", "target": "Air-Dry", "value": 1, "fabric":"Spandex","color": "#FF9083"},
+    {"source": "Cold", "target": "Air-Dry", "value": 1, "fabric":"Spandex","color": "#FF9083"},
+    {"source": "Air-Dry", "target": "Low-Heat", "value": 1, "fabric":"Spandex","color": "#FF9083"},
 
     {"source": "Cold", "target": "Hand-Wash", "value": 1, "fabric":"Wools","color": "#FAC83C"},
     {"source": "Hand-Wash", "target": "Air-Dry", "value": 1, "fabric":"Wools","color": "#FAC83C"}

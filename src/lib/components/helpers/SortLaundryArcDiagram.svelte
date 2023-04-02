@@ -8,7 +8,6 @@
   /**
    * @type {any}
    */
-  let links;
   $: scrollIndex = index;
 
   import data from "$lib/data/sortLaundryByFabric.json";
@@ -28,21 +27,11 @@
    * @type {any}
    */
   let svg;
-  // import data from "$lib/data/testdata.json";
-
   const margin = { top: 20, right: 30, bottom: 50, left: 30 };
   const width = 1000 - margin.left - margin.right;
   const height = 500 - margin.top - margin.bottom;
 
-  /**
-   * @type {number}
-   */
-
-  // let data;
-
   onMount(async () => {
-    // data = await d3.json("$lib/data/testdata.json");
-
     const allNodes = data.nodes.map((d) => d.name);
     const fabricType = data.links.map((d) => d.fabric);
     const fabricArray = fabricType.filter(
@@ -152,22 +141,6 @@
       .style("stroke-width", 2)
       .attr("visibility", "visible");
 
-    // nodes.on("mouseover", function (event, d) {
-    //   nodes.style("fill", "#B8B8B8");
-    //   d3.select(this).style("fill", "#69b3b2");
-    //   links
-    //     .style("stroke", (a) =>
-    //       a.source === d.name || a.target === d.name ? "#69b3b2" : "#b8b8b8"
-    //     )
-    //     .style("stroke-width", (a) =>
-    //       a.source === d.name || a.target === d.name ? 4 : 1
-    //     );
-    // });
-
-    // nodes.on("mouseout", function (_event, d) {
-    //   nodes.style("fill", "#69b3a2");
-    //   links.style("stroke", "black").style("stroke-width", "1");
-    // });
     console.log(scrollIndex);
   });
 
