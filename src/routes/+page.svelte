@@ -23,13 +23,15 @@
 <ScrollyChapter2_2 />
 <Chapter3 />
 <Footnote />
-<a href="/app">Click here</a>
+
+<!-- <a href="/app">Click here</a> -->
 
 <!-- <div class="for-scroll" /> -->
 <style>
   :global(body) {
     background-color: var(--pl-black);
     transition: background-color 0.3s;
+    width: auto;
   }
   /* .for-scroll {
     height: 2000px;

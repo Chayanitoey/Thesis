@@ -43,6 +43,9 @@
     svg = d3
       .select("#my_dataviz")
       .append("svg")
+      // .attr("preserveAspectRatio", "xMinYMin meet")
+      // .attr("viewBox", "0 0 300 300")
+      // .classed("svg-content", true)
       .attr("width", width + margin.left + margin.right + 100)
       .attr("height", height + margin.top + margin.bottom)
       .append("g")
@@ -212,6 +215,21 @@
   #my_dataviz {
     margin-top: -5vh;
     margin-left: 20vw;
+    max-width: 100vw;
+  }
+  :global(.svg-container) {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    padding-bottom: 100%;
+    vertical-align: top;
+    overflow: hidden;
+  }
+  :global(.svg-content) {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
   }
   :global(text) {
     font-family: var(--pl-serif);

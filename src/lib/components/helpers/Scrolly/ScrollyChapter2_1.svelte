@@ -62,33 +62,36 @@
   >
     <div slot="background">
       <div class="background-content">
-        {#if index < 4}
-          <!-- <p>mock {index}</p> -->
+        <!-- {#if index < 4}
           <img
             src={Sweater}
             alt="A green sweater from COS"
             style="transform: scale({index + 1},{index + 1}"
-          />
-          <!-- {:else if index == 1}
-          <p>Highlighting Cotton {index}</p>
+          /> -->
+        {#if index == 0}
+          <p>Jacket {index}</p>
+        {:else if index == 1}
+          <p>Highlighting fabric composition #1 on Jacket {index}</p>
         {:else if index == 2}
-          <p>Highlighting Nylon {index}</p>
+          <p>Highlighting fabric composition #2 on Jacket {index}</p>
         {:else if index == 3}
-          <p>Highlighting Spandex {index}</p> -->
+          <p>Highlighting fabric composition #3 on Jacket {index}</p>
         {:else if index == 4}
-          <p>Care Label</p>
+          <p>Zooming in to see the Care Label</p>
         {:else if index == 5}
-          <p>Care Label : Fabric Composition</p>
+          <p>Highlighting the Care Label : Fabric Composition</p>
         {:else if index == 6}
-          <p>Care Label : Laundry Care Symbols</p>
+          <p>Highlighting the Care Label : Laundry Care Symbols</p>
         {:else if index == 7}
-          <p>Wash Care Symbols</p>
+          <p>Showing all Wash Care Symbols in US</p>
         {:else if index == 8}
-          <p>Dry Care Symbols</p>
+          <p>Showing all Dry Care Symbols in US</p>
         {:else if index == 9}
-          <p>Iron Care Symbols</p>
+          <p>Showing all Iron Care Symbols in US</p>
         {:else if index == 10}
-          <p>Other Special Care Symbols i.e. Dry Clean and Bleach</p>
+          <p>
+            Showing all Other Special Care Symbols i.e. Dry Clean and Bleach
+          </p>
         {/if}
       </div>
     </div>
@@ -286,7 +289,7 @@
     justify-content: left;
     align-items: left;
     text-align: justify;
-    color: var(--pl-black);
+    color: var(--pl-white);
     padding-bottom: 10px;
     padding-right: 0%;
     padding-left: 0%;

@@ -57,7 +57,7 @@
     <br />
     <b>Sort by color:</b>
   </p>
-  <FabricGroup />
+  <!-- <FabricGroup /> -->
 </div>
 
 <div class="sort_fabric_type">
@@ -190,7 +190,7 @@
     height: 5vh;
     max-width: 56vw;
     margin: auto;
-    margin-top: 10%;
+    margin-top: 30vh;
     justify-content: center;
     align-items: center;
   }

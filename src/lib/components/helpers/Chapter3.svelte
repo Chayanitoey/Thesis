@@ -1,6 +1,7 @@
 <script>
   // @ts-nocheck
   import "$lib/styles/global.css";
+  import icon from "$lib/images/laundry_icon.png";
 </script>
 
 <div class="background-gradient">
@@ -19,7 +20,9 @@
       means that individuals must replace their clothing more frequently,
       resulting in additional expenses for new clothing purchases.
     </p>
-    <div class="ellipse" />
+    <a href="https://app.perfectlaundryday.com/">
+      <img class="ellipse" src={icon} alt="Perfect Laundry Day Icon" />
+    </a>
   </div>
 </div>
 
@@ -82,14 +85,19 @@
     /* max-width: 40vw; */
   }
   .ellipse {
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
+    display: flex;
     width: 344px;
     height: 344px;
-    /* left: 788px;*/
-    top: 465px;
-    border: 1px solid var(--pl-black);
-    border-radius: 50%;
-    margin: auto;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+    margin-top: 10vh;
+    margin-left: auto;
+    margin-right: auto;
+
+    /* border: 1px solid var(--pl-black);
+    border-radius: 50%; */
   }
 
   .background-gradient {
