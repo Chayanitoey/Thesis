@@ -2,10 +2,17 @@
   // @ts-nocheck
 
   import Scroller from "./Scroller.svelte";
+  import { lazyLoad } from "$lib/components/helpers/lazyLoad.js";
   import "$lib/styles/global.css";
   import { fly } from "svelte/transition";
   import { fade } from "svelte/transition";
   import Sweater from "$lib/images/Sweater_desktop.png";
+  import laundrySymbols from "$lib/images/careIcons.png";
+  import laundryicons from "$lib/images/laundryicons.svg";
+  import Blazer from "$lib/images/Blazer.svg";
+  import FabricBlazer from "$lib/images/FabricBlazer.svg";
+  import ZoomInLabel from "$lib/images/ZoomInLabel.svg";
+  import Label from "$lib/images/Label.svg";
 
   /**
    * @type {number}
@@ -69,29 +76,68 @@
             style="transform: scale({index + 1},{index + 1}"
           /> -->
         {#if index == 0}
-          <p>Jacket {index}</p>
+          <!-- <p>Jacket {index}</p> -->
+          <p>
+            <img use:lazyLoad={Blazer} alt="Blazer" style="width:40vw;" />
+          </p>
         {:else if index == 1}
-          <p>Highlighting fabric composition #1 on Jacket {index}</p>
-        {:else if index == 2}
+          <p>
+            <img
+              use:lazyLoad={FabricBlazer}
+              alt="showing fabric compositions of this blazer"
+              style="width:40vw;"
+            />
+          </p>
+          <!-- {:else if index == 2}
           <p>Highlighting fabric composition #2 on Jacket {index}</p>
         {:else if index == 3}
-          <p>Highlighting fabric composition #3 on Jacket {index}</p>
+          <p>Highlighting fabric composition #3 on Jacket {index}</p> -->
+          <!-- {:else if index == 2}
+          <p>
+            <img
+              use:lazyLoad={ZoomInLabel}
+              alt="showing fabric compositions of this blazer"
+              style="width:40vw;"
+            />
+          </p> -->
+        {:else if index >= 2 && index <= 3}
+          <p>
+            <img
+              use:lazyLoad={ZoomInLabel}
+              alt="highlighting the fabric composition"
+              style="transform: scale({(index / 2) *
+                (index / 2) *
+                (index / 2)},{(index / 2) *
+                (index / 2) *
+                (index / 2)}; width:40vw;"
+            />
+          </p>
+        {:else if index == 3}
+          <p>
+            <img
+              src={Label}
+              alt="highlighting the label"
+              style="transition: all 1s ease-in;z-index:1000; "
+            />
+          </p>
         {:else if index == 4}
-          <p>Zooming in to see the Care Label</p>
+          <p>Highlighting the Care Label : Icons</p>
         {:else if index == 5}
-          <p>Highlighting the Care Label : Fabric Composition</p>
-        {:else if index == 6}
-          <p>Highlighting the Care Label : Laundry Care Symbols</p>
-        {:else if index == 7}
-          <p>Showing all Wash Care Symbols in US</p>
+          <p>
+            <img
+              use:lazyLoad={laundryicons}
+              alt="care symbols in the us"
+              style="width:50vw;"
+            />
+          </p>
         {:else if index == 8}
-          <p>Showing all Dry Care Symbols in US</p>
-        {:else if index == 9}
+          <p>Showing all care symbols from US, Europe, Japan</p>
+          <!-- {:else if index == 9}
           <p>Showing all Iron Care Symbols in US</p>
         {:else if index == 10}
           <p>
             Showing all Other Special Care Symbols i.e. Dry Clean and Bleach
-          </p>
+          </p> -->
         {/if}
       </div>
     </div>
@@ -100,113 +146,106 @@
         <div class="left-align-text">
           <h2>Learning The Care Label</h2>
           <p class="p-left">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vitae
-            tortor efficitur, porttitor nibh id, suscipit ex. Fusce massa leo,
-            mattis non bibendum sed, porttitor vitae neque. <br />
-            <li>Showing the jacket total</li>
+            When it comes to proper garment care, it all begins with correctly
+            reading the care label. Fortunately, US brands and manufacturers are
+            required to include a care tag on their items, making it easier for
+            consumers to know how to care for their garments. For example,
+            imagine you've just purchased a brand new puffer jacket...
+            <br />
           </p>
         </div>
       </section>
       <section>
         <div class="left-align-text">
           <p class="p-left">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vitae
-            tortor efficitur, porttitor nibh id, suscipit ex. Fusce massa leo,
-            mattis non bibendum sed, porttitor vitae neque.<br />
-            <li>Highlighting just Cotton</li>
+            Clothes are more often made of several fabric compositions. This
+            jacket has 49% cottons on its exterior.
+          </p>
+        </div>
+      </section>
+      <!-- <section>
+        <div class="left-align-text">
+          <p class="p-left">And it has 100% nylon on its interior.</p>
+        </div>
+      </section>
+      <section>
+        <div class="left-align-text">
+          <p class="p-left">
+            But it also has spandex on the trim and possibly on the parts that
+            are hard to notice.
+          </p>
+        </div>
+      </section> -->
+      <section>
+        <div class="left-align-text">
+          <p class="p-left">
+            When it comes to caring for a garment like a puffer jacket, it can
+            be difficult to determine the best cleaning method.
+            <br />
+            <br />
+            That's where the care label comes in - it's an essential tool for understanding
+            how to properly care for your clothing. In fact, you'll almost always
+            find the care label on the bottom left of a jacket, here is a *guide*
+            available to help you locate it.
           </p>
         </div>
       </section>
       <section>
         <div class="left-align-text">
           <p class="p-left">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vitae
-            tortor efficitur, porttitor nibh id, suscipit ex. Fusce massa leo,
-            mattis non bibendum sed, porttitor vitae neque. <br />
-            <li>Highlighting just Nylon</li>
+            In accordance with official environmental policy mandates, all US
+            brands are now required to provide information about the fabric
+            compositions of their products. This information not only makes
+            textile recycling easier but can also be used as a valuable care
+            guide when other care instructions are not readily available.
           </p>
         </div>
       </section>
       <section>
         <div class="left-align-text">
           <p class="p-left">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vitae
-            tortor efficitur, porttitor nibh id, suscipit ex. Fusce massa leo,
-            mattis non bibendum sed, porttitor vitae neque.<br />
-            <li>Highlighting just Spandex</li>
+            If you’re unlucky, care symbols might the only guide you have for
+            the laundry instructions. In this case, the left icon indicates a
+            30°C wash, the middle icon means "no tumble dry," and the right
+            icons signify "no bleach."
           </p>
         </div>
       </section>
       <section>
         <div class="left-align-text">
           <p class="p-left">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vitae
-            tortor efficitur, porttitor nibh id, suscipit ex. Fusce massa leo,
-            mattis non bibendum sed, porttitor vitae neque.<br />
-            <li>Zooming in the care label</li>
+            It's easy to feel confused by these symbols, especially given that
+            there are a total of x icons in the US system alone, and y care
+            icons that are commonly used by international brands in Japan or
+            Europe.
+          </p>
+        </div>
+      </section>
+      <section>
+        <div class="left-align-text">
+          <p class="p-left">Here is the table for learning those labels</p>
+        </div>
+      </section>
+      <!-- <section>
+        <div class="left-align-text">
+          <p class="p-left">
+            Iron symbols are possibly the most intuitive ones as it is in a form
+            of a literal iron, it has about x variations in the US care symbol
+            system.
           </p>
         </div>
       </section>
       <section>
         <div class="left-align-text">
           <p class="p-left">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vitae
-            tortor efficitur, porttitor nibh id, suscipit ex. Fusce massa leo,
-            mattis non bibendum sed, porttitor vitae neque.<br />
-            <li>Highlighting the textile description</li>
+            It's also worth knowing about a few other care symbols. For example,
+            a triangle icon usually indicates that bleaching is possible, while
+            a circular icon typically means that the item should be dry-cleaned.
+            By familiarizing yourself with these symbols, you'll be able to
+            confidently care for your clothes and avoid any accidental damage.
           </p>
         </div>
-      </section>
-      <section>
-        <div class="left-align-text">
-          <p class="p-left">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vitae
-            tortor efficitur, porttitor nibh id, suscipit ex. Fusce massa leo,
-            mattis non bibendum sed, porttitor vitae neque.<br />
-            <li>Highlighting the Laundry icons</li>
-          </p>
-        </div>
-      </section>
-      <section>
-        <div class="left-align-text">
-          <p class="p-left">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vitae
-            tortor efficitur, porttitor nibh id, suscipit ex. Fusce massa leo,
-            mattis non bibendum sed, porttitor vitae neque.<br />
-            <li>Wash Icons Explaination</li>
-          </p>
-        </div>
-      </section>
-      <section>
-        <div class="left-align-text">
-          <p class="p-left">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vitae
-            tortor efficitur, porttitor nibh id, suscipit ex. Fusce massa leo,
-            mattis non bibendum sed, porttitor vitae neque.<br />
-            <li>Dry Icons Explaination</li>
-          </p>
-        </div>
-      </section>
-      <section>
-        <div class="left-align-text">
-          <p class="p-left">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vitae
-            tortor efficitur, porttitor nibh id, suscipit ex. Fusce massa leo,
-            mattis non bibendum sed, porttitor vitae neque.<br />
-            <li>Iron Icons Explaination</li>
-          </p>
-        </div>
-      </section>
-      <section>
-        <div class="left-align-text">
-          <p class="p-left">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vitae
-            tortor efficitur, porttitor nibh id, suscipit ex. Fusce massa leo,
-            mattis non bibendum sed, porttitor vitae neque.<br />
-            <li>Other Icons Explaination i.e. Dry clean and Bleach</li>
-          </p>
-        </div>
-      </section>
+      </section> -->
     </div>
   </Scroller>
 </div>
@@ -215,9 +254,12 @@
   img {
     display: block;
     width: 100%;
-    transition: transform 0.25s, visibility 0.25s ease-in;
-    /* margin-top: -10vh; */
+    /* transition: transform 0.25s, visibility 0.25s ease-in; */
+    opacity: 0;
+    transition: all 0.25s ease-in;
   }
+  /* margin-top: -10vh; */
+
   .span-line {
     position: absolute;
     width: 60px;
@@ -288,7 +330,7 @@
   .p-left {
     justify-content: left;
     align-items: left;
-    text-align: justify;
+    text-align: left;
     color: var(--pl-white);
     padding-bottom: 10px;
     padding-right: 0%;
@@ -320,7 +362,7 @@
   }
   .left-align-text {
     float: left;
-    max-width: 40vw;
+    max-width: 30vw;
     margin-left: 5vw;
     margin-top: 5vw;
   }

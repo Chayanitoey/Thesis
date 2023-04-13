@@ -45,10 +45,9 @@
     individuals must replace their clothing more frequently, resulting in
     additional expenses for new clothing purchases.
   </p>
-  <p style="margin-top:8vh;text-align:center;font-weight:600;">
+  <!-- <p style="margin-top:8vh;text-align:center;font-weight:600;">
     Here are some common reasons why garments have been discarded...
-    <!-- <strong>{index + 1}/{count}</strong> -->
-  </p>
+  </p> -->
 </div>
 
 <div class="scrollyGraphic" in:fly={{ y: 150, duration: 1000 }}>
@@ -68,8 +67,6 @@
           <div class="transition" in:fade={{ duration: 1000 }}>
             <Chart1 bind:index />
           </div>
-
-          <!-- <progress value={count ? (index + 1) / count : 0} /> -->
         </div>
         <!-- {:else if index == 1} -->
         <!-- <div class="intro-text">
@@ -132,34 +129,27 @@
     </div>
 
     <div slot="foreground">
-      <section>
-        <!-- <div class="step">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum atque
-          maxime porro voluptatem impedit ex dicta modi iusto ipsam odit
-          accusamus ad hic nemo expedita debitis, repellendus eius cum! Numquam!
-        </div> -->
-      </section>
+      <section />
       <section>
         <div class="step">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum atque
-          maxime porro voluptatem impedit ex dicta modi iusto ipsam odit
-          accusamus ad hic nemo expedita debitis, repellendus eius cum! Numquam!
+          One of the primary reasons why individuals discard their garments is
+          due to damaged materials, according to the research by <a
+            href="http://mistrafuturefashion.com">MMF</a
+          >, mister future fashion research institute.
         </div>
       </section>
       <section>
         <div class="step">
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi fugiat
-          possimus repudiandae blanditiis temporibus. Assumenda, itaque in! Illo
-          est, dolorem repellendus rerum quisquam suscipit facilis vel ut
-          tempore magnam? Dolores!
+          The research paper has also shown that individuals can prevent damage
+          to their clothing's materials by following proper care methods and
+          becoming knowledgeable about the garment care process.
         </div>
       </section>
-      <section>
+      <section style="margin-top:60vh;">
         <div class="step">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat
-          soluta, consequatur sunt facilis illo error suscipit rem rerum sint
-          doloribus praesentium similique et? Fuga illum est ipsum accusantium
-          necessitatibus alias?
+          By taking the simple steps in caring, individuals can extend the life
+          of their clothing and reduce the amount of textile waste that ends up
+          in landfills and prolong garment life-cycle.
         </div>
       </section>
     </div>
@@ -241,7 +231,7 @@
     font-size: 16px;
     padding-top: 10vh;
     /* this works only for 1920 screen width needs to do break views*/
-    margin-top: -8vh;
+    margin-top: -20vh;
   }
 
   .background-content {

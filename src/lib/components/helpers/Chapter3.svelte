@@ -13,12 +13,13 @@
     </h3>
     <h1>Time To Do Laundry</h1>
     <p>
-      One of the most common ways that mishandling laundry can result in
-      economic loss is through the premature deterioration of clothing. When
-      garments are not washed or dried properly, the fabric can become worn,
-      faded, or stretched, leading to a shorter lifespan for the garment. This
-      means that individuals must replace their clothing more frequently,
-      resulting in additional expenses for new clothing purchases.
+      Remembering the laundry symbols and sorting clothes by fabric or color can
+      be a challenge. That's where the <span style="font-family:var(--pl-serif)"
+        >Perfect Laundry App</span
+      > comes in - it takes care of the sorting and gives you personalized advice
+      on how to care for your garments. Although the app is still in the testing/beta
+      phase, it promises to simplify your laundry routine and keep your clothes looking
+      great. If you have any questions or feedback, don't hesitate to reach out!
     </p>
     <a href="https://app.perfectlaundryday.com/">
       <img class="ellipse" src={icon} alt="Perfect Laundry Day Icon" />

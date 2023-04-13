@@ -41,7 +41,7 @@
     bind:progress
   >
     <div slot="background">
-      <img src={Image} alt="Loading..." />
+      <!-- <img src={Image} alt="Loading..." /> -->
       <div class="background-content">
         {#if index == 0}
           <div class="intro-text" in:fly={{ y: 150, duration: 1000 }}>

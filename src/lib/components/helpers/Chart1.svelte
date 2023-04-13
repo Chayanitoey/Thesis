@@ -138,7 +138,7 @@
   </div> -->
   <h2>Common reasons why garments are discarded</h2>
   <div class="chart">
-    <div id="rectangle" />
+    <!-- <div id="rectangle" /> -->
     <Pancake.Chart x1={0} x2={max} y1={0} y2={1}>
       {#each stacks as stack, i}
         {#each stack.values as d}
