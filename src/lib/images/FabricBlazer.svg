@@ -8,8 +8,8 @@
 
       .cls-3 {
         fill: #fff;
-        font-family: Marcellus-Regular, Marcellus;
-        font-size: 24px;
+        font-family: var(--pl-serif);
+        font-size: 30px;
       }
 
       .cls-4 {

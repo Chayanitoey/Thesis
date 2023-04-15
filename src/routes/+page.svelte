@@ -4,6 +4,7 @@
   import Scrollyintro from "$lib/components/helpers/Scrolly/Scrollyintro.svelte";
   import ScrollyChapter1 from "$lib/components/helpers/Scrolly/ScrollyChapter1.svelte";
   import ScrollyChapter2_1 from "$lib/components/helpers/Scrolly/ScrollyChapter2_1.svelte";
+  import LaundryIconsTable from "$lib/components/helpers/LaundryIconsTable.svelte";
   import ScrollyChapter2_2 from "$lib/components/helpers/Scrolly/ScrollyChapter2_2.svelte";
   import Chapter3 from "$lib/components/helpers/Chapter3.svelte";
   import Footnote from "$lib/components/helpers/Footnote.svelte";
@@ -20,6 +21,7 @@
 <ScrollyChapter1 />
 <ScrollyFacts />
 <ScrollyChapter2_1 />
+<LaundryIconsTable />
 <ScrollyChapter2_2 />
 <Chapter3 />
 <Footnote />

@@ -1,0 +1,67 @@
+unique_id,icon_type,icon_name,icon_instruction,svg_name
+1,Wash,Washing,Washing Symbol,Wash.svg
+2,Wash,Do not wash,Do not wash,Do_not_wash.svg
+3,Wash,Machine Wash - Permanent Press,Machine Wash Permanent Press,Wash_permanent_press.svg
+4,Wash,Machine Wash - Gentle Cycle,Machine Wash Gentle Cycle,Wash_gentle_cycle.svg
+5,Wash,Wash 95,Wash at 95 Celcius or below ,Wash_dots_95.svg
+6,Wash,Handwash,Handwash only,Handwash.svg
+7,Wash,Wring,Wring,Wring.svg
+8,Wash,Do not wring,Do not wring,Do_not_wring.svg
+9,Wash,Wash 30,Wash at 30 Celcius or below ,Wash_30.svg
+10,Wash,Wash 40,Wash at 40 Celcius or below ,Wash_40.svg
+11,Wash,Wash 50,Wash at 50 Celcius or below ,Wash_50.svg
+12,Wash,Wash 60,Wash at 60 Celcius or below ,Wash_60.svg
+13,Wash,Wash 70,Wash at 70 Celcius or below ,Wash_70.svg
+14,Wash,Wash 95,Wash at 95 Celcius or below ,Wash_95.svg
+15,Wash,Wash 30,Wash at 30 Celcius or below ,Wash_dots_30.svg
+16,Wash,Wash 40,Wash at 40 Celcius or below ,Wash_dots_40.svg
+17,Wash,Wash 50,Wash at 50 Celcius or below ,Wash_dots_50.svg
+18,Wash,Wash 60,Wash at 60 Celcius or below ,Wash_dots_60.svg
+19,Wash,Wash 70,Wash at 70 Celcius or below ,Wash_dots_70.svg
+20,Dry,Natural Dry,Natural dry,Natural _dry.svg
+21,Dry,Do not dry,Do not dry,Do_not_dry.svg
+22,Dry,Line dry,Line dry,Line_dry.svg
+23,Dry,Dry flat,Dry flat,Dry_flat.svg
+24,Dry,Drip dry,Drip dry,Drip_dry.svg
+25,Dry,Shade dry,Shade dry,Shade_dry.svg
+26,Dry,Line dry in shade,Line dry in shade,Line_dry_shade.svg
+27,Dry,Dry flat in shade,Dry flat in shade,Dry_flat_shade.svg
+28,Dry,Drip dry in shade,Drip dry in shade,Drip_dry_shade.svg
+29,Dry,"Tumble dry, normal","Tumble dry, normal",Tumble_dry_normal.svg
+30,Dry,"Tumble dry, low heat","Tumble dry, low heat",Tumble_dry_low_heat.svg
+31,Dry,"Tumble dry, medium heat","Tumble dry, medium heat",Tumble_dry_medium_heat.svg
+32,Dry,Tumble dry high heat,Tumble dry high heat,Tumble_dry_high_heat.svg
+33,Dry,"Tumble dry, no heat","Tumble dry, no heat",Tumble_dry_no_heat.svg
+34,Dry,"Tumble dry, gentle","Tumble dry, gentle",Tumble_dry_gentle.svg
+35,Dry,"Tumble dry, very gentle","Tumble dry, very gentle",Tumble_dry_very_gentle.svg
+36,Dry,Do not tumble dry,Do not tumble dry,Do_not_tumble_dry.svg
+37,Bleach,Bleach,Bleach,Bleach.svg
+38,Bleach,Do not bleach,Do not bleach,Do_not_blech_1.svg
+39,Bleach,Do not bleach,Do not bleach,Do_not_blech_2.svg
+40,Bleach,Chlorine bleach,Chlorine bleach,Chlorine_bleach.svg
+41,Bleach,Non-chlorine bleach,Non-chlorine bleach,Non_chlorine_bleach_1.svg
+42,Bleach,Non-chlorine bleach,Non-chlorine bleach,Non_chlorine_bleach_2.svg
+43,Dry clean,Dry clean,Dry clean,Dry_clean.svg
+44,Dry clean,Do not dry clean,Do not dry clean,Do_not_dryclean.svg
+45,Dry clean,Wet clean,Wet clean,Wet_clean.svg
+46,Dry clean,Do not wet clean,Do not wet clean,Do_not_wet_clean.svg
+47,Dry clean,"Dry clean, short cycle","Dry clean, short cycle",Dry_clean_short_cycle.svg
+48,Dry clean,"Dry clean, reduced moisture","Dry clean, reduced moisture",Dry_clean_reduced_moisture.svg
+49,Dry clean,"Dry clean, low heat","Dry clean, low heat",Dry_clean_low_heat.svg
+50,Dry clean,"Dry clean, no steam","Dry clean, no steam",Dry_clean_no_stream.svg
+51,Dry clean,Gentle wet clean,Gentle wet clean,Gentle_wet_clean.svg
+52,Dry clean,Very gentle wet clean,Very gentle wet clean,Very_gentle_wet_clean.svg
+53,Dry clean,"Dry clean, any solvent","Dry clean, any solvent",Dryclean_any_solvent.svg
+54,Dry clean,"Dry clean, hydrocarbon solvent only","Dry clean, hydrocarbon solvent only",Dryclean_hydrocarbon.svg
+55,Dry clean,"Dry clean, hydrocarbon solvent only","Gentle dry clean, hydrocarbon solvent only",Gentle_dryclean_hydrocarbon.svg
+56,Dry clean,"Very gentle dry clean, hydrocarbon solvent only","Very gentle dry clean, hydrocarbon solvent only",Very_gentle_dryclean_hydrocarbon.svg
+57,Dry clean,Dry clean with PCE,Dry clean with PCE,Dryclean_PCE.svg
+58,Dry clean,Gentle dry clean with PCE,Gentle dry clean with PCE,Gentle_dryclean_PCE.svg
+59,Dry clean,Very gentle dry clean with PCE,Very gentle dry clean with PCE,Very_gentle_dryclean_PCE.svg
+60,Iron,Iron,Iron,Iron.svg
+61,Iron,Do not iron,Do not iron,Do_not_iron.svg
+62,Iron,Iron at low temperature,Iron at low temperature,Iron_low_temp.svg
+63,Iron,Iron at medium temperature,Iron at medium temperature,Iron_medium_temp.svg
+64,Iron,Iron at high temperature,Iron at high temperature,Iron_high_temp.svg
+65,Iron,Steam,Steam,Steam.svg
+66,Iron,Do not steam,Do not steam,Do_not_steam.svg

@@ -2,6 +2,10 @@
 <svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 629 808.43">
   <defs>
     <style>
+    .highlight-symbols{
+      fill: rgba(255, 246, 155, 1); 
+      transition-delay: all 200s ease-out;
+}
       .cls-1 {
         letter-spacing: -.01em;
       }
@@ -27,7 +31,7 @@
       }
 
       .cls-6, .cls-7 {
-        font-family: LabGrotIns-Medium, 'Lab Grot Ins';
+        font-family: var(--pl-serif);
         font-weight: 500;
       }
 
@@ -103,10 +107,10 @@
       <rect class="cls-15" x=".5" y=".5" width="628" height="807.43"/>
       <g>
         <text class="cls-6" transform="translate(197.96 110.4)"><tspan class="cls-4" x="0" y="0">C</tspan><tspan x="32.88" y="0">a</tspan><tspan class="cls-11" x="59.13" y="0">r</tspan><tspan x="76.18" y="0">e </tspan><tspan class="cls-14" x="113.23" y="0">L</tspan><tspan x="140.59" y="0">a</tspan><tspan class="cls-19" x="166.85" y="0">b</tspan><tspan x="195.31" y="0">el</tspan></text>
-        <text class="cls-7" transform="translate(222.7 169.4)"><tspan x="0" y="0">Jac</tspan><tspan class="cls-3" x="45.93" y="0">k</tspan><tspan class="cls-12" x="61.17" y="0">e</tspan><tspan x="77.46" y="0">t</tspan><tspan class="cls-2" x="88.65" y="0"> </tspan><tspan class="cls-13" x="94.74" y="0">A</tspan><tspan class="cls-16" x="114.45" y="0">t</tspan><tspan x="125.16" y="0">elier</tspan></text>
+        <text class="cls-7" transform="translate(222.7 169.4)"><tspan x="0" y="0">Jacket</tspan><tspan class="cls-13" x="94.74" y="0">Atelier</tspan></text>
       </g>
-      <text class="cls-7" transform="translate(227.56 696.4)"><tspan x="0" y="0">Made In </tspan><tspan class="cls-18" x="116.01" y="0">I</tspan><tspan class="cls-9" x="124.26" y="0">t</tspan><tspan x="135.51" y="0">al</tspan><tspan class="cls-1" x="159.06" y="0">y</tspan></text>
-      <text class="cls-7" transform="translate(155.11 602.35)"><tspan class="cls-8" x="0" y="0">W</tspan><tspan class="cls-21" x="27.78" y="0">ash </tspan><tspan class="cls-5" x="82.53" y="0">C</tspan><tspan x="102.87" y="0">old or D</tspan><tspan class="cls-10" x="208.47" y="0">r</tspan><tspan class="cls-22" x="220.47" y="0">y</tspan><tspan class="cls-20" x="235.29" y="0" xml:space="preserve"> Cl</tspan><tspan class="cls-17" x="269.34" y="0">e</tspan><tspan x="285.57" y="0">an</tspan></text>
+      <text class="cls-7" transform="translate(227.56 696.4)"><tspan x="0" y="0">Made In </tspan><tspan class="cls-18" x="116.01" y="0">Italy</tspan></text>
+      <rect class="highlight-symbols" x="81" y="260" width="470" height="100"/>
       <g>
         <path d="m169.47,464.73c0,3.6-2.7,7.05-7.56,7.05s-7.74-3.36-7.74-8.19c0-4.53,2.64-8.13,6.12-11.43l1.35-1.26h4.5v.06l-3.36,3.06c-2.1,1.89-3.6,3.69-4.47,5.37,1.05-.96,2.49-1.5,4.35-1.5,4.11,0,6.81,3.15,6.81,6.84Zm-3.39.06c0-2.34-1.56-4.08-4.11-4.08s-4.35,1.74-4.35,4.08,1.74,4.08,4.32,4.08,4.14-1.74,4.14-4.08Z"/>
         <path d="m187.56,465.63c0,3.48-2.85,6.15-7.83,6.15s-7.86-2.67-7.86-6.15c0-2.52,1.38-4.41,3.75-5.4-1.71-.87-2.76-2.4-2.76-4.44,0-3.18,2.73-5.4,6.87-5.4s6.84,2.22,6.84,5.4c0,2.04-1.05,3.57-2.73,4.44,2.34.99,3.72,2.88,3.72,5.4Zm-3.45-.24c0-2.13-1.56-3.75-4.38-3.75s-4.41,1.62-4.41,3.75c0,1.98,1.59,3.6,4.41,3.6s4.38-1.62,4.38-3.6Zm-7.98-9.42c0,1.77,1.41,3.03,3.6,3.03s3.6-1.26,3.6-3.03-1.38-2.94-3.6-2.94-3.6,1.23-3.6,2.94Z"/>

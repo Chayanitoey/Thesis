@@ -6,6 +6,8 @@
   import "$lib/styles/global.css";
   import { fly } from "svelte/transition";
   import { fade } from "svelte/transition";
+  import { quintOut } from "svelte/easing";
+
   import Sweater from "$lib/images/Sweater_desktop.png";
   import laundrySymbols from "$lib/images/careIcons.png";
   import laundryicons from "$lib/images/laundryicons.svg";
@@ -76,7 +78,6 @@
             style="transform: scale({index + 1},{index + 1}"
           /> -->
         {#if index == 0}
-          <!-- <p>Jacket {index}</p> -->
           <p>
             <img use:lazyLoad={Blazer} alt="Blazer" style="width:40vw;" />
           </p>
@@ -88,46 +89,38 @@
               style="width:40vw;"
             />
           </p>
-          <!-- {:else if index == 2}
-          <p>Highlighting fabric composition #2 on Jacket {index}</p>
-        {:else if index == 3}
-          <p>Highlighting fabric composition #3 on Jacket {index}</p> -->
-          <!-- {:else if index == 2}
-          <p>
-            <img
-              use:lazyLoad={ZoomInLabel}
-              alt="showing fabric compositions of this blazer"
-              style="width:40vw;"
-            />
-          </p> -->
         {:else if index >= 2 && index <= 3}
           <p>
             <img
               use:lazyLoad={ZoomInLabel}
               alt="highlighting the fabric composition"
-              style="transform: scale({(index / 2) *
+              id="image-{index}"
+              style="transform: 
+              scale({(index / 2) * (index / 2) * (index / 2) * (index / 2)}
+                ,{(index / 2) *
                 (index / 2) *
-                (index / 2)},{(index / 2) *
                 (index / 2) *
                 (index / 2)}; width:40vw;"
             />
           </p>
-        {:else if index == 3}
+        {:else if index == 4}
           <p>
             <img
-              src={Label}
-              alt="highlighting the label"
-              style="transition: all 1s ease-in;z-index:1000; "
+              use:lazyLoad={Label}
+              alt="showing fabric compositions of this blazer"
+              style="width:30vw;margin-top:10vh;margin-right:10vw;"
             />
           </p>
-        {:else if index == 4}
-          <p>Highlighting the Care Label : Icons</p>
+          <!-- <div
+            in:fade={{ delay: 450 }}
+            style="position:absolute; background-color: rgba(255, 246, 155, 0.6); width:24vw; height:6vh;margin-top:-42vh; margin-left:7vw; "
+          /> -->
         {:else if index == 5}
           <p>
             <img
               use:lazyLoad={laundryicons}
               alt="care symbols in the us"
-              style="width:50vw;"
+              style="width:40vw;"
             />
           </p>
         {:else if index == 8}
@@ -163,19 +156,6 @@
           </p>
         </div>
       </section>
-      <!-- <section>
-        <div class="left-align-text">
-          <p class="p-left">And it has 100% nylon on its interior.</p>
-        </div>
-      </section>
-      <section>
-        <div class="left-align-text">
-          <p class="p-left">
-            But it also has spandex on the trim and possibly on the parts that
-            are hard to notice.
-          </p>
-        </div>
-      </section> -->
       <section>
         <div class="left-align-text">
           <p class="p-left">
@@ -206,8 +186,12 @@
           <p class="p-left">
             If you’re unlucky, care symbols might the only guide you have for
             the laundry instructions. In this case, the left icon indicates a
-            30°C wash, the middle icon means "no tumble dry," and the right
-            icons signify "no bleach."
+            <span
+              style="background-color: rgba(255, 246, 155,1); color: var(--pl-black); padding-left: 3px; padding-right: 3px; font-weight:900;"
+            >
+              30°C wash, the middle icon means "no tumble dry," and the right
+              icons signify "no bleach."</span
+            >
           </p>
         </div>
       </section>
@@ -251,12 +235,22 @@
 </div>
 
 <style>
+  :global(#image-3) {
+    margin-right: 50vw;
+    max-width: 30vw;
+    margin-top: -80vh;
+  }
+  :global(#image-2) {
+    margin-top: -7vh;
+  }
+
   img {
     display: block;
     width: 100%;
     /* transition: transform 0.25s, visibility 0.25s ease-in; */
     opacity: 0;
     transition: all 0.25s ease-in;
+    margin-top: -5vh;
   }
   /* margin-top: -10vh; */
 
@@ -306,6 +300,7 @@
     line-height: 38px;
     letter-spacing: 0.01em;
     color: var(--pl-green);
+    padding-left: 1.5em;
   }
   p {
     font-family: var(--pl-sans);
@@ -317,6 +312,7 @@
     font-style: normal;
     font-size: 16px;
     line-height: 20px;
+    letter-spacing: 2%;
     letter-spacing: 0.01em;
     padding-bottom: 10px;
     padding-right: 10%;
@@ -331,10 +327,11 @@
     justify-content: left;
     align-items: left;
     text-align: left;
+    backdrop-filter: blur(10px);
     color: var(--pl-white);
+    letter-spacing: 2%;
     padding-bottom: 10px;
-    padding-right: 0%;
-    padding-left: 0%;
+    padding: 2em 2em;
   }
   [slot="background"] {
     display: flex;
