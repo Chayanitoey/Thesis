@@ -115,7 +115,7 @@
             in:fade={{ delay: 450 }}
             style="position:absolute; background-color: rgba(255, 246, 155, 0.6); width:24vw; height:6vh;margin-top:-42vh; margin-left:7vw; "
           /> -->
-        {:else if index == 5}
+          <!-- {:else if index == 5}
           <p>
             <img
               use:lazyLoad={laundryicons}
@@ -124,7 +124,7 @@
             />
           </p>
         {:else if index == 8}
-          <p>Showing all care symbols from US, Europe, Japan</p>
+          <p>Showing all care symbols from US, Europe, Japan</p> -->
           <!-- {:else if index == 9}
           <p>Showing all Iron Care Symbols in US</p>
         {:else if index == 10}
@@ -195,7 +195,7 @@
           </p>
         </div>
       </section>
-      <section>
+      <!-- <section>
         <div class="left-align-text">
           <p class="p-left">
             It's easy to feel confused by these symbols, especially given that
@@ -204,12 +204,12 @@
             Europe.
           </p>
         </div>
-      </section>
-      <section>
+      </section> -->
+      <!-- <section>
         <div class="left-align-text">
           <p class="p-left">Here is the table for learning those labels</p>
         </div>
-      </section>
+      </section> -->
       <!-- <section>
         <div class="left-align-text">
           <p class="p-left">
