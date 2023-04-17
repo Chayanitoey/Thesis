@@ -18,7 +18,7 @@ unique_id,icon_type,icon_name,icon_instruction,svg_name
 17,Wash,Wash 50,Wash at 50 Celcius or below ,Wash_dots_50.svg
 18,Wash,Wash 60,Wash at 60 Celcius or below ,Wash_dots_60.svg
 19,Wash,Wash 70,Wash at 70 Celcius or below ,Wash_dots_70.svg
-20,Dry,Natural Dry,Natural dry,Natural _dry.svg
+20,Dry,Natural Dry,Natural dry,Natural_dry.svg
 21,Dry,Do not dry,Do not dry,Do_not_dry.svg
 22,Dry,Line dry,Line dry,Line_dry.svg
 23,Dry,Dry flat,Dry flat,Dry_flat.svg

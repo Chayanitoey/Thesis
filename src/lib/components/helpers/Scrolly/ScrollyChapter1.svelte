@@ -46,9 +46,6 @@
     individuals must replace their clothing more frequently, resulting in
     additional expenses for new clothing purchases.
   </p>
-  <!-- <p style="margin-top:8vh;text-align:center;font-weight:600;">
-    Here are some common reasons why garments have been discarded...
-  </p> -->
 </div>
 
 <div class="chart-1">
@@ -76,12 +73,20 @@
     </div>
 
     <div slot="foreground">
-      <section style="margin-top:-70vh;margin-bottom:10vh;">
+      <section style="margin-top:-60vh;margin-bottom:30vh;">
         <div class="step-1">
-          One of the primary reasons why individuals discard their garments is
-          due to damaged materials, according to the research by <a
-            href="http://mistrafuturefashion.com">MMF</a
-          >, mister future fashion research institute.
+          The data below are from 1960 to 2018, relating to the total number of
+          tons of textiles generated, recycled, composted, combusted with energy
+          recovery and landfilled.
+          <br />
+          <span style="paddng-top:2;font-size:0.6rem; color:var(--pl-grey);">
+            Source: <a
+              href="https://www.epa.gov/facts-and-figures-about-materials-waste-and-recycling/textiles-material-specific-data"
+              >American Apparel and Footwear Association, International Trade
+              Commission, the U.S. Department of Commerce's Office of Textiles
+              and Apparel, and the Council for Textile Recycling.</a
+            ></span
+          >
         </div>
       </section>
       <section>
@@ -111,18 +116,6 @@
 </div>
 
 <style>
-  /* .sticky-head{
-		position: -webkit-sticky;
-  		position: sticky;
-		z-index: 9;
-		padding-top: 5vh;
-		top:10px;
-		background-color: var(--pl-black);
-	} */
-  /* .chapter {
-    position: relative;
-    width: 300px;
-  } */
   .span-line {
     position: absolute;
     width: 60px;
@@ -141,7 +134,7 @@
     align-items: center;
     justify-content: center;
     width: 56vw;
-    margin-top: 30vh;
+    /* margin-top: 30vh; */
   }
   .chart-1 {
     margin: auto;
@@ -199,8 +192,6 @@
     height: 100vh;
     font-size: 16px;
     padding-top: 10vh;
-    /* this works only for 1920 screen width needs to do break views*/
-    margin-top: -20vh;
   }
 
   .background-content {
@@ -209,9 +200,9 @@
     border-bottom: 2px solid var(--blue3);
     font-size: 1.4em;
     overflow: hidden;
-    padding: 1em 4em;
+    padding: 1em 1em;
     /* this works only for 1920 screen width needs to do break views*/
-    margin-top: 0vh;
+    margin-top: -20vh;
   }
 
   [slot="foreground"] {
@@ -225,7 +216,7 @@
     font-size: 16px;
     box-sizing: border-box;
     padding: 2em 2em;
-    background-color: var(--pl-black);
+    /* background-color: var(--pl-black); */
     color: var(--pl-white);
     backdrop-filter: blur(10px);
     border-radius: 1em;
@@ -239,14 +230,14 @@
     font-size: 16px;
     box-sizing: border-box;
     padding: 2em 2em;
-    background-color: var(--pl-black);
+    /* background-color: var(--pl-black); */
     color: var(--pl-white);
     backdrop-filter: blur(10px);
     /* border-radius: 1em;
     border: 1px solid #333; */
     pointer-events: auto;
     max-width: 50vw;
-    margin: auto;
+    /* margin-top: -10vh; */
     font-family: var(--pl-sans);
   }
 
@@ -271,5 +262,11 @@
   } */
   .scrollyGraphic {
     margin-top: -5%;
+  }
+  a {
+    color: var(--pl-white);
+  }
+  a:hover {
+    color: var(--pl-green);
   }
 </style>
