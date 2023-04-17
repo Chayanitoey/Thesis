@@ -8,6 +8,7 @@
   import { onMount } from "svelte";
   import * as d3 from "d3";
   import Chart1 from "$lib/components/helpers/Chart1.svelte";
+  import AreaChart from "$lib/components/helpers/AreaChart.svelte";
 
   /**
    * @type {number}
@@ -50,6 +51,12 @@
   </p> -->
 </div>
 
+<div class="chart-1">
+  <div class="transition" in:fade={{ duration: 1000 }}>
+    <Chart1 />
+  </div>
+</div>
+
 <div class="scrollyGraphic" in:fly={{ y: 150, duration: 1000 }}>
   <Scroller
     {top}
@@ -62,74 +69,21 @@
   >
     <div slot="background">
       <div class="background-content">
-        <!-- {#if index == 0} -->
-        <div class="intro-text">
-          <div class="transition" in:fade={{ duration: 1000 }}>
-            <Chart1 bind:index />
-          </div>
+        <div class="chart">
+          <AreaChart bind:index />
         </div>
-        <!-- {:else if index == 1} -->
-        <!-- <div class="intro-text">
-            <h3>
-              <span class="span-line" style="margin-left:-80px;" />
-              CHAPTER I
-              <span class="span-line" style="margin-left:15px;" />
-            </h3>
-
-            <h1>The Environmental Impact</h1>
-            <div class="transition" in:fade={{ duration: 1000 }}>
-              <p>
-                Mishandling laundry can also contribute to waste generation.
-                When clothing is not properly cared for, it may become damaged,
-                stained, or ill-fitting, leading individuals to dispose of the
-                garment and purchase a replacement. This not only creates
-                additional waste but also contributes to the consumption of
-                resources needed to produce new clothing.
-              </p>
-              <p style="margin-top:8vh;text-align:center;font-weight:600;">
-                ... then they end up here
-              </p>
-              <Chart1 bind:index />
-            </div>
-          </div> -->
-        <!-- {:else if index == 2} -->
-        <!-- <div class="intro-text">
-            <h3>
-              <span class="span-line" style="margin-left:-80px;" />
-              CHAPTER I
-              <span class="span-line" style="margin-left:15px;" />
-            </h3>
-            <h1>The Environmental Impact</h1>
-            <div class="transition" in:fade={{ duration: 1000 }}>
-              <p>
-                It is clear that mishandling laundry has a significant impact on
-                sustainability and the environment. To reduce these negative
-                effects, individuals must learn proper laundry techniques and
-                take the time to care for their clothing properly. By doing so,
-                we can reduce our carbon footprint, minimize pollution, and
-                promote more sustainable practices in our daily lives.
-              </p>
-              <p style="margin-top:8vh;text-align:center;font-weight:600;">
-                ...which is equal to X amount of CO2 in our atmosphere that
-                leads to Global Warming.
-              </p>
-              <Chart1 bind:index />
-            </div>
-          </div>
-         -->
-        <!-- {/if} -->
-
-        <!-- 
-				<p>offset in current section</p>
-				<progress value={offset || 0} />
-
-				<p>total progress</p>
-				<progress value={progress || 0} /> -->
       </div>
     </div>
 
     <div slot="foreground">
-      <section />
+      <section style="margin-top:-70vh;margin-bottom:10vh;">
+        <div class="step-1">
+          One of the primary reasons why individuals discard their garments is
+          due to damaged materials, according to the research by <a
+            href="http://mistrafuturefashion.com">MMF</a
+          >, mister future fashion research institute.
+        </div>
+      </section>
       <section>
         <div class="step">
           One of the primary reasons why individuals discard their garments is
@@ -181,6 +135,21 @@
     justify-content: center;
     width: 56vw;
     top: 0;
+  }
+  .chart {
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    width: 56vw;
+    margin-top: 30vh;
+  }
+  .chart-1 {
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    width: 65vw;
+    height: 100vh;
+    margin-top: 10vh;
   }
   h1 {
     font-family: var(--pl-serif);
@@ -242,7 +211,7 @@
     overflow: hidden;
     padding: 1em 4em;
     /* this works only for 1920 screen width needs to do break views*/
-    margin-top: -20vh;
+    margin-top: 0vh;
   }
 
   [slot="foreground"] {
@@ -261,6 +230,20 @@
     backdrop-filter: blur(10px);
     border-radius: 1em;
     border: 1px solid #333;
+    pointer-events: auto;
+    max-width: 50vw;
+    margin: auto;
+    font-family: var(--pl-sans);
+  }
+  .step-1 {
+    font-size: 16px;
+    box-sizing: border-box;
+    padding: 2em 2em;
+    background-color: var(--pl-black);
+    color: var(--pl-white);
+    backdrop-filter: blur(10px);
+    /* border-radius: 1em;
+    border: 1px solid #333; */
     pointer-events: auto;
     max-width: 50vw;
     margin: auto;

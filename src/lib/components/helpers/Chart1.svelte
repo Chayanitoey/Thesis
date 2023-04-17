@@ -79,112 +79,39 @@
   const pos = tweened(0, { easing: cubicOut, duration: 800 });
 </script>
 
-{#if index < 2}
-  <h2>Common reasons why garments are discarded</h2>
-  <div class="chart">
-    <Pancake.Chart x1={0} x2={max} y1={0} y2={1}>
-      <!-- <Pancake.Grid horizontal count={1} let:value let:first>
-      <div class="grid-line horizontal">
-      </div>
-    </Pancake.Grid> -->
-      <!-- 
-    <Pancake.Grid vertical count={5} let:value>
-      <div class="grid-line vertical" />
-      <span class="x-label">{value}</span>
-    </Pancake.Grid> -->
+<h2>Common reasons why garments are discarded</h2>
+<div class="chart">
+  <Pancake.Chart x1={0} x2={max} y1={0} y2={1}>
+    <!-- <Pancake.Grid horizontal count={1} let:value let:first>
+    <div class="grid-line horizontal">
+    </div>
+  </Pancake.Grid> -->
+    <!-- 
+  <Pancake.Grid vertical count={5} let:value>
+    <div class="grid-line vertical" />
+    <span class="x-label">{value}</span>
+  </Pancake.Grid> -->
 
-      {#each stacks as stack, i}
-        {#each stack.values as d}
-          <Pancake.Box x1={d.start} x2={d.end} y1={d.i - 1} y2={d.i}>
-            <div
-              class="box"
-              id={reasons[i]}
-              style="background-color: {colorsReasons[
-                i
-              ]}; border-color: {colorsDestinations[i]};"
-            />
-            <span class="label"
-              >{@html reasons[i].split("_").join("&nbsp;")}</span
-            >
-            <span class="numlabel"
-              >{@html (((d.end - d.start) * 100) / 364).toFixed(1)}%</span
-            >
-          </Pancake.Box>
-        {/each}
+    {#each stacks as stack, i}
+      {#each stack.values as d}
+        <Pancake.Box x1={d.start} x2={d.end} y1={d.i - 1} y2={d.i}>
+          <div
+            class="box"
+            id={reasons[i]}
+            style="background-color: {colorsReasons[
+              i
+            ]}; border-color: {colorsDestinations[i]};"
+          />
+          <span class="label">{@html reasons[i].split("_").join("&nbsp;")}</span
+          >
+          <span class="numlabel"
+            >{@html (((d.end - d.start) * 100) / 364).toFixed(1)}%</span
+          >
+        </Pancake.Box>
       {/each}
-    </Pancake.Chart>
-  </div>
-{:else if index == 2}
-  <!-- <h2>How do people dispose garment?</h2>
-  <div class="chart">
-    <Pancake.Chart x1={0} x2={max_1} y1={0} y2={1}>
-      {#each stacks_1 as stack_1, i}
-        {#each stack_1.values as d}
-          <Pancake.Box x1={d.start} x2={d.end} y1={d.i - 1} y2={d.i}>
-            <div
-              class="box"
-              id={destinations[i]}
-              style="background-color: {colorsDestinations[
-                i
-              ]}; border-color: {colorsDestinations[i]};"
-            />
-            <span class="label"
-              >{@html destinations[i].split("_").join("&nbsp;")}</span
-            >
-          </Pancake.Box>
-        {/each}
-      {/each}
-    </Pancake.Chart>
-  </div> -->
-  <h2>Common reasons why garments are discarded</h2>
-  <div class="chart">
-    <!-- <div id="rectangle" /> -->
-    <Pancake.Chart x1={0} x2={max} y1={0} y2={1}>
-      {#each stacks as stack, i}
-        {#each stack.values as d}
-          <Pancake.Box x1={d.start} x2={d.end} y1={d.i - 1} y2={d.i}>
-            <div
-              class="box"
-              id={reasons[i]}
-              style="background-color: {colorsReasons[
-                i
-              ]}; border-color: {colorsDestinations[i]};"
-            />
-            <span class="label"
-              >{@html reasons[i].split("_").join("&nbsp;")}</span
-            >
-            <span class="numlabel"
-              >{@html (((d.end - d.start) * 100) / 364).toFixed(1)}%</span
-            >
-          </Pancake.Box>
-        {/each}
-      {/each}
-    </Pancake.Chart>
-  </div>
-{:else}
-  <h2>Where their final destination is</h2>
-  <div class="chart">
-    <Pancake.Chart x1={0} x2={max_2} y1={0} y2={1}>
-      {#each stacks_2 as stack_2, i}
-        {#each stack_2.values as d}
-          <Pancake.Box x1={d.start} x2={d.end} y1={d.i - 1} y2={d.i}>
-            <div
-              class="box"
-              id={final_destinations[i]}
-              style="background-color: {colorsDestinations[
-                i
-              ]}; border-color: {colorsDestinations[i]};"
-            />
-            <span class="label"
-              >{@html final_destinations[i].split("_").join("&nbsp;")}</span
-            >
-            <span class="numlabel">{@html (d.end - d.start).toFixed(1)}%</span>
-          </Pancake.Box>
-        {/each}
-      {/each}
-    </Pancake.Chart>
-  </div>
-{/if}
+    {/each}
+  </Pancake.Chart>
+</div>
 
 <style>
   #rectangle {
