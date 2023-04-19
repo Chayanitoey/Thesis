@@ -21,7 +21,9 @@
 <ScrollyChapter1 />
 <ScrollyFacts />
 <ScrollyChapter2_1 />
+<div class="line-division" />
 <LaundryIconsTable />
+<div class="line-division-2" />
 <ScrollyChapter2_2 />
 <Chapter3 />
 <Footnote />
@@ -38,4 +40,19 @@
   /* .for-scroll {
     height: 2000px;
   } */
+  .line-division {
+    height: 0.25rem;
+    background: var(--pl-white);
+    margin-top: 10vh;
+    margin-bottom: 2vh;
+    margin-right: 10vw;
+    margin-left: 10vw;
+    width: 80vw;
+  }
+  .line-division-2 {
+    margin-top: 10vh;
+    height: 20vh;
+    width: 56vw;
+    padding: 2;
+  }
 </style>

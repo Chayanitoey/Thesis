@@ -13,6 +13,8 @@
   import laundryicons from "$lib/images/laundryicons.svg";
   import Blazer from "$lib/images/Blazer.svg";
   import FabricBlazer from "$lib/images/FabricBlazer.svg";
+  import FabricComponents from "$lib/images/FabricComponents.svg";
+
   import ZoomInLabel from "$lib/images/ZoomInLabel.svg";
   import Label from "$lib/images/Label.svg";
 
@@ -71,24 +73,21 @@
   >
     <div slot="background">
       <div class="background-content">
-        <!-- {#if index < 4}
-          <img
-            src={Sweater}
-            alt="A green sweater from COS"
-            style="transform: scale({index + 1},{index + 1}"
-          /> -->
-        {#if index == 0}
-          <p>
-            <img use:lazyLoad={Blazer} alt="Blazer" style="width:40vw;" />
-          </p>
-        {:else if index == 1}
+        {#if index < 2}
           <p>
             <img
-              use:lazyLoad={FabricBlazer}
-              alt="showing fabric compositions of this blazer"
-              style="width:40vw;"
+              src="https://raw.githubusercontent.com/Chayanitoey/laundry_icons/main/Blazer/Jacket.png"
+              alt="Blazer"
+              style="width:26vw;margin-left:-30vw;z-index:-100;position:absolute;"
             />
           </p>
+          {#if index == 1}
+            <img
+              src="https://raw.githubusercontent.com/Chayanitoey/laundry_icons/main/Blazer/FabricComposition.png"
+              alt="showing fabric compositions of this blazer"
+              style="width:36vw;margin-left:-35.2vw;margin-top:-4.5vh;z-index:100;position:absolute;"
+            />
+          {/if}
         {:else if index >= 2 && index <= 3}
           <p>
             <img
@@ -100,7 +99,10 @@
                 ,{(index / 2) *
                 (index / 2) *
                 (index / 2) *
-                (index / 2)}; width:40vw;"
+                (index / 2)}; width:36vw;z-index:100;position:absolute;
+                 margin-left:{index == 3
+                ? '-70vw'
+                : '-35.2vw'};margin-top:{index == 3 ? '-70vh' : '-12vh'};"
             />
           </p>
         {:else if index == 4}
@@ -108,7 +110,7 @@
             <img
               use:lazyLoad={Label}
               alt="showing fabric compositions of this blazer"
-              style="width:30vw;margin-top:10vh;margin-right:10vw;"
+              style="width:30vw;margin-top:0vh;margin-right:7vw;"
             />
           </p>
           <!-- <div
@@ -136,14 +138,14 @@
     </div>
     <div slot="foreground">
       <section>
-        <div class="left-align-text">
-          <h2>Learning The Care Label</h2>
+        <div class="left-align-text" style="margin-top:20vh;">
+          <h2>The Care Label</h2>
           <p class="p-left">
             When it comes to proper garment care, it all begins with correctly
             reading the care label. Fortunately, US brands and manufacturers are
             required to include a care tag on their items, making it easier for
             consumers to know how to care for their garments. For example,
-            imagine you've just purchased a brand new puffer jacket...
+            imagine you've just purchased a brand new blazer jacket...
             <br />
           </p>
         </div>
@@ -152,7 +154,10 @@
         <div class="left-align-text">
           <p class="p-left">
             Clothes are more often made of several fabric compositions. This
-            jacket has 49% cottons on its exterior.
+            jacket has <span class="emphasis-green">68% wool</span> and
+            <span class="emphasis-blue">32% Viscose</span>
+            on its exterior with <span class="emphasis-red">100% culpro</span>
+            in the interior.
           </p>
         </div>
       </section>
@@ -165,19 +170,21 @@
             <br />
             That's where the care label comes in - it's an essential tool for understanding
             how to properly care for your clothing. In fact, you'll almost always
-            find the care label on the bottom left of a jacket, here is a *guide*
-            available to help you locate it.
+            find the care label on the bottom left of a jacket,
+            <span class="emphasis"
+              >here is a *guide* available to help you locate it.</span
+            >
           </p>
         </div>
       </section>
       <section>
         <div class="left-align-text">
           <p class="p-left">
-            In accordance with official environmental policy mandates, all US
-            brands are now required to provide information about the fabric
-            compositions of their products. This information not only makes
-            textile recycling easier but can also be used as a valuable care
-            guide when other care instructions are not readily available.
+            In accordance with official environmental policy mandates, <span
+              class="emphasis"
+              >all US brands are now required to provide information about the
+              fabric compositions of their products.</span
+            >
           </p>
         </div>
       </section>
@@ -185,12 +192,13 @@
         <div class="left-align-text">
           <p class="p-left">
             If you’re unlucky, care symbols might the only guide you have for
-            the laundry instructions. In this case, the left icon indicates a
+            the laundry instructions. In this case, the icons from left to right
+            mean
             <span
               style="background-color: rgba(255, 246, 155,1); color: var(--pl-black); padding-left: 3px; padding-right: 3px; font-weight:900;"
             >
-              30°C wash, the middle icon means "no tumble dry," and the right
-              icons signify "no bleach."</span
+              "30°C wash, dry clean preferred, no iron, no bleach, dry flat in
+              shade, no bleach."</span
             >
           </p>
         </div>
@@ -248,9 +256,9 @@
     display: block;
     width: 100%;
     /* transition: transform 0.25s, visibility 0.25s ease-in; */
-    opacity: 0;
-    transition: all 0.25s ease-in;
-    margin-top: -5vh;
+    opacity: 1;
+    transition: all 0.25s, visibility 0.25s ease-in;
+    /* margin-top: -5vh; */
   }
   /* margin-top: -10vh; */
 
@@ -393,5 +401,29 @@
 
   [slot="foreground"] section:last-of-type {
     height: 100vh;
+  }
+  .emphasis {
+    background-color: var(--pl-white);
+    color: var(--pl-black);
+    font-weight: 700;
+    padding: 0 2px;
+  }
+  .emphasis-red {
+    background-color: var(--pl-red);
+    color: var(--pl-white);
+    font-weight: 700;
+    padding: 0 2px;
+  }
+  .emphasis-green {
+    background-color: var(--pl-green);
+    color: var(--pl-black);
+    font-weight: 700;
+    padding: 0 2px;
+  }
+  .emphasis-blue {
+    background-color: var(--pl-blue);
+    color: var(--pl-white);
+    font-weight: 700;
+    padding: 0 2px;
   }
 </style>

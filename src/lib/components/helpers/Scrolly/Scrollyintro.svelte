@@ -45,11 +45,11 @@
       <div class="background-content">
         {#if index == 0}
           <div class="intro-text" in:fly={{ y: 150, duration: 1000 }}>
-            <h1>Lost Shape</h1>
+            <h1>Shrinking</h1>
           </div>
         {:else if index == 1}
           <div class="intro-text" in:fly={{ y: 150, duration: 1000 }}>
-            <h1>Discolored</h1>
+            <h1>Discoloring</h1>
           </div>
         {:else if index == 2}
           <div class="intro-text" in:fly={{ y: 150, duration: 1000 }}>
@@ -58,7 +58,7 @@
         {:else if index == 3}
           <div class="intro-text" transition:fade>
             <h1 style="text-decoration: line-through;">
-              Lost Shape, Discolored, Broken
+              Shrinking, Discoloring, Broken
             </h1>
           </div>
           <div class="intro-text" in:fly={{ y: 200, duration: 3000 }}>

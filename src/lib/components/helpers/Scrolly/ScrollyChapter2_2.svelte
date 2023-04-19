@@ -47,11 +47,13 @@
     <!-- Sort by <span style="background-color:var(--pl-blue);">color</span> : -->
     Sorting the laundry has to happen, and it's a good place not to cut corners by
     performing a rush job. Sorting is the time when you can treat and prevent all
-    kinds of problems, so make it a habit to practice your due diligence when sorting.**Credit
-    to
+    kinds of problems, so make it a habit to practice your due diligence when sorting.
+    According to
     <a href="https://www.nytimes.com/guides/smarterliving/how-to-do-laundry"
-      >NYT**</a
+      >NYT</a
     >
+    it's wise to civide your laundry load by colors :
+    <span class="emphasis">white, colors, and pastel.</span>
     <br />
     <br />
     <br />
@@ -86,13 +88,9 @@
   <p>
     <!-- Sort by -->
     <!-- <span style="background-color:var(--pl-blue);">fabric type</span>:  -->
-    Sorting the laundry has to happen, and it's a good place not to cut corners by
-    performing a rush job. Sorting is the time when you can treat and prevent all
-    kinds of problems, so make it a habit to practice your due diligence when sorting.**Credit
-    to
-    <a href="https://www.nytimes.com/guides/smarterliving/how-to-do-laundry"
-      >NYT**</a
-    >
+    When possible, it is also wise to sort your laundry by fabric composition due
+    to widely different characteristics of each fibre, your clothes will need different
+    care methods/ wash settings to maintain quality of the fabric fiber.
     <br />
     <br />
     <br />
@@ -398,5 +396,11 @@
 
   [slot="foreground"] section:last-of-type {
     height: 100vh;
+  }
+  .emphasis {
+    background-color: var(--pl-white);
+    color: var(--pl-black);
+    font-weight: 700;
+    padding: 0 2px;
   }
 </style>

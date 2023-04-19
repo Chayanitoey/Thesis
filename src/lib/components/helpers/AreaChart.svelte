@@ -32,12 +32,12 @@
   const yFormat = ""; // a format specifier string for the y-axis
   const horizontalGrid = true; // show horizontal grid lines
   const verticalGrid = false; // show vertical grid lines
-  const colors = ["green", "red", "blue", "yellow"]; // fill color for dots && number of colors in fill array MUST match number of subsets in data
+  const colors = ["#8BFF7A", "#E01705", "#191CE4", "#F9AF4A"]; // fill color for dots && number of colors in fill array MUST match number of subsets in data
   const showDots = false; // whether dots should be displayed
   const dotsFilled = false; // whether dots should be filled or outlined
   const r = 3; // (fixed) radius of dots, in pixels
   const strokeWidth = 1; // stroke width of line, in pixels
-  const fillOpacity = 0.3; // fill opacity of area
+  const fillOpacity = 0.5; // fill opacity of area
   const tooltipBackground = "black"; // background color of tooltip
   const tooltipTextColor = "white"; // text color of tooltip
   const strokeLinecap = "round"; // stroke line cap of the line
@@ -349,6 +349,16 @@
       />
     {/each}
   </svg>
+  <span
+    style="font-family: var(--pl-sans);font-size:0.7rem; color:var(--pl-grey);"
+  >
+    Source: <a
+      href="https://www.epa.gov/facts-and-figures-about-materials-waste-and-recycling/textiles-material-specific-data"
+      >American Apparel and Footwear Association, International Trade
+      Commission, the U.S. Department of Commerce's Office of Textiles and
+      Apparel, and the Council for Textile Recycling.</a
+    ></span
+  >
 </div>
 
 <!-- Tooltip -->
@@ -418,5 +428,11 @@
     /* box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px,
       rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px,
       rgba(0, 0, 0, 0.09) 0px 32px 16px; */
+  }
+  a {
+    color: var(--pl-white);
+  }
+  a:hover {
+    color: var(--pl-green);
   }
 </style>

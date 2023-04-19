@@ -95,18 +95,21 @@
     {#each stacks as stack, i}
       {#each stack.values as d}
         <Pancake.Box x1={d.start} x2={d.end} y1={d.i - 1} y2={d.i}>
-          <div
-            class="box"
-            id={reasons[i]}
-            style="background-color: {colorsReasons[
-              i
-            ]}; border-color: {colorsDestinations[i]};"
-          />
-          <span class="label">{@html reasons[i].split("_").join("&nbsp;")}</span
-          >
-          <span class="numlabel"
-            >{@html (((d.end - d.start) * 100) / 364).toFixed(1)}%</span
-          >
+          <div class="stack-box">
+            <div
+              class="box"
+              id={reasons[i]}
+              style="background-color: {colorsReasons[
+                i
+              ]}; border-color: {colorsDestinations[i]};"
+            />
+            <span class="label"
+              >{@html reasons[i].split("_").join("&nbsp;")}</span
+            >
+            <span class="numlabel"
+              >{@html (((d.end - d.start) * 100) / 364).toFixed(1)}%</span
+            >
+          </div>
         </Pancake.Box>
       {/each}
     {/each}
@@ -125,7 +128,7 @@
   .chart {
     height: 100px;
     padding: 1em 0 0em 3em;
-    margin: 0 0 36px 0;
+    margin: 0 0 50px 0;
     margin-left: calc(-3em);
   }
   h2 {
@@ -140,22 +143,22 @@
   .label {
     position: absolute;
     left: 0.3em;
-    bottom: -20px;
+    bottom: -25px;
     font-family: var(--pl-sans);
     font-weight: 400;
-    font-size: 0.5em;
-    color: #999;
+    font-size: 0.7em;
+    /* color: #999; */
+    color: var(--pl-white);
     text-align: center;
   }
   .numlabel {
     position: absolute;
     left: 0.3em;
     top: 11em;
-    bottom: -20px;
     font-family: var(--pl-sans);
     font-weight: 400;
-    font-size: 0.5em;
-    color: #999;
+    font-size: 0.7em;
+    color: var(--pl-white);
     text-align: center;
   }
 
@@ -167,8 +170,10 @@
     height: calc(100% - 4px);
     border-radius: 0px;
   }
-  .box:hover {
-    background-color: var(pl-red);
-    border: 10px solid;
+  .stack-box {
+    opacity: 0.6;
+  }
+  .stack-box:hover {
+    opacity: 1;
   }
 </style>

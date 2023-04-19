@@ -37,6 +37,7 @@
         <img
           src="https://raw.githubusercontent.com/Chayanitoey/laundry_icons/main/laundryIcons_svg/{icon.svg_name}"
           alt={icon.icon_name}
+          class="filter-white"
           style="max-width:10vw; max-height:10vh;padding:12%;"
           title="{icon.icon_instruction}
         "
@@ -50,6 +51,7 @@
           src="https://raw.githubusercontent.com/Chayanitoey/laundry_icons/main/laundryIcons_svg/{icon.svg_name}"
           alt={icon.icon_name}
           style="max-width:10vw; max-height:10vh;padding:12%;"
+          class="filter-white"
           title="{icon.icon_instruction}
           "
           use:tooltip
@@ -61,6 +63,7 @@
           src="https://raw.githubusercontent.com/Chayanitoey/laundry_icons/main/laundryIcons_svg/{icon.svg_name}"
           alt={icon.icon_name}
           style="max-width:10vw; max-height:10vh;padding:12%;"
+          class="filter-white"
           title="{icon.icon_instruction}
           "
           use:tooltip
@@ -72,6 +75,7 @@
           src="https://raw.githubusercontent.com/Chayanitoey/laundry_icons/main/laundryIcons_svg/{icon.svg_name}"
           alt={icon.icon_name}
           style="max-width:10vw; max-height:10vh;padding:12%;"
+          class="filter-white"
           title="{icon.icon_instruction}
           "
           use:tooltip
@@ -83,6 +87,7 @@
           src="https://raw.githubusercontent.com/Chayanitoey/laundry_icons/main/laundryIcons_svg/{icon.svg_name}"
           alt={icon.icon_name}
           style="max-width:10vw; max-height:10vh;padding:12%;"
+          class="filter-white"
           title="{icon.icon_instruction}
           "
           use:tooltip
@@ -94,6 +99,7 @@
           src="https://raw.githubusercontent.com/Chayanitoey/laundry_icons/main/laundryIcons_svg/{icon.svg_name}"
           alt={icon.icon_name}
           style="max-width:10vw; max-height:10vh;padding:12%;"
+          class="filter-white"
           title="{icon.icon_instruction}
           "
           use:tooltip
@@ -139,7 +145,7 @@
     margin-left: 10vw;
   }
   .icon-container {
-    background-color: var(--pl-white);
+    /* background-color: var(--pl-white); */
     opacity: 0.7;
     width: 100%;
     height: auto;
@@ -171,5 +177,9 @@
   button:focus {
     background-color: var(--pl-green) !important;
     opacity: 1;
+  }
+  .filter-white {
+    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(85deg)
+      brightness(111%) contrast(103%);
   }
 </style>

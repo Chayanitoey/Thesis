@@ -42,9 +42,13 @@
     One of the most common ways that mishandling laundry can result in economic
     loss is through the premature deterioration of clothing. When garments are
     not washed or dried properly, the fabric can become worn, faded, or
-    stretched, leading to a shorter lifespan for the garment. This means that
-    individuals must replace their clothing more frequently, resulting in
-    additional expenses for new clothing purchases.
+    stretched, leading to a shorter lifespan for the garment. <span
+      class="emphasis"
+      >One of the primary reasons why individuals discard their garments is due
+      to damaged materials</span
+    >, according to the research by
+    <a href="http://mistrafuturefashion.com">MMF</a>, mistra future fashion
+    research institute.
   </p>
 </div>
 
@@ -52,6 +56,14 @@
   <div class="transition" in:fade={{ duration: 1000 }}>
     <Chart1 />
   </div>
+</div>
+
+<div class="intro-text">
+  <p>
+    The data in this chart below are from 1960 to 2018, relating to the total
+    number of tons of <span class="emphasis-green">textiles generated.</span> The
+    number is representing in thousands of tons.
+  </p>
 </div>
 
 <div class="scrollyGraphic" in:fly={{ y: 150, duration: 1000 }}>
@@ -73,42 +85,36 @@
     </div>
 
     <div slot="foreground">
-      <section style="margin-top:-60vh;margin-bottom:30vh;">
-        <div class="step-1">
-          The data below are from 1960 to 2018, relating to the total number of
-          tons of textiles generated, recycled, composted, combusted with energy
-          recovery and landfilled.
-          <br />
-          <span style="paddng-top:2;font-size:0.6rem; color:var(--pl-grey);">
-            Source: <a
-              href="https://www.epa.gov/facts-and-figures-about-materials-waste-and-recycling/textiles-material-specific-data"
-              >American Apparel and Footwear Association, International Trade
-              Commission, the U.S. Department of Commerce's Office of Textiles
-              and Apparel, and the Council for Textile Recycling.</a
-            ></span
+      <section>
+        <!-- <div class="step-1">
+          The data in this chart below are from 1960 to 2018, relating to the
+          total number of tons of <span class="emphasis-green"
+            >textiles generated.</span
+          > The number is representing in thousands of tons.
+        </div> -->
+      </section>
+      <section>
+        <div class="step">
+          While textile generation has been on the rise for the past decade, so
+          as the waste generation. Unfortunately, 75.6% of the textile waste
+          ends up in <span class="emphasis-yellow">"landfill".</span>
+          Increasing 1.3% YoY, 11% of total textile generation goes to<span
+            class="emphasis-red">"recycling"</span
           >
+          The good news is
+          <span class="emphasis-blue">"combustiion with energy recovery"</span> is
+          also in the horrizon, increasing but still not fast enough, yields at 14.5%
+          of total yearly.
         </div>
       </section>
       <section>
         <div class="step">
-          One of the primary reasons why individuals discard their garments is
-          due to damaged materials, according to the research by <a
-            href="http://mistrafuturefashion.com">MMF</a
-          >, mister future fashion research institute.
-        </div>
-      </section>
-      <section>
-        <div class="step">
-          The research paper has also shown that individuals can prevent damage
-          to their clothing's materials by following proper care methods and
-          becoming knowledgeable about the garment care process.
-        </div>
-      </section>
-      <section style="margin-top:60vh;">
-        <div class="step">
-          By taking the simple steps in caring, individuals can extend the life
-          of their clothing and reduce the amount of textile waste that ends up
-          in landfills and prolong garment life-cycle.
+          Eventhough <span class="emphasis-yellow">landill waste</span> is
+          decreasing on average at -3.4% YoY, it's still a lot when looking at
+          the amount of textiles generation. Looking at the data, we're
+          generating at least
+          <span class="emphasis">11,300 thousands of tons</span> of landfiled textile
+          waste in 2018 alone.
         </div>
       </section>
     </div>
@@ -141,7 +147,7 @@
     align-items: center;
     justify-content: center;
     width: 65vw;
-    height: 100vh;
+    height: 50vh;
     margin-top: 10vh;
   }
   h1 {
@@ -172,13 +178,13 @@
   p {
     font-family: var(--pl-sans);
     align-items: center;
-    text-align: justify;
+    text-align: left;
     color: var(--pl-white);
     font-weight: 400;
     font-style: normal;
     font-size: 16px;
     line-height: 20px;
-    letter-spacing: 0.01em;
+    letter-spacing: 0.06em;
     padding-bottom: 10px;
     padding-right: 10%;
     padding-left: 10%;
@@ -229,7 +235,6 @@
   .step-1 {
     font-size: 16px;
     box-sizing: border-box;
-    padding: 2em 2em;
     /* background-color: var(--pl-black); */
     color: var(--pl-white);
     backdrop-filter: blur(10px);
@@ -237,8 +242,11 @@
     border: 1px solid #333; */
     pointer-events: auto;
     max-width: 50vw;
+    margin: auto;
+    padding-bottom: 2rem;
     /* margin-top: -10vh; */
     font-family: var(--pl-sans);
+    width: 56vw;
   }
 
   [slot="foreground"] section {
@@ -261,12 +269,43 @@
     position: relative;
   } */
   .scrollyGraphic {
-    margin-top: -5%;
+    margin-top: 0%;
+    margin-bottom: 10%;
   }
   a {
     color: var(--pl-white);
   }
   a:hover {
     color: var(--pl-green);
+  }
+  .emphasis-green {
+    background-color: var(--pl-green);
+    color: var(--pl-black);
+    font-weight: 700;
+    padding: 0 2px;
+  }
+  .emphasis {
+    background-color: var(--pl-white);
+    color: var(--pl-black);
+    font-weight: 700;
+    padding: 0 2px;
+  }
+  .emphasis-red {
+    background-color: var(--pl-red);
+    color: var(--pl-white);
+    font-weight: 700;
+    padding: 0 2px;
+  }
+  .emphasis-yellow {
+    background-color: var(--pl-yellow);
+    color: var(--pl-black);
+    font-weight: 700;
+    padding: 0 2px;
+  }
+  .emphasis-blue {
+    background-color: var(--pl-blue);
+    color: var(--pl-white);
+    font-weight: 700;
+    padding: 0 2px;
   }
 </style>
