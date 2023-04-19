@@ -8,35 +8,39 @@
   import ScrollyChapter2_2 from "$lib/components/helpers/Scrolly/ScrollyChapter2_2.svelte";
   import Chapter3 from "$lib/components/helpers/Chapter3.svelte";
   import Footnote from "$lib/components/helpers/Footnote.svelte";
+  import Breakout from "$lib/components/helpers/Breakout.svelte";
 
   import ScrollyFacts from "$lib/components/helpers/Scrolly/ScrollyFacts.svelte";
 
   import "$lib/styles/font.css";
   import "$lib/styles/global.css";
+  let innerWidth = 1400;
+  let innerHeight = 0;
 </script>
 
+<svelte:window bind:innerWidth bind:innerHeight />
+
 <ProgressBar />
-<Hamburger />
-<Scrollyintro />
-<ScrollyChapter1 />
-<ScrollyFacts />
-<ScrollyChapter2_1 />
-<div class="line-division" />
-<LaundryIconsTable />
-<div class="line-division-2" />
-<ScrollyChapter2_2 />
-<Chapter3 />
-<Footnote />
+<!-- <Hamburger /> -->
+{#if innerWidth > 1300}
+  <Scrollyintro />
+  <ScrollyChapter1 />
+  <ScrollyFacts />
+  <ScrollyChapter2_1 />
+  <div class="line-division" />
+  <LaundryIconsTable />
+  <div class="line-division-2" />
+  <ScrollyChapter2_2 />
+  <Chapter3 />
+  <Footnote />
+{:else}
+  <Breakout />
+{/if}
 
 <!-- <a href="/app">Click here</a> -->
 
 <!-- <div class="for-scroll" /> -->
 <style>
-  :global(body) {
-    background-color: var(--pl-black);
-    transition: background-color 0.3s;
-    width: auto;
-  }
   /* .for-scroll {
     height: 2000px;
   } */
