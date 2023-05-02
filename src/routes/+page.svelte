@@ -14,7 +14,7 @@
 
   import "$lib/styles/font.css";
   import "$lib/styles/global.css";
-  let innerWidth = 1400;
+  let innerWidth = 0;
   let innerHeight = 0;
 </script>
 

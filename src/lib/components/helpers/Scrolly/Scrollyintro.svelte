@@ -3,7 +3,8 @@
   import "$lib/styles/global.css";
   import { fly } from "svelte/transition";
   import { fade } from "svelte/transition";
-  import Image from "$lib/images/OriginalSweater.png";
+  import { slide } from "svelte/transition";
+  import { quintOut } from "svelte/easing";
   // import Jacket from "$lib/components/helpers/Jacket.svelte";
 
   /**
@@ -27,9 +28,6 @@
   let bottom = 1; // 0 - 1
 </script>
 
-<!-- <div class="jacketobject"> -->
-<!-- <Jacket /> -->
-<!-- </div> -->
 <div class="scrollyGraphic">
   <Scroller
     {top}
@@ -41,117 +39,115 @@
     bind:progress
   >
     <div slot="background">
-      <!-- <img src={Image} alt="Loading..." /> -->
       <div class="background-content">
-        {#if index == 0}
-          <div class="intro-text" in:fly={{ y: 150, duration: 1000 }}>
-            <h1>Shrinking</h1>
-          </div>
-        {:else if index == 1}
-          <div class="intro-text" in:fly={{ y: 150, duration: 1000 }}>
-            <h1>Discoloring</h1>
-          </div>
-        {:else if index == 2}
-          <div class="intro-text" in:fly={{ y: 150, duration: 1000 }}>
-            <h1>Broken</h1>
-          </div>
-        {:else if index == 3}
-          <div class="intro-text" transition:fade>
-            <h1 style="text-decoration: line-through;">
-              Shrinking, Discoloring, Broken
+        {#if index < 2}
+          <div
+            class="text-intro"
+            transition:fade={{
+              delay: 250,
+              duration: 300,
+              easing: quintOut,
+            }}
+          >
+            <h1>
+              <span
+                style="
+                  text-decoration:{index == 1 ? 'line-through' : 'none'};
+                  text-decoration-color:{index == 1
+                  ? 'var(--pl-green'
+                  : 'none'};
+                  
+                  "
+              >
+                Shrinking
+              </span>
             </h1>
-          </div>
-          <div class="intro-text" in:fly={{ y: 200, duration: 3000 }}>
-            <p>
-              These are the common rookie’s mistakes if you don’t know how to
-              take care of your clothes properly-learning how to wash & care
-              your garment is crucial for a long-life and sustainable fashion
-              consumption. This project aims to demystify garment washing &
-              caring.
+            <h1>
+              <span
+                style="text-decoration:{index == 1 ? 'line-through' : 'none'};
+                text-decoration-color:{index == 1 ? 'var(--pl-green' : 'none'};
+
+              ">Discoloring</span
+              >
+            </h1>
+            <h1>
+              <span
+                style="text-decoration:{index == 1 ? 'line-through' : 'none'};
+                text-decoration-color:{index == 1 ? 'var(--pl-green' : 'none'};
+                ">Broken Materials</span
+              >
+            </h1>
+            <p style="margin-top:-10vh;">
+              <strong>Perfect Laundry Day:</strong>
+              enhancing garments longevity with better laundry practices.
+              <br />
+              <span style="margin-top:20px;">Chay Thawaranont | 2023</span>
             </p>
           </div>
         {/if}
-
-        <!-- <p>current section: <strong>{index + 1}/{count}</strong></p>
-				<progress value={count ? (index + 1) / count : 0} />
-
-				<p>offset in current section</p>
-				<progress value={offset || 0} />
-
-				<p>total progress</p>
-				<progress value={progress || 0} /> -->
       </div>
     </div>
 
     <div slot="foreground">
+      <section />
       <section>
-        <!-- <div class="step">
-					1
-				</div> -->
-      </section>
-      <section>
-        <!-- <div class="step">
-					2
-				</div> -->
-      </section>
-      <section>
-        <!-- <div class="step">
-					3
-				</div> -->
-      </section>
-      <section>
-        <!-- <div class="step">
-					4
-				</div> -->
+        <div class="text-scroll">
+          These are the common rookie’s mistakes if you don’t know how to take
+          care of your clothes properly-learning how to wash & care your garment
+          is crucial for a long-life and sustainable fashion consumption.
+          <br />
+          <br />
+          This project aims to demystify garment washing & caring.
+        </div>
       </section>
     </div>
   </Scroller>
 </div>
 
 <style>
-  /* .jacketobject {
-    position: sticky;
-  } */
-  img {
-    max-width: 100vw;
-    max-height: 100vh;
-    position: absolute;
-    z-index: -1;
-  }
-  .intro-text {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    max-width: 56vw;
-    /* margin-top:40vh; */
+  .text-intro {
+    display: inline-block;
+    row-gap: 1rem;
+    /* height: 100vh;
+    margin-bottom: 20vh; */
+    padding-top: 10rem;
+    padding-left: 3rem;
+    /* margin-top: 40vh; */
   }
 
   h1 {
     font-family: var(--pl-serif);
-    justify-content: center;
-    text-align: center;
+    margin-top: -15vh;
     color: var(--pl-white);
     font-weight: 400;
     font-style: normal;
-    font-size: 50px;
+    font-size: 9rem;
     letter-spacing: -0.01em;
   }
   p {
     font-family: var(--pl-sans);
-    justify-content: center;
-    align-items: center;
-    text-align: justify;
+    text-align: left;
     color: var(--pl-white);
     font-weight: 400;
     font-style: normal;
-    font-size: 16px;
-    line-height: 20px;
+    font-size: 2rem;
     letter-spacing: 0.01em;
-    padding-bottom: 10px;
-    padding-right: 10%;
-    padding-left: 10%;
   }
 
+  .text-scroll {
+    font-size: 16px;
+    box-sizing: border-box;
+    padding: 2em 2em;
+    background-color: var(--pl-black);
+    color: var(--pl-white);
+    backdrop-filter: blur(10px);
+    border-radius: 1em;
+    border: 1px solid #333;
+    pointer-events: auto;
+    max-width: 40vw;
+    margin: auto;
+    font-family: var(--pl-sans);
+  }
   [slot="background"] {
     display: flex;
     justify-content: center;
@@ -181,17 +177,6 @@
     font-size: 16px;
   }
 
-  .step {
-    font-size: 1em;
-    box-sizing: border-box;
-    padding: 1em 1.25em;
-    background-color: hsla(0, 0%, 100%, 0.8);
-    backdrop-filter: blur(10px);
-    border-radius: 1em;
-    border: 1px solid #333;
-    pointer-events: auto;
-  }
-
   [slot="foreground"] section {
     pointer-events: all;
     height: 80vh;
@@ -205,12 +190,6 @@
     height: 100vh;
   }
 
-  progress {
-    display: block;
-    width: 100%;
-    height: 1rem;
-    position: relative;
-  }
   .scrollyGraphic {
     z-index: 1;
   }

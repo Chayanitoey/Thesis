@@ -27,7 +27,7 @@
    * @type {any}
    */
   let svg;
-  const margin = { top: 20, right: 30, bottom: 50, left: 30 };
+  const margin = { top: 30, right: 30, bottom: 30, left: 30 };
   const width = 1000 - margin.left - margin.right;
   const height = 500 - margin.top - margin.bottom;
 
@@ -75,8 +75,54 @@
       .attr("x", -20)
       .attr("y", height)
       .attr("width", 430)
-      .attr("height", 40)
-      .attr("stroke", "white");
+      .attr("height", 4)
+      .attr("fill", "white");
+
+    const colorRange = svg
+      .append("rect")
+      .attr("x", -20)
+      .attr("y", 0)
+      .attr("width", 890)
+      .attr("height", 10)
+      .attr("fill", "url(#gradient)");
+
+    const temp_text = svg
+      .append("text")
+      .attr("x", -20)
+      .attr("y", 30)
+      .style("font-size", 12)
+      .text("Temperature from Hot->Cold->Hot")
+      .style("fill", "white")
+      .style("text-anchor", "Left");
+
+    const gradient = svg
+      .append("defs")
+      .append("linearGradient")
+      .attr("id", "gradient")
+      .attr("x1", "0%")
+      .attr("y1", "0%")
+      .attr("x2", "100%")
+      .attr("y2", "0%");
+
+    gradient
+      .append("stop")
+      .attr("offset", "0%")
+      .attr("stop-color", "rgba(224, 23, 5, 0.4)");
+
+    gradient
+      .append("stop")
+      .attr("offset", "42.25%")
+      .attr("stop-color", "#7BDBFF");
+
+    gradient
+      .append("stop")
+      .attr("offset", "58.15%")
+      .attr("stop-color", "#7BDBFF");
+
+    gradient
+      .append("stop")
+      .attr("offset", "100%")
+      .attr("stop-color", "rgba(224, 23, 5, 0.53)");
 
     // .attr("fill", "blue");
 
@@ -85,8 +131,8 @@
       .attr("x", 420)
       .attr("y", height)
       .attr("width", 450)
-      .attr("height", 40)
-      .attr("stroke", "white");
+      .attr("height", 4)
+      .attr("fill", "white");
     // .attr("fill", "red");
 
     // Add the label dry to the rect
@@ -231,15 +277,24 @@
     top: 0;
     left: 0;
   }
+  :global(.temp_box) {
+    fill: linear-gradient(
+      270deg,
+      rgba(224, 23, 5, 0.4) 0%,
+      #7bdbff 42.25%,
+      #7bdbff 58.15%,
+      rgba(224, 23, 5, 0.53) 100%
+    );
+  }
   :global(text) {
     font-family: var(--pl-serif);
   }
   #legend_arc {
     width: 60vw;
-    margin-top: -15vh;
+    margin-top: -7vh;
     position: absolute;
     text-align: left;
-    margin-left: -20vw;
+    margin-left: -18vw;
   }
   .swatch {
     width: 2.5vw;
