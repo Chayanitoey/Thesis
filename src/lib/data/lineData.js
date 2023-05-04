@@ -84,15 +84,15 @@ export default [
     data: all_textile
   },
   {
-    id: 'Recycled',
-    data: recycled
+    id: 'Landfilled',
+    data: landfilled
   },
   {
     id: 'Combustion',
     data: combustion
   },
   {
-    id: 'Landfilled',
-    data: landfilled
+    id: 'Recycled',
+    data: recycled
   }
 ]

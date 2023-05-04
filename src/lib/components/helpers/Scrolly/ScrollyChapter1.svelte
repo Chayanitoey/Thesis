@@ -97,7 +97,7 @@
         <div class="step">
           While textile generation has been on the rise for the past decade, so
           as the waste generation. Unfortunately, 75.6% of the textile waste
-          ends up in <span class="emphasis-yellow">"landfill".</span>
+          ends up in <span class="emphasis-mint">"landfill".</span>
           Increasing 1.3% YoY, 11% of total textile generation goes to<span
             class="emphasis-red">"recycling"</span
           >
@@ -109,7 +109,7 @@
       </section>
       <section>
         <div class="step">
-          Eventhough <span class="emphasis-yellow">landill waste</span> is
+          Eventhough <span class="emphasis-mint">landill waste</span> is
           decreasing on average at -3.4% YoY, it's still a lot when looking at
           the amount of textiles generation. Looking at the data, we're
           generating at least
@@ -296,9 +296,9 @@
     font-weight: 700;
     padding: 0 2px;
   }
-  .emphasis-yellow {
-    background-color: var(--pl-yellow);
-    color: var(--pl-black);
+  .emphasis-mint {
+    background-color: var(--pl-mint);
+    color: var(--pl-white);
     font-weight: 700;
     padding: 0 2px;
   }

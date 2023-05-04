@@ -32,12 +32,12 @@
   const yFormat = ""; // a format specifier string for the y-axis
   const horizontalGrid = true; // show horizontal grid lines
   const verticalGrid = false; // show vertical grid lines
-  const colors = ["#8BFF7A", "#E01705", "#191CE4", "#F9AF4A"]; // fill color for dots && number of colors in fill array MUST match number of subsets in data
+  const colors = ["#8BFF7A", "#007991", "#FF6F61", "#5465FF"]; // fill color for dots && number of colors in fill array MUST match number of subsets in data
   const showDots = false; // whether dots should be displayed
   const dotsFilled = false; // whether dots should be filled or outlined
   const r = 3; // (fixed) radius of dots, in pixels
   const strokeWidth = 1; // stroke width of line, in pixels
-  const fillOpacity = 0.5; // fill opacity of area
+  const fillOpacity = 0.8; // fill opacity of area
   const tooltipBackground = "black"; // background color of tooltip
   const tooltipTextColor = "white"; // text color of tooltip
   const strokeLinecap = "round"; // stroke line cap of the line
@@ -242,7 +242,7 @@
       {/each}
     {:else}
       {#each areas as subsetArea, i}
-        {#if i == 3}
+        {#if i == 1}
           <g
             class="chartlines"
             pointer-events="none"
@@ -350,7 +350,7 @@
     {/each}
   </svg>
   <span
-    style="font-family: var(--pl-sans);font-size:0.7rem; color:var(--pl-grey);"
+    style="font-family: var(--pl-sans);font-size:0.7rem; color:var(--pl-grey); padding-top:1rem;"
   >
     Source: <a
       href="https://www.epa.gov/facts-and-figures-about-materials-waste-and-recycling/textiles-material-specific-data"

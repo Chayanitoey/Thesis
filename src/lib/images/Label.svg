@@ -3,7 +3,7 @@
   <defs>
     <style>
     .highlight-symbols{
-      fill: rgba(255, 246, 155, 1); 
+      fill: rgba(139, 255, 122, 1); 
       transition-delay: all 200s ease-out;
 }
       .cls-1 {

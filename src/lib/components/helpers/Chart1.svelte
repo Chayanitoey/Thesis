@@ -36,12 +36,12 @@
   ];
 
   const colorsReasons = [
+    "#8BFF7A",
     "#FFFFFF",
-    "#E01705",
-    "#09A08C",
-    "#F9AF4A",
-    "#86C4CE",
-    "#7A7A7A",
+    "#5465FF",
+    "#788BFF",
+    "#007991",
+    "#FF6F61",
   ];
   const colorsDestinations = [
     "#FFFFFF",
@@ -51,7 +51,7 @@
     "#86C4CE",
     "#7A7A7A",
   ];
-  const colorsFinalDestinations = ["#FFFFFF", "#E01705", "#09A08C", "#F9AF4A"];
+  // const colorsFinalDestinations = ["#FFFFFF", "#E01705", "#09A08C", "#F9AF4A"];
 
   //This one is for 'the reasons why people dispose garment' chart
   const stacks = Pancake.stacks(points, reasons, "id");

@@ -8,13 +8,16 @@
 
     --pl-black: #000000;
     --pl-green : #8BFF7A;
-    --pl-blue : #191CE4;
-    --pl-red : #E01705;
-    --pl-sky : #86C4CE;
-    --pl-yellow : #F9AF4A;
-    --pl-mint : #09A08C;
-    --pl-grey : #DED9D9;
+    --pl-blue : #5465FF;
+    --pl-red : #FF6F61;
+    --pl-sky : #96FFEA;
+    --pl-yellow : #FFFC4F;
+    --pl-mint : #007991;
+    --pl-grey : #788BFF;
     --pl-white : #FFFFFF;
+    --pl-pink : #D794FF;
+    --pl-purple : #8861FF;
+
 
 }
 body{

@@ -22,6 +22,7 @@
     <button
       class:active={selected === iconType}
       class="btn"
+      role="button"
       on:click={() => filterSelection(iconType)}
       tabindex="0"
     >
@@ -30,83 +31,85 @@
   {/each}
 </p>
 
-<div class="grid-icons">
-  {#each data as icon}
-    {#if selected === "All"}
-      <div class="icon-container" transition:fade>
-        <img
-          src="https://raw.githubusercontent.com/Chayanitoey/laundry_icons/main/laundryIcons_svg/{icon.svg_name}"
-          alt={icon.icon_name}
-          class="filter-white"
-          style="max-width:10vw; max-height:10vh;padding:12%;"
-          title="{icon.icon_instruction}
+<div class="grid-wrapper">
+  <div class="grid-icons">
+    {#each data as icon}
+      {#if selected === "All"}
+        <div class="icon-container" transition:fade>
+          <img
+            src="https://raw.githubusercontent.com/Chayanitoey/laundry_icons/main/laundryIcons_svg/{icon.svg_name}"
+            alt={icon.icon_name}
+            class="filter-white"
+            style="max-width:10vw; max-height:10vh;padding:12%;"
+            title="{icon.icon_instruction}
         "
-          use:tooltip
-        />
-      </div>
-      <!-- <p>{icon.icon_instruction}</p> -->
-    {:else if icon.icon_type === "Wash" && icon.icon_type === selected}
-      <div class="icon-container">
-        <img
-          src="https://raw.githubusercontent.com/Chayanitoey/laundry_icons/main/laundryIcons_svg/{icon.svg_name}"
-          alt={icon.icon_name}
-          style="max-width:10vw; max-height:10vh;padding:12%;"
-          class="filter-white"
-          title="{icon.icon_instruction}
+            use:tooltip
+          />
+        </div>
+        <!-- <p>{icon.icon_instruction}</p> -->
+      {:else if icon.icon_type === "Wash" && icon.icon_type === selected}
+        <div class="icon-container">
+          <img
+            src="https://raw.githubusercontent.com/Chayanitoey/laundry_icons/main/laundryIcons_svg/{icon.svg_name}"
+            alt={icon.icon_name}
+            style="max-width:10vw; max-height:10vh;padding:12%;"
+            class="filter-white"
+            title="{icon.icon_instruction}
           "
-          use:tooltip
-        />
-      </div>
-    {:else if icon.icon_type === "Dry" && icon.icon_type === selected}
-      <div class="icon-container" transition:fade>
-        <img
-          src="https://raw.githubusercontent.com/Chayanitoey/laundry_icons/main/laundryIcons_svg/{icon.svg_name}"
-          alt={icon.icon_name}
-          style="max-width:10vw; max-height:10vh;padding:12%;"
-          class="filter-white"
-          title="{icon.icon_instruction}
+            use:tooltip
+          />
+        </div>
+      {:else if icon.icon_type === "Dry" && icon.icon_type === selected}
+        <div class="icon-container" transition:fade>
+          <img
+            src="https://raw.githubusercontent.com/Chayanitoey/laundry_icons/main/laundryIcons_svg/{icon.svg_name}"
+            alt={icon.icon_name}
+            style="max-width:10vw; max-height:10vh;padding:12%;"
+            class="filter-white"
+            title="{icon.icon_instruction}
           "
-          use:tooltip
-        />
-      </div>
-    {:else if icon.icon_type === "Dry clean" && icon.icon_type === selected}
-      <div class="icon-container" transition:fade>
-        <img
-          src="https://raw.githubusercontent.com/Chayanitoey/laundry_icons/main/laundryIcons_svg/{icon.svg_name}"
-          alt={icon.icon_name}
-          style="max-width:10vw; max-height:10vh;padding:12%;"
-          class="filter-white"
-          title="{icon.icon_instruction}
+            use:tooltip
+          />
+        </div>
+      {:else if icon.icon_type === "Dry clean" && icon.icon_type === selected}
+        <div class="icon-container" transition:fade>
+          <img
+            src="https://raw.githubusercontent.com/Chayanitoey/laundry_icons/main/laundryIcons_svg/{icon.svg_name}"
+            alt={icon.icon_name}
+            style="max-width:10vw; max-height:10vh;padding:12%;"
+            class="filter-white"
+            title="{icon.icon_instruction}
           "
-          use:tooltip
-        />
-      </div>
-    {:else if icon.icon_type === "Bleach" && icon.icon_type === selected}
-      <div class="icon-container" transition:fade>
-        <img
-          src="https://raw.githubusercontent.com/Chayanitoey/laundry_icons/main/laundryIcons_svg/{icon.svg_name}"
-          alt={icon.icon_name}
-          style="max-width:10vw; max-height:10vh;padding:12%;"
-          class="filter-white"
-          title="{icon.icon_instruction}
+            use:tooltip
+          />
+        </div>
+      {:else if icon.icon_type === "Bleach" && icon.icon_type === selected}
+        <div class="icon-container" transition:fade>
+          <img
+            src="https://raw.githubusercontent.com/Chayanitoey/laundry_icons/main/laundryIcons_svg/{icon.svg_name}"
+            alt={icon.icon_name}
+            style="max-width:10vw; max-height:10vh;padding:12%;"
+            class="filter-white"
+            title="{icon.icon_instruction}
           "
-          use:tooltip
-        />
-      </div>
-    {:else if icon.icon_type === "Iron" && icon.icon_type === selected}
-      <div class="icon-container" transition:fade>
-        <img
-          src="https://raw.githubusercontent.com/Chayanitoey/laundry_icons/main/laundryIcons_svg/{icon.svg_name}"
-          alt={icon.icon_name}
-          style="max-width:10vw; max-height:10vh;padding:12%;"
-          class="filter-white"
-          title="{icon.icon_instruction}
+            use:tooltip
+          />
+        </div>
+      {:else if icon.icon_type === "Iron" && icon.icon_type === selected}
+        <div class="icon-container" transition:fade>
+          <img
+            src="https://raw.githubusercontent.com/Chayanitoey/laundry_icons/main/laundryIcons_svg/{icon.svg_name}"
+            alt={icon.icon_name}
+            style="max-width:10vw; max-height:10vh;padding:12%;"
+            class="filter-white"
+            title="{icon.icon_instruction}
           "
-          use:tooltip
-        />
-      </div>
-    {/if}
-  {/each}
+            use:tooltip
+          />
+        </div>
+      {/if}
+    {/each}
+  </div>
 </div>
 
 <style>
@@ -144,6 +147,9 @@
     width: 80vw;
     margin-left: 10vw;
   }
+  .grid-wrapper {
+    height: 120vh;
+  }
   .icon-container {
     /* background-color: var(--pl-white); */
     opacity: 0.7;
@@ -161,11 +167,62 @@
     transform: scale(1.05);
     opacity: 1;
   }
-  button {
-    padding: 0.7rem;
+
+  .btn {
+    align-items: center;
+    appearance: none;
+    background-color: #fff;
+    border: 1px solid #dbdbdb;
+    border-radius: 0.375em;
+    margin-right: 1rem;
+    margin-left: 1rem;
+    box-shadow: none;
+    box-sizing: border-box;
+    color: var(--pl-black);
+    cursor: pointer;
+    display: inline-flex;
+    font-family: var(--pl-sans);
+    font-size: 1rem;
+    height: 2em;
+    justify-content: center;
+    line-height: 1;
+    padding: calc(0.5em - 1px) 1em;
+    position: relative;
+    text-align: center;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: top;
+    white-space: nowrap;
+  }
+
+  .btn:active {
+    /* border-color: #434242; */
+    background-color: #4a4a4a;
+    outline: 0;
+  }
+
+  .btn:focus {
+    border-color: #485fc7;
+    background-color: var(--pl-green);
+    outline: 0;
+  }
+
+  .btn:hover {
+    background-color: #737272;
+    border-color: #b5b5b5;
+  }
+
+  .btn:focus:not(:active) {
+    box-shadow: rgba(72, 95, 199, 0.25) 0 0 0 0.125em;
+  }
+
+  /* button {
+    padding: 0.2rem;
     margin: 0.5rem;
     background-color: var(--pl-white);
-    opacity: 0.8;
+    color: var(--pl-black);
+    opacity: 0;
     border-radius: 10%;
     font-weight: 600;
   }
@@ -177,7 +234,8 @@
   button:focus {
     background-color: var(--pl-green) !important;
     opacity: 1;
-  }
+  } */
+
   .filter-white {
     filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(85deg)
       brightness(111%) contrast(103%);

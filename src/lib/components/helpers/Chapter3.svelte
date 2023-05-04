@@ -14,8 +14,11 @@
     <h1>Time To Do Laundry</h1>
     <p>
       Remembering the laundry symbols and sorting clothes by fabric or color can
-      be a challenge. That's where the <span style="font-family:var(--pl-serif)"
-        >Perfect Laundry App</span
+      be a challenge. That's where the
+      <a href="https://app.perfectlaundryday.com/"
+        ><span style="font-family:var(--pl-serif) color:var(--pl-black);"
+          >Perfect Laundry App</span
+        ></a
       > comes in - it takes care of the sorting and gives you personalized advice
       on how to care for your garments. Although the app is still in the testing/beta
       phase, it promises to simplify your laundry routine and keep your clothes looking
@@ -28,6 +31,9 @@
 </div>
 
 <style>
+  a {
+    color: var(--pl-black);
+  }
   .span-line {
     position: absolute;
     width: 60px;
@@ -106,15 +112,11 @@
     background: linear-gradient(
       180deg,
       rgba(0, 255, 10, 0) 0%,
-      #7aff7f 40%,
-      #7aff7f 52%,
       #7aff7f 53.12%,
-      #7aff7f 60.12%,
-      #7aff7f 65.12%,
       rgba(0, 255, 10, 0) 100%
     );
     width: 100%;
     margin-left: 0;
-    height: 170vh;
+    height: 150vh;
   }
 </style>

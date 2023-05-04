@@ -34,9 +34,36 @@
   </p>
   <p>
     Sources:
-    <li>1</li>
-    <li>2</li>
-    <li>3</li>
+    <li>
+      Günter Jakobi. Detergents and Textile Washing: Principles and Practice.
+      New York, NY, USA: VCH Publishers, 1987.
+    </li>
+    <li>
+      Cotton, Lucy, Adam S. Hayward, Neil J. Lant, and Richard S. Blackburn.
+      “Improved Garment Longevity and Reduced Microfibre Release Are Important
+      Sustainability Benefits of Laundering in Colder and Quicker Washing
+      Machine Cycles.” Dyes and Pigments 177 (June 1, 2020): 108120.
+    </li>
+    <li>
+      Assessing the Impact of Wash Water Temperature, Detergent Type and
+      Laundering Platform on Basic Clothing Attributes.” Accessed March 14,
+      2023.
+    </li>
+    <li>
+      Agarwal, Gaurav, Ludovic Koehl, and Anne Perwvelz. "Simultaneous Influence
+      of Ageing and Softener on Mechanical Properties of Knitted Textiles during
+      Life Cycle of Garment." International Journal of Clothing Science and
+      Technology23, no. 2 (2011): 152-169. doi
+    </li>
+    <li>
+      Schmitz, Angelika and Rainer Stamminger. "Usage Behaviour and Related
+      Energy Consumption of European Consumers for Washing and Drying." Energy
+      Efficiency 7, no. 6 (12, 2014): 937-954.
+    </li>
+    <li>
+      “How to Take Care of Your Clothes - T Magazine Guides - The New York
+      Times.”
+    </li>
   </p>
 
   <p>

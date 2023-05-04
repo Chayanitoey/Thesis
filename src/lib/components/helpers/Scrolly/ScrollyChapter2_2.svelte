@@ -62,21 +62,29 @@
   <div
     style="max-width:100%;display: grid; grid-template-columns: 23vw 23vw 23vw;"
   >
-    <div style="font-family: var(--pl-serif); font-size:medium;">
-      White
+    <div>
       <div class="rect-sort-color" style="background-color: white;" />
+      <div
+        style="font-family: var(--pl-serif); font-size:medium; color:var(--pl-white);"
+      >
+        White
+      </div>
     </div>
-    <div
-      style="display: inline-block; vertical-align: middle;font-family: var(--pl-serif); font-size:medium;"
-    >
-      Colors
+    <div>
       <div class="rect-sort-color" id="colors-group" />
+      <div
+        style="display: inline-block; vertical-align: middle;font-family: var(--pl-serif); font-size:medium;  color:var(--pl-white);"
+      >
+        Colors
+      </div>
     </div>
-    <div
-      style="display: inline-block; vertical-align: middle;font-family: var(--pl-serif); font-size:medium;"
-    >
-      Pastels
+    <div>
       <div class="rect-sort-color" id="pastels-group" />
+      <div
+        style="display: inline-block; vertical-align: middle;font-family: var(--pl-serif); font-size:medium;color:var(--pl-white);"
+      >
+        Pastels
+      </div>
     </div>
   </div>
   <!-- <FabricGroup /> -->
@@ -111,34 +119,46 @@
   >
     <div slot="background">
       <SortLaundryArcDiagram bind:index />
-      <!-- <div class="background-content">
-        <h3>Sort by fabric type:</h3>
-        <p>current section: <strong>{index + 1}/{count}</strong></p>
-        <progress value={count ? (index + 1) / count : 0} />
-
-        <p>offset in current section</p>
-        <progress value={offset || 0} />
-
-        <p>total progress</p>
-        <progress value={progress || 0} />
-      </div> -->
     </div>
 
     <div slot="foreground">
+      <section />
+      <!-- for screen recording -->
+      <!-- 
       <section>
-        <!-- <div class="step">
-          <div class="step">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi
-            fugiat possimus repudiandae blanditiis temporibus. Assumenda, itaque
-            in! Illo est, dolorem repellendus rerum quisquam suscipit facilis
-            vel ut tempore magnam? Dolores!
-          </div>
-        </div> -->
+        <div class="step">
+          <span style="color:#8BFF7A; font-weight:900;padding:2px 2px">
+            Natural Fibers
+          </span>
+          like cotton or linen can be prone to wrinkle and shrinking- avoid hot water
+          during wash and high heat for tumble dry
+        </div>
       </section>
+
+      <section>
+        <div class="step">
+          <span style="color:#8BFF7A; font-weight:900;padding:2px 2px">
+            Delicate Fibers
+          </span>
+          like Silk or Rayon should be almost always hand-washed or dry-cleaned
+        </div>
+      </section>
+
+      <section>
+        <div class="step">
+          <span style="color:#8BFF7A; font-weight:900;padding:2px 2px">
+            Synthetic Fibers
+          </span>
+          like Nylon or Polyester can be washed and dried with all temperature settings.
+        </div>
+      </section> -->
+
+      <!-- for actual app -->
+
       <section>
         <div class="step">
           <span
-            style="background-color:#FF294C; font-weight:900;padding:2px 2px"
+            style="background-color:#007991;font-weight:900;color: var(--pl-black);padding:2px 2px"
           >
             Cotton
           </span>
@@ -150,7 +170,7 @@
       <section>
         <div class="step">
           While <span
-            style="background-color:#7BDBFF; font-weight:900; color: var(--pl-black);padding:2px 2px"
+            style="background-color:#8BFF7A; font-weight:900; color: var(--pl-black);padding:2px 2px"
           >
             Linen
           </span> is highly washable, it can easily shrink and wrinkle if not washed
@@ -162,7 +182,7 @@
       <section>
         <div class="step">
           <span
-            style="background-color:#FAC83C;color: var(--pl-black);font-weight:900;padding:2px 2px"
+            style="background-color:#FFFC4F;color: var(--pl-black);font-weight:900;padding:2px 2px"
           >
             Wool
           </span>
@@ -175,7 +195,7 @@
       <section>
         <div class="step">
           <span
-            style="background-color:#191CE4; font-weight:900;padding:2px 2px"
+            style="background-color:#FFFFFF; font-weight:900;padding:2px 2px; color:black;"
           >
             Silk
           </span>
@@ -189,7 +209,7 @@
       <section>
         <div class="step">
           <span
-            style="background-color:#FFFFFF; font-weight:900;color: var(--pl-black);padding:2px 2px"
+            style="background-color:#FF6F61; font-weight:900;color: var(--pl-black);padding:2px 2px"
           >
             Rayon and viscose
           </span> are not highly washable. Always dry clean rayon and viscose clothes.
@@ -198,7 +218,7 @@
       <section>
         <div class="step">
           <span
-            style="background-color:#A6E7FF; color: var(--pl-black);font-weight:900;padding:2px 2px"
+            style="background-color:#788BFF; color: var(--pl-black);font-weight:900;padding:2px 2px"
             >Nylon</span
           > is also highly washable, but prone to static. Air drying will prevent
           static, so skip the dryer.
@@ -207,7 +227,7 @@
       <section>
         <div class="step">
           <span
-            style="background-color:#09A08C;color: var(--pl-black);font-weight:900;padding:2px 2px"
+            style="background-color:#D794FF;color: var(--pl-black);font-weight:900;padding:2px 2px"
           >
             Polyester
           </span> is highly machine washable and can be machine dried on medium-
@@ -217,7 +237,7 @@
       <section>
         <div class="step">
           <span
-            style="background-color:#FF9083; color: var(--pl-black);font-weight:900;padding:2px 2px"
+            style="background-color:#8861FF; color: var(--pl-black);font-weight:900;padding:2px 2px"
             >Spandex</span
           > is machine washable, but it can hold onto odors, which means that it
           should be dried on a low-heat setting or air dried. Avoid the use of chlorine
@@ -227,7 +247,7 @@
       <section>
         <div class="step">
           <span
-            style="background-color:#D9D9D9; font-weight:900; color: var(--pl-black); padding:2px 2px"
+            style="background-color:#5465FF; font-weight:900; color: var(--pl-black); padding:2px 2px"
           >
             Blends</span
           > should be washed according to the instructions for the more sensitive

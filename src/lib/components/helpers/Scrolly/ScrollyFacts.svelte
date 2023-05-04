@@ -101,7 +101,7 @@
   h1 {
     font-family: var(--pl-serif);
     text-align: left;
-    color: var(--pl-black);
+    color: var(--pl-green);
     font-weight: 400;
     font-style: normal;
     font-size: 5vw;
@@ -148,12 +148,12 @@
 
   .scrollyGraphic {
     z-index: 1;
-    background: linear-gradient(
+    /* background: linear-gradient(
       180deg,
       rgba(0, 255, 10, 0) 0%,
       #7aff7f 53.12%,
       rgba(0, 255, 10, 0) 100%
-    );
+    ); */
     width: 100vw;
   }
 
@@ -161,7 +161,7 @@
   .main {
     width: 330px;
     height: 330px;
-    border: 1px solid black;
+    border: 1px solid var(--pl-green);
     position: absolute;
     top: 0;
     bottom: 40%;
@@ -173,7 +173,7 @@
   .circle0 {
     width: 30px;
     height: 30px;
-    background: var(--pl-black);
+    background: var(--pl-green);
     border-radius: 50%;
     position: absolute;
     top: 0;
@@ -189,7 +189,7 @@
   .circle {
     width: 30px;
     height: 30px;
-    background: var(--pl-black);
+    background: var(--pl-green);
     border-radius: 50%;
     position: absolute;
     top: 0;
@@ -203,7 +203,7 @@
   .circle1 {
     width: 30px;
     height: 30px;
-    background: var(--pl-black);
+    background: var(--pl-green);
     border-radius: 50%;
     position: absolute;
     top: 0;
@@ -217,7 +217,7 @@
   .circle2 {
     width: 30px;
     height: 30px;
-    background: var(--pl-black);
+    background: var(--pl-green);
     border-radius: 50%;
     position: absolute;
     top: 0;
@@ -231,7 +231,7 @@
   .circle3 {
     width: 30px;
     height: 30px;
-    background: var(--pl-black);
+    background: var(--pl-green);
     border-radius: 50%;
     position: absolute;
     top: 0;
@@ -245,7 +245,7 @@
   .circle4 {
     width: 30px;
     height: 30px;
-    background: var(--pl-black);
+    background: var(--pl-green);
     border-radius: 50%;
     position: absolute;
     top: 0;
@@ -260,7 +260,7 @@
   .circle5 {
     width: 30px;
     height: 30px;
-    background: var(--pl-black);
+    background: var(--pl-green);
     border-radius: 50%;
     position: absolute;
     top: 0;
@@ -275,7 +275,7 @@
   .circle6 {
     width: 30px;
     height: 30px;
-    background: var(--pl-black);
+    background: var(--pl-green);
     border-radius: 50%;
     position: absolute;
     top: 0;
@@ -289,7 +289,7 @@
   .circle7 {
     width: 30px;
     height: 30px;
-    background: var(--pl-black);
+    background: var(--pl-green);
     border-radius: 50%;
     position: absolute;
     top: 0;

@@ -13,15 +13,15 @@
   import data from "$lib/data/sortLaundryByFabric.json";
 
   let labels = [
-    { fabric: "Cotton", color: "#FF294C" },
-    { fabric: "Linen", color: "#7BDBFF" },
-    { fabric: "Wool", color: "#FAC83C" },
-    { fabric: "Silk", color: "#191CE4" },
-    { fabric: "Rayon", color: "#FFFFFF" },
-    { fabric: "Nylon", color: "#A6E7FF" },
-    { fabric: "Polyester", color: "#09A08C" },
-    { fabric: "Spandex", color: "#FF9083" },
-    { fabric: "Blends", color: "#D9D9D9" },
+    { fabric: "Cotton", color: "#007991" },
+    { fabric: "Linen", color: "#8BFF7A" },
+    { fabric: "Wool", color: "#FFFC4F" },
+    { fabric: "Silk", color: "#FFFFFF" },
+    { fabric: "Rayon", color: "#FF6F61" },
+    { fabric: "Nylon", color: "#788BFF" },
+    { fabric: "Polyester", color: "#D794FF" },
+    { fabric: "Spandex", color: "#8861FF" },
+    { fabric: "Blends", color: "#5465FF" },
   ];
   /**
    * @type {any}
@@ -78,53 +78,51 @@
       .attr("height", 4)
       .attr("fill", "white");
 
-    const colorRange = svg
-      .append("rect")
-      .attr("x", -20)
-      .attr("y", 0)
-      .attr("width", 890)
-      .attr("height", 10)
-      .attr("fill", "url(#gradient)");
+    // const colorRange = svg
+    //   .append("rect")
+    //   .attr("x", -20)
+    //   .attr("y", 0)
+    //   .attr("width", 890)
+    //   .attr("height", 10)
+    //   .attr("fill", "url(#gradient)");
 
-    const temp_text = svg
-      .append("text")
-      .attr("x", -20)
-      .attr("y", 30)
-      .style("font-size", 12)
-      .text("Temperature from Hot->Cold->Hot")
-      .style("fill", "white")
-      .style("text-anchor", "Left");
+    // const temp_text = svg
+    //   .append("text")
+    //   .attr("x", -20)
+    //   .attr("y", 30)
+    //   .style("font-size", 12)
+    //   .text("Temperature from Hot->Cold->Hot")
+    //   .style("fill", "white")
+    //   .style("text-anchor", "Left");
 
-    const gradient = svg
-      .append("defs")
-      .append("linearGradient")
-      .attr("id", "gradient")
-      .attr("x1", "0%")
-      .attr("y1", "0%")
-      .attr("x2", "100%")
-      .attr("y2", "0%");
+    // const gradient = svg
+    //   .append("defs")
+    //   .append("linearGradient")
+    //   .attr("id", "gradient")
+    //   .attr("x1", "0%")
+    //   .attr("y1", "0%")
+    //   .attr("x2", "100%")
+    //   .attr("y2", "0%");
 
-    gradient
-      .append("stop")
-      .attr("offset", "0%")
-      .attr("stop-color", "rgba(224, 23, 5, 0.4)");
+    // gradient
+    //   .append("stop")
+    //   .attr("offset", "0%")
+    //   .attr("stop-color", "rgba(224, 23, 5, 0.4)");
 
-    gradient
-      .append("stop")
-      .attr("offset", "42.25%")
-      .attr("stop-color", "#7BDBFF");
+    // gradient
+    //   .append("stop")
+    //   .attr("offset", "42.25%")
+    //   .attr("stop-color", "#7BDBFF");
 
-    gradient
-      .append("stop")
-      .attr("offset", "58.15%")
-      .attr("stop-color", "#7BDBFF");
+    // gradient
+    //   .append("stop")
+    //   .attr("offset", "58.15%")
+    //   .attr("stop-color", "#7BDBFF");
 
-    gradient
-      .append("stop")
-      .attr("offset", "100%")
-      .attr("stop-color", "rgba(224, 23, 5, 0.53)");
-
-    // .attr("fill", "blue");
+    // gradient
+    //   .append("stop")
+    //   .attr("offset", "100%")
+    //   .attr("stop-color", "rgba(224, 23, 5, 0.53)");
 
     const dry = svg
       .append("rect")
@@ -198,6 +196,29 @@
     if (scrollIndex == 0) {
       svg.selectAll("path").attr("visibility", "visible");
     }
+    //***for the presentation
+
+    // else if (scrollIndex == 1) {
+    //   svg.selectAll("path").attr("visibility", "hidden");
+    //   svg.selectAll(".Cotton").attr("visibility", "visible");
+    //   svg.selectAll(".Linen").attr("visibility", "visible");
+    //   svg.selectAll(".Wools").attr("visibility", "visible");
+    // }
+    // //showing just linen paths in the second index
+    // else if (scrollIndex == 2) {
+    //   svg.selectAll("path").attr("visibility", "hidden");
+    //   svg.selectAll(".Silk").attr("visibility", "visible");
+    //   svg.selectAll(".Rayon").attr("visibility", "visible");
+    // }
+    // //showing just wool paths in the second index
+    // else if (scrollIndex == 3) {
+    //   svg.selectAll("path").attr("visibility", "hidden");
+    //   svg.selectAll(".Nylon").attr("visibility", "visible");
+    //   svg.selectAll(".Polyester").attr("visibility", "visible");
+    //   svg.selectAll(".Spandex").attr("visibility", "visible");
+    // }
+
+    //***for the website
     //showing just cotton paths in the second index
     else if (scrollIndex == 1) {
       svg.selectAll("path").attr("visibility", "hidden");

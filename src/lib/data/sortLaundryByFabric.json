@@ -11,34 +11,35 @@
     {"name": "Dry-Clean", "group": 3}
   ],
   "links": [
-    {"source": "Cold", "target": "Hand-Wash", "value": 1, "fabric":"Cotton","color": "#FF294C"},
-    {"source": "Hand-Wash", "target": "Low-Heat", "value": 1, "fabric":"Cotton","color": "#FF294C"},
-    {"source": "Low-Heat", "target": "Medium-Heat", "value": 1, "fabric":"Cotton","color": "#FF294C"},
-
-    {"source": "Cold", "target": "Hand-Wash", "value": 1, "fabric":"Linen","color": "#7BDBFF"},
-    {"source": "Hand-Wash", "target": "Air-Dry", "value": 1, "fabric":"Linen","color": "#7BDBFF"},
-
-    {"source": "Hot", "target": "Warm", "value": 1, "fabric":"Nylon","color": "#A6E7FF"},
-    {"source": "Warm", "target": "Cold", "value": 1, "fabric":"Nylon","color": "#A6E7FF"},
-    {"source": "Cold", "target": "Air-Dry", "value": 1, "fabric":"Nylon","color": "#A6E7FF"},
+    {"source": "Cold", "target": "Hand-Wash", "value": 1, "fabric":"Cotton","color": "#007991"},
+    {"source": "Hand-Wash", "target": "Low-Heat", "value": 1, "fabric":"Cotton","color": "#007991"},
+    {"source": "Low-Heat", "target": "Medium-Heat", "value": 1, "fabric":"Cotton","color": "#007991"},
     
-    {"source": "Hot", "target": "Warm", "value": 1, "fabric":"Polyester","color": "#09A08C"},
-    {"source": "Warm", "target": "Cold", "value": 1, "fabric":"Polyester","color": "#09A08C"},
-    {"source": "Cold", "target": "Low-Heat", "value": 1, "fabric":"Polyester","color": "#09A08C"},
-    {"source": "Low-Heat", "target": "Medium-Heat", "value": 1, "fabric":"Polyester","color": "#09A08C"},
+    {"source": "Hot", "target": "Warm", "value": 1, "fabric":"Polyester","color": "#D794FF"},
+    {"source": "Warm", "target": "Cold", "value": 1, "fabric":"Polyester","color": "#D794FF"},
+    {"source": "Cold", "target": "Low-Heat", "value": 1, "fabric":"Polyester","color": "#D794FF"},
+    {"source": "Low-Heat", "target": "Medium-Heat", "value": 1, "fabric":"Polyester","color": "#D794FF"},
 
+    {"source": "Hand-Wash", "target": "Air-Dry", "value": 1, "fabric":"Rayon","color": "#FF6F61"},
+    {"source": "Air-Dry", "target": "Dry-Clean", "value": 1, "fabric":"Rayon","color": "#FF6F61"},
 
-    {"source": "Dry-Clean", "target": "Dry-Clean", "value": 1, "fabric":"Rayon","color": "#FFFFFF"},
+    {"source": "Hand-Wash", "target": "Dry-Clean", "value": 1, "fabric":"Silk","color": "#FFFFFF"},
 
-    {"source": "Hand-Wash", "target": "Dry-Clean", "value": 1, "fabric":"Silk","color": "#191CE4"},
+    {"source": "Hot", "target": "Warm", "value": 1, "fabric":"Spandex","color": "#8861FF"},
+    {"source": "Warm", "target": "Cold", "value": 1, "fabric":"Spandex","color": "#8861FF"},
+    {"source": "Cold", "target": "Air-Dry", "value": 1, "fabric":"Spandex","color": "#8861FF"},
+    {"source": "Air-Dry", "target": "Low-Heat", "value": 1, "fabric":"Spandex","color": "#8861FF"},
+  
+    {"source": "Hot", "target": "Warm", "value": 1, "fabric":"Nylon","color": "#788BFF"},
+    {"source": "Warm", "target": "Cold", "value": 1, "fabric":"Nylon","color": "#788BFF"},
+    {"source": "Cold", "target": "Air-Dry", "value": 1, "fabric":"Nylon","color": "#788BFF"},
 
-    {"source": "Hot", "target": "Warm", "value": 1, "fabric":"Spandex","color": "#FF9083"},
-    {"source": "Warm", "target": "Cold", "value": 1, "fabric":"Spandex","color": "#FF9083"},
-    {"source": "Cold", "target": "Air-Dry", "value": 1, "fabric":"Spandex","color": "#FF9083"},
-    {"source": "Air-Dry", "target": "Low-Heat", "value": 1, "fabric":"Spandex","color": "#FF9083"},
+    {"source": "Cold", "target": "Hand-Wash", "value": 1, "fabric":"Wools","color": "#FFFC4F"},
+    {"source": "Hand-Wash", "target": "Air-Dry", "value": 1, "fabric":"Wools","color": "#FFFC4F"},
 
-    {"source": "Cold", "target": "Hand-Wash", "value": 1, "fabric":"Wools","color": "#FAC83C"},
-    {"source": "Hand-Wash", "target": "Air-Dry", "value": 1, "fabric":"Wools","color": "#FAC83C"}
+    {"source": "Cold", "target": "Hand-Wash", "value": 1, "fabric":"Linen","color": "#8BFF7A"},
+    {"source": "Hand-Wash", "target": "Air-Dry", "value": 1, "fabric":"Linen","color": "#8BFF7A"}
+
 
   ]
 }

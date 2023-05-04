@@ -195,7 +195,7 @@
             the laundry instructions. In this case, the icons from left to right
             mean
             <span
-              style="background-color: rgba(255, 246, 155,1); color: var(--pl-black); padding-left: 3px; padding-right: 3px; font-weight:900;"
+              style="background-color:  var(--pl-green); color: var(--pl-black); padding-left: 3px; padding-right: 3px; font-weight:900;"
             >
               "30°C wash, dry clean preferred, no iron, no bleach, dry flat in
               shade, no bleach."</span
