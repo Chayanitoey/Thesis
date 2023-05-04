@@ -32,13 +32,13 @@
 
 <style>
   a {
-    color: var(--pl-black);
+    color: var(--pl-green);
   }
   .span-line {
     position: absolute;
     width: 60px;
     margin-top: 13px;
-    border: 1px solid var(--pl-black);
+    border: 1px solid var(--pl-white);
   }
   .intro-text {
     /* display: flex; */
@@ -58,7 +58,7 @@
     position: relative;
     top: 0;
     width: 100%;
-    color: var(--pl-black);
+    color: var(--pl-white);
     font-weight: 400;
     font-style: normal;
     font-size: 50px;
@@ -72,14 +72,14 @@
     align-items: center;
     text-align: center;
     letter-spacing: 0.01em;
-    color: var(--pl-black);
+    color: var(--pl-white);
   }
   p {
     font-family: var(--pl-sans);
     justify-content: center;
     align-items: center;
     text-align: justify;
-    color: var(--pl-black);
+    color: var(--pl-white);
     font-weight: 400;
     font-style: normal;
     font-size: 16px;
@@ -103,20 +103,20 @@
     margin-left: auto;
     margin-right: auto;
 
-    /* border: 1px solid var(--pl-black);
-    border-radius: 50%; */
+    border: 1px solid var(--pl-white);
+    border-radius: 50%;
   }
 
   .background-gradient {
     z-index: 1;
-    background: linear-gradient(
+    /* background: linear-gradient(
       180deg,
       rgba(0, 255, 10, 0) 0%,
       #7aff7f 53.12%,
       rgba(0, 255, 10, 0) 100%
-    );
+    ); */
     width: 100%;
     margin-left: 0;
-    height: 150vh;
+    height: 160vh;
   }
 </style>
