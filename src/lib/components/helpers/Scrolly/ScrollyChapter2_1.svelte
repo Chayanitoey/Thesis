@@ -314,7 +314,7 @@
     line-height: 38px;
     letter-spacing: 0.01em;
     color: var(--pl-green);
-    padding-left: 1em;
+    padding-left: 1.2em;
   }
   p {
     font-family: var(--pl-sans);
