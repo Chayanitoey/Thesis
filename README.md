@@ -11,7 +11,14 @@ The data used in this project was mainly collected from various existing academi
 
 Here is a video of this website live in action
 
+<<<<<<< HEAD
 https://github.com/Chayanitoey/Thesis/assets/61849099/8a76a057-eca5-4001-bf9a-c1096a870381
+=======
+
+https://github.com/Chayanitoey/Thesis/assets/61849099/8a76a057-eca5-4001-bf9a-c1096a870381
+
+
+>>>>>>> 166ab95452897d4ea8936d2541e988b25951890c
 
 ## Design Process
 
