@@ -11,7 +11,7 @@ The data used in this project was mainly collected from various existing academi
 
 Here is a video of this website live in action
 
-<iframe src="https://player.vimeo.com/video/826743843?h=bd1b2186c7&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="2880" height="1800" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="demo_thesis"></iframe>
+https://github.com/Chayanitoey/Thesis/assets/61849099/8a76a057-eca5-4001-bf9a-c1096a870381
 
 ## Design Process
 
