@@ -21,7 +21,7 @@
 <svelte:window bind:innerWidth bind:innerHeight />
 
 <ProgressBar />
-<Hamburger />
+<!-- <Hamburger /> -->
 {#if innerWidth > 1300}
   <Scrollyintro />
   <ScrollyChapter1 />

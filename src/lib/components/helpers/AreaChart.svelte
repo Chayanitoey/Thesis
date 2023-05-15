@@ -138,6 +138,12 @@
 </script>
 
 <div class="chart-container">
+  {#if index == 0}
+    <h1>Textile waste generation in America</h1>
+  {:else}
+    <h1>Textile waste management</h1>
+  {/if}
+
   <svg
     {width}
     {height}
@@ -349,7 +355,7 @@
       />
     {/each}
   </svg>
-  <span
+  <p
     style="font-family: var(--pl-sans);font-size:0.7rem; color:var(--pl-grey); padding-top:1rem;"
   >
     Source: <a
@@ -357,8 +363,8 @@
       >American Apparel and Footwear Association, International Trade
       Commission, the U.S. Department of Commerce's Office of Textiles and
       Apparel, and the Council for Textile Recycling.</a
-    ></span
-  >
+    >
+  </p>
 </div>
 
 <!-- Tooltip -->
@@ -377,6 +383,17 @@
 {/if}
 
 <style>
+  h1 {
+    font-family: var(--pl-serif);
+    position: relative;
+    top: 0;
+    width: 100%;
+    color: var(--pl-white);
+    font-weight: 400;
+    font-style: normal;
+    font-size: 50px;
+    letter-spacing: -0.01em;
+  }
   .chart-container {
     justify-content: center;
     align-items: center;

@@ -2,13 +2,14 @@
   // @ts-nocheck
   import "$lib/styles/global.css";
   import icon from "$lib/images/laundry_icon.png";
+  import phone from "$lib/images/Phone_1_AdobeExpress.gif";
 </script>
 
 <div class="background-gradient">
   <div class="intro-text">
     <h3>
       <span class="span-line" style="margin-left:-80px;" />
-      CHAPTER III
+      CHAPTER IV
       <span class="span-line" style="margin-left:15px;" />
     </h3>
     <h1>Time To Do Laundry</h1>
@@ -25,7 +26,7 @@
       great. If you have any questions or feedback, don't hesitate to reach out!
     </p>
     <a href="https://app.perfectlaundryday.com/">
-      <img class="ellipse" src={icon} alt="Perfect Laundry Day Icon" />
+      <img class="ellipse" src={phone} alt="Perfect Laundry Day Icon" />
     </a>
   </div>
 </div>
@@ -94,17 +95,17 @@
   .ellipse {
     /* box-sizing: border-box; */
     display: flex;
-    width: 344px;
-    height: 344px;
+    width: 120%;
+    height: 120%;
     justify-content: center;
     align-items: center;
     text-align: justify;
     margin-top: 10vh;
-    margin-left: auto;
+    margin-left: -5vw;
     margin-right: auto;
 
-    border: 1px solid var(--pl-white);
-    border-radius: 50%;
+    /* border: 1px solid var(--pl-white);
+    border-radius: 50%; */
   }
 
   .background-gradient {

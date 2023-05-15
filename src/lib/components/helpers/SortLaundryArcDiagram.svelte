@@ -197,7 +197,6 @@
       svg.selectAll("path").attr("visibility", "visible");
     }
     //***for the presentation
-
     // else if (scrollIndex == 1) {
     //   svg.selectAll("path").attr("visibility", "hidden");
     //   svg.selectAll(".Cotton").attr("visibility", "visible");

@@ -44,13 +44,13 @@
   <h2>Sorting by Color</h2>
 
   <p>
-    <!-- Sort by <span style="background-color:var(--pl-blue);">color</span> : -->
-    Sorting the laundry has to happen, and it's a good place not to cut corners by
-    performing a rush job. Sorting is the time when you can treat and prevent all
-    kinds of problems, so make it a habit to practice your due diligence when sorting.
-    According to
-    <a href="https://www.nytimes.com/guides/smarterliving/how-to-do-laundry"
-      >NYT</a
+    Sorting the laundry has to happen, and it's a good place not to cut corners
+    by performing a rush job. Sorting is the time when you can treat and prevent
+    all kinds of problems, so make it a habit to practice your due diligence
+    when sorting. According to
+    <a
+      href="https://www.nytimes.com/guides/smarterliving/how-to-do-laundry"
+      class="emphasis">The New York Times</a
     >
     it's wise to civide your laundry load by colors :
     <span class="emphasis">white, colors, and pastel.</span>
@@ -65,7 +65,7 @@
     <div>
       <div class="rect-sort-color" style="background-color: white;" />
       <div
-        style="font-family: var(--pl-serif); font-size:medium; color:var(--pl-white);"
+        style="font-family: var(--pl-serif); font-size:2rem; color:var(--pl-white);"
       >
         White
       </div>
@@ -73,7 +73,7 @@
     <div>
       <div class="rect-sort-color" id="colors-group" />
       <div
-        style="display: inline-block; vertical-align: middle;font-family: var(--pl-serif); font-size:medium;  color:var(--pl-white);"
+        style="display: inline-block; vertical-align: middle;font-family: var(--pl-serif); font-size:2rem;  color:var(--pl-white);"
       >
         Colors
       </div>
@@ -81,24 +81,22 @@
     <div>
       <div class="rect-sort-color" id="pastels-group" />
       <div
-        style="display: inline-block; vertical-align: middle;font-family: var(--pl-serif); font-size:medium;color:var(--pl-white);"
+        style="display: inline-block; vertical-align: middle;font-family: var(--pl-serif); font-size:2rem;color:var(--pl-white);"
       >
         Pastels
       </div>
     </div>
   </div>
-  <!-- <FabricGroup /> -->
 </div>
 
 <div class="sort_fabric_type">
   <h2>Sorting by Fabric Type</h2>
 
   <p>
-    <!-- Sort by -->
-    <!-- <span style="background-color:var(--pl-blue);">fabric type</span>:  -->
-    When possible, it is also wise to sort your laundry by fabric composition due
-    to widely different characteristics of each fibre, your clothes will need different
-    care methods/ wash settings to maintain quality of the fabric fiber.
+    When possible, it is also wise to sort your laundry by fabric composition
+    due to widely different characteristics of each fibre, your clothes will
+    need different care methods/ wash settings to maintain quality of the fabric
+    fiber.
     <br />
     <br />
     <br />
@@ -124,8 +122,8 @@
     <div slot="foreground">
       <section />
       <!-- for screen recording -->
-      <!-- 
-      <section>
+
+      <!-- <section>
         <div class="step">
           <span style="color:#8BFF7A; font-weight:900;padding:2px 2px">
             Natural Fibers
@@ -260,8 +258,8 @@
 
 <style>
   .rect-sort-color {
-    width: 100px;
-    height: 100px;
+    width: 200px;
+    height: 200px;
     border-radius: 2;
     margin-top: 2%;
     margin-bottom: 2%;
@@ -274,6 +272,8 @@
       #29f2aa 66.5%,
       #e01705 88.58%
     );
+    background-size: 200% 200%;
+    animation: gradient 5s ease infinite;
     transform: rotate(-90deg);
   }
   #pastels-group {
@@ -285,8 +285,23 @@
       #caffd9 77.19%,
       #fcffd5 98.8%
     );
+    background-size: 200% 200%;
+    animation: gradient 5s ease infinite;
     transform: rotate(-90deg);
   }
+
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
   .span-line {
     position: absolute;
     width: 60px;
@@ -318,7 +333,7 @@
   }
 
   .sort_color {
-    height: 80vh;
+    height: 100vh;
     max-width: 56vw;
     margin: auto;
     justify-content: center;

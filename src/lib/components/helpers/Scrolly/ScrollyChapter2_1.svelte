@@ -85,7 +85,7 @@
             <img
               src="https://raw.githubusercontent.com/Chayanitoey/laundry_icons/main/Blazer/FabricComposition.png"
               alt="showing fabric compositions of this blazer"
-              style="width:36vw;margin-left:-35.2vw;margin-top:-4.5vh;z-index:100;position:absolute;"
+              style="width:36vw;margin-left:-35.2vw;margin-top:-3.8vh;z-index:100;position:absolute;"
             />
           {/if}
         {:else if index >= 2 && index <= 3}
@@ -139,6 +139,7 @@
     <div slot="foreground">
       <section>
         <div class="left-align-text" style="margin-top:20vh;">
+          <!-- ********for website -->
           <h2>The Care Label</h2>
           <p class="p-left">
             When it comes to proper garment care, it all begins with correctly
@@ -148,6 +149,11 @@
             imagine you've just purchased a brand new blazer jacket...
             <br />
           </p>
+          <!-- ********for presentation -->
+          <!-- <h2>How to care your clothes?</h2>
+          <p class="p-left">
+            Imagine you have just bought a brand new work blazer jacket...
+          </p> -->
         </div>
       </section>
       <section>
@@ -164,7 +170,7 @@
       <section>
         <div class="left-align-text">
           <p class="p-left">
-            When it comes to caring for a garment like a puffer jacket, it can
+            When it comes to caring for a garment like a blazer jacket, it can
             be difficult to determine the best cleaning method.
             <br />
             <br />
@@ -304,11 +310,11 @@
   h2 {
     font-family: var(--pl-serif);
     font-weight: 400;
-    font-size: 1.5rem;
+    font-size: 2rem;
     line-height: 38px;
     letter-spacing: 0.01em;
     color: var(--pl-green);
-    padding-left: 1.5em;
+    padding-left: 1em;
   }
   p {
     font-family: var(--pl-sans);
@@ -318,13 +324,13 @@
     color: var(--pl-white);
     font-weight: 400;
     font-style: normal;
-    font-size: 16px;
-    line-height: 20px;
+    font-size: 20px;
+    line-height: 24px;
     letter-spacing: 2%;
     letter-spacing: 0.01em;
     padding-bottom: 10px;
     padding-right: 10%;
-    padding-left: 10%;
+    padding-left: 9%;
 
     /* max-width: 40vw; */
   }

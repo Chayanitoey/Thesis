@@ -116,8 +116,8 @@
   h2 {
     font-family: var(--pl-serif);
     font-weight: 400;
-    font-size: 2rem;
-    line-height: 38px;
+    font-size: 4rem;
+    line-height: 4.5rem;
     letter-spacing: 0.01em;
     color: var(--pl-green);
     margin-left: 10vw;
