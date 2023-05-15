@@ -1,16 +1,12 @@
 <div class="breakout">
-  <h3>
-    <span style="background-color: var(--pl-green); padding:3px;"
-      >This story is not available on small screens yet!</span
-    >
-  </h3>
+  <h3>This story is not available on small screens yet!</h3>
   <p>
     Sorry, this story doesn't work on small screens and touch devices yet. You
     should view this story on a desktop computer, laptop, or any device at least
     the size of a horizontal iPad. Meanwhile, you can still visit the beta for
     the perfect laundry day app instead!
   </p>
-  <button>
+  <button class="btn">
     <a href="https://app.perfectlaundryday.com/">
       Visit Perfect Laundry App Beta
     </a>
@@ -21,12 +17,12 @@
   h3 {
     font-family: var(--pl-serif);
     font-weight: 700;
-    font-size: 1.5rem;
-    line-height: 29px;
+    font-size: 2rem;
+    line-height: 2.5rem;
     align-items: left;
     text-align: left;
     letter-spacing: 0.01em;
-    color: var(--pl-black);
+    color: var(--pl-green);
   }
   p {
     font-family: var(--pl-sans);
@@ -49,7 +45,7 @@
     margin-left: 10vw;
   }
   a {
-    color: var(--pl-white);
+    color: var(--pl-black);
     text-decoration-line: underline;
     font-weight: 400;
   }
@@ -57,11 +53,52 @@
     color: var(--pl-black);
     text-decoration-line: underline;
   }
-  button {
-    background-color: var(--pl-black);
-    padding: 4px;
+
+  .btn {
+    align-items: center;
+    appearance: none;
+    background-color: #fff;
+    border: 1px solid #dbdbdb;
+    border-radius: 0.375em;
+    margin-right: 1rem;
+    box-shadow: none;
+    box-sizing: border-box;
+    color: var(--pl-black);
+    cursor: pointer;
+    display: inline-flex;
+    font-family: var(--pl-sans);
+    font-size: 1rem;
+    height: 2em;
+    justify-content: center;
+    line-height: 1;
+    padding: calc(0.5em - 1px) 1em;
+    position: relative;
+    text-align: center;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: top;
+    white-space: nowrap;
   }
-  button:hover {
+
+  .btn:active {
+    /* border-color: #434242; */
     background-color: var(--pl-green);
+    outline: 0;
+  }
+
+  .btn:focus {
+    border-color: #485fc7;
+    background-color: var(--pl-green);
+    outline: 0;
+  }
+
+  .btn:hover {
+    background-color: var(--pl-green);
+    border-color: #b5b5b5;
+  }
+
+  .btn:focus:not(:active) {
+    box-shadow: rgba(72, 95, 199, 0.25) 0 0 0 0.125em;
   }
 </style>
