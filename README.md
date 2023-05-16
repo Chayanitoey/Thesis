@@ -38,7 +38,7 @@ npm run dev -- --open
 
 ## Documentation
 
-[Read my research paper](https://linktodocumentation)
+[Read more about the research methodologies and documentations on my research paper](https://github.com/Chayanitoey/Thesis/blob/main/static/ThesisPaper/ChayThawaranont_PerfectLaundryDay_Thesis_paper.pdf)
 
 This visual essay was built with Svelte, SvelteKit and D3 , deployed on Cloudflare. I also used the help of the Scroller.svelte library for scroll events, svelte-hamburgers, pancake.svelte for Stacked Bar Chart, LayerCake.svelte for dot plot chart, and Scroller UI for the database UI components.
 
