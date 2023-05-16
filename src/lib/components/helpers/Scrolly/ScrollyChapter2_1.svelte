@@ -324,13 +324,12 @@
     color: var(--pl-white);
     font-weight: 400;
     font-style: normal;
-    font-size: 20px;
-    line-height: 24px;
-    letter-spacing: 2%;
-    letter-spacing: 0.01em;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.06em;
     padding-bottom: 10px;
     padding-right: 10%;
-    padding-left: 9%;
+    padding-left: 10%;
 
     /* max-width: 40vw; */
   }

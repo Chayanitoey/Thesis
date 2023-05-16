@@ -115,6 +115,7 @@
   <div id="ScrollyChapter4">
     <Chapter3 />
   </div>
+  <div id="empty_div" />
   <Footnote />
 {:else}
   <Breakout />
@@ -176,5 +177,9 @@
   a {
     color: var(--pl-white);
     text-decoration: none;
+  }
+  #empty_div {
+    height: 30vh;
+    width: 100vw;
   }
 </style>
