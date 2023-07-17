@@ -53,8 +53,13 @@
 {#if innerWidth > 1300}
   <div class="indicator">
     <div class="about-this-project">
-      <a href="#">About this project</a>
+      {#if scrollIndex < 5}
+        <a style="opacity:1;" href="#ScrollyIntro">About this project</a>
+      {:else}
+        <a style="opacity:0.5;" href="#ScrollyIntro">About this project</a>
+      {/if}
     </div>
+
     <span style="color:white;opacity: 0.5;">|</span>
     <div class="indicator_chapter">
       {#if scrollIndex > 5 && scrollIndex < 32}
@@ -100,8 +105,9 @@
       {/if}
     </div>
   </div>
-
-  <Scrollyintro />
+  <div id="ScrollyIntro">
+    <Scrollyintro />
+  </div>
   <div id="ScrollyChapter1">
     <ScrollyChapter1 />
   </div>
