@@ -314,7 +314,7 @@
     margin-top: -7vh;
     position: absolute;
     text-align: left;
-    margin-left: -18vw;
+    margin-left: -5vw;
   }
   .swatch {
     width: 2.5vw;

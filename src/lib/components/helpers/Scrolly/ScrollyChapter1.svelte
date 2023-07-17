@@ -136,11 +136,10 @@
     top: 0;
   }
   .chart {
-    margin: auto;
-    align-items: center;
-    justify-content: center;
-    width: 56vw;
-    /* margin-top: 30vh; */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
   .chart-1 {
     margin: auto;
@@ -197,18 +196,13 @@
     align-items: center;
     height: 100vh;
     font-size: 16px;
-    padding-top: 10vh;
   }
 
   .background-content {
-    /* background-color: hsla(210, 100%, 50%, 0.1); */
-    border-top: 2px solid var(--blue3);
-    border-bottom: 2px solid var(--blue3);
     font-size: 1.4em;
-    overflow: hidden;
-    padding: 1em 1em;
-    /* this works only for 1920 screen width needs to do break views*/
-    margin-top: -20vh;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
   }
 
   [slot="foreground"] {

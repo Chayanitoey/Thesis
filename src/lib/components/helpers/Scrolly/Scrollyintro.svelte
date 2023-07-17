@@ -77,7 +77,7 @@
                 ">Broken Materials</span
               >
             </h1>
-            <p style="margin-top:-10vh;">
+            <p>
               <strong>Perfect Laundry Day:</strong>
               enhancing garments longevity with better laundry practices.
               <br />
@@ -92,12 +92,13 @@
       <section />
       <section>
         <div class="text-scroll">
-          These are the common rookie’s mistakes if you don’t know how to take
-          care of your clothes properly-learning how to wash & care your garment
-          is crucial for a long-life and sustainable fashion consumption.
+          This visual essay created by Chay Chayanit Thawaranont in support of a
+          graduate school thesis for the Masters of Science in Data
+          Visualization at Parsons School of Design, The New School.
           <br />
           <br />
-          This project aims to demystify garment washing & caring.
+          This project aims to demystify garment washing & caring and prolong the
+          garment lifecycle through informative laundry guidance.
         </div>
       </section>
     </div>
@@ -107,17 +108,12 @@
 <style>
   .text-intro {
     display: inline-block;
-    row-gap: 1rem;
-    /* height: 100vh;
-    margin-bottom: 20vh; */
-    padding-top: 10rem;
-    padding-left: 3rem;
-    /* margin-top: 40vh; */
+    padding: 10rem 3rem;
   }
 
   h1 {
     font-family: var(--pl-serif);
-    margin-top: -15vh;
+    line-height: 0.7;
     color: var(--pl-white);
     font-weight: 400;
     font-style: normal;

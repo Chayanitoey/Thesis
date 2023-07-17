@@ -137,238 +137,234 @@
   const yTicks = niceY.ticks(yScalefactor);
 </script>
 
-<div class="parent-container">
-  <div class="chart-container">
-    {#if index == 0}
-      <h1>Textile waste generation in America</h1>
-    {:else}
-      <h1>Textile waste management</h1>
+<div class="chart-container">
+  {#if index == 0}
+    <h1>Textile waste generation in America</h1>
+  {:else}
+    <h1>Textile waste management</h1>
+  {/if}
+
+  <svg
+    {width}
+    {height}
+    viewBox="0 0 {width} {height}"
+    cursor="crosshair"
+    on:mouseout={() => (dotInfo = null)}
+    on:blur={() => (dotInfo = null)}
+    {index}
+  >
+    <!-- Dots (if enabled) -->
+    {#if showDots && !dotInfo}
+      {#each I as i}
+        <g class="dot" pointer-events="none">
+          <circle
+            cx={xScale(xVals[i])}
+            cy={yScale(yVals[i])}
+            {r}
+            stroke={colors[colorVals[i]]}
+            fill={dotsFilled ? colors[colorVals[i]] : "none"}
+          />
+        </g>
+      {/each}
     {/if}
-
-    <svg
-      {width}
-      {height}
-      viewBox="0 0 {width} {height}"
-      cursor="crosshair"
-      on:mouseout={() => (dotInfo = null)}
-      on:blur={() => (dotInfo = null)}
-      {index}
-    >
-      <!-- Dots (if enabled) -->
-      {#if showDots && !dotInfo}
-        {#each I as i}
-          <g class="dot" pointer-events="none">
-            <circle
-              cx={xScale(xVals[i])}
-              cy={yScale(yVals[i])}
-              {r}
-              stroke={colors[colorVals[i]]}
-              fill={dotsFilled ? colors[colorVals[i]] : "none"}
-            />
-          </g>
-        {/each}
-      {/if}
-      <!-- Chart Areas -->
-      {#if index == 0}
-        {#each areas as subsetArea, i}
-          {#if i == 0}
-            <g
-              class="chartlines"
-              pointer-events="none"
-              in:fly={{ y: 50, duration: 500, easing: cubicOut }}
-              out:fly={{ y: -{ y }, duration: 675 }}
-            >
-              {#if dotInfo}
-                <path
-                  class="line"
-                  fill={colors[i]}
-                  fill-opacity={points[dotInfo[1]].color === i ? "0.5" : "0.1"}
-                  stroke={colors[i]}
-                  d={subsetArea}
-                />
-                <circle
-                  cx={xScale(points[dotInfo[1]].x)}
-                  cy={yScale(points[dotInfo[1]].y)}
-                  r="3"
-                  stroke={colors[points[dotInfo[1]].color]}
-                  fill="none"
-                />
-              {:else}
-                <path
-                  class="line"
-                  fill={colors[i]}
-                  stroke={colors[i]}
-                  d={subsetArea}
-                  fill-opacity={fillOpacity}
-                  stroke-width={strokeWidth}
-                  stroke-linecap={strokeLinecap}
-                  stroke-linejoin={strokeLinejoin}
-                />
-              {/if}
-            </g>
-          {/if}
-        {/each}
-      {:else if index == 1}
-        {#each areas as subsetArea, i}
-          {#if i > 0}
-            <g
-              class="chartlines"
-              pointer-events="none"
-              in:fly={{ y: 10, duration: 500, easing: cubicOut }}
-              out:fly={{ y: -{ y }, duration: 675 }}
-            >
-              {#if dotInfo}
-                <path
-                  class="line"
-                  fill={colors[i]}
-                  fill-opacity={points[dotInfo[1]].color === i ? "0.5" : "0.1"}
-                  stroke={colors[i]}
-                  d={subsetArea}
-                />
-                <circle
-                  cx={xScale(points[dotInfo[1]].x)}
-                  cy={yScale(points[dotInfo[1]].y)}
-                  r="3"
-                  stroke={colors[points[dotInfo[1]].color]}
-                  fill="none"
-                />
-              {:else}
-                <path
-                  class="line"
-                  fill={colors[i]}
-                  stroke={colors[i]}
-                  d={subsetArea}
-                  fill-opacity={fillOpacity}
-                  stroke-width={strokeWidth}
-                  stroke-linecap={strokeLinecap}
-                  stroke-linejoin={strokeLinejoin}
-                />
-              {/if}
-            </g>
-          {/if}
-        {/each}
-      {:else}
-        {#each areas as subsetArea, i}
-          {#if i == 1}
-            <g
-              class="chartlines"
-              pointer-events="none"
-              in:fly={{ y: 10, duration: 500, easing: cubicOut }}
-              out:fly={{ y: -{ y }, duration: 675 }}
-            >
-              {#if dotInfo}
-                <path
-                  class="line"
-                  fill={colors[i]}
-                  fill-opacity={points[dotInfo[1]].color === i ? "0.5" : "0.1"}
-                  stroke={colors[i]}
-                  d={subsetArea}
-                />
-                <circle
-                  cx={xScale(points[dotInfo[1]].x)}
-                  cy={yScale(points[dotInfo[1]].y)}
-                  r="3"
-                  stroke={colors[points[dotInfo[1]].color]}
-                  fill="none"
-                />
-              {:else}
-                <path
-                  class="line"
-                  fill={colors[i]}
-                  stroke={colors[i]}
-                  d={subsetArea}
-                  fill-opacity={fillOpacity}
-                  stroke-width={strokeWidth}
-                  stroke-linecap={strokeLinecap}
-                  stroke-linejoin={strokeLinejoin}
-                />
-              {/if}
-            </g>
-          {/if}
-        {/each}
-      {/if}
-
-      <!-- Y-axis and horizontal grid lines -->
-      <g
-        class="y-axis"
-        transform="translate({marginLeft}, 0)"
-        pointer-events="none"
-      >
-        <path
-          class="domain"
-          stroke="white"
-          d="M{insetLeft}, {marginTop} V{height - marginBottom + 6}"
-        />
-        {#each yTicks as tick, i}
-          <g class="tick" transform="translate(0, {yScale(tick)})">
-            <line class="tick-start" x1={insetLeft - 6} x2={insetLeft} />
-            {#if horizontalGrid}
-              <line
-                class="tick-grid"
-                x1={insetLeft}
-                x2={width - marginLeft - marginRight}
+    <!-- Chart Areas -->
+    {#if index == 0}
+      {#each areas as subsetArea, i}
+        {#if i == 0}
+          <g
+            class="chartlines"
+            pointer-events="none"
+            in:fly={{ y: 50, duration: 500, easing: cubicOut }}
+            out:fly={{ y: -{ y }, duration: 675 }}
+          >
+            {#if dotInfo}
+              <path
+                class="line"
+                fill={colors[i]}
+                fill-opacity={points[dotInfo[1]].color === i ? "0.5" : "0.1"}
+                stroke={colors[i]}
+                d={subsetArea}
+              />
+              <circle
+                cx={xScale(points[dotInfo[1]].x)}
+                cy={yScale(points[dotInfo[1]].y)}
+                r="3"
+                stroke={colors[points[dotInfo[1]].color]}
+                fill="none"
+              />
+            {:else}
+              <path
+                class="line"
+                fill={colors[i]}
+                stroke={colors[i]}
+                d={subsetArea}
+                fill-opacity={fillOpacity}
+                stroke-width={strokeWidth}
+                stroke-linecap={strokeLinecap}
+                stroke-linejoin={strokeLinejoin}
               />
             {/if}
-            <text text-align="right" x="-{marginLeft}" y="5"
-              >{tick * 100 + yFormat}</text
-            >
           </g>
-        {/each}
-        <text
-          style="fill: var(--pl-white);"
-          x="-{marginLeft}"
-          y={marginTop - 60}>{yLabel}</text
-        >
-      </g>
-      <!-- X-axis and vertical grid lines -->
-      <g
-        class="x-axis"
-        transform="translate(0,{height - marginBottom - insetBottom})"
-        pointer-events="none"
-      >
-        <path
-          class="domain"
-          stroke="white"
-          d="M{marginLeft},0.5 H{width - marginRight}"
-        />
-        {#each xTicks as tick, i}
-          <g class="tick" transform="translate({xScale(tick)}, 0)">
-            <line class="tick-start" stroke="black" y2="6" />
-            {#if verticalGrid}
-              <line class="tick-grid" y2={-height} />
-            {/if}
-            <text font-size="8px" x={-marginLeft / 4} y="20"
-              >{xTicksFormatted[i] + xFormat}</text
-            >
-          </g>
-        {/each}
-        <text x={width - marginLeft - marginRight - 40} y={marginBottom}
-          >{xLabel}</text
-        >
-      </g>
-
-      {#each pointsScaled as point, i}
-        <path
-          stroke="none"
-          fill-opacity="0"
-          class="voronoi-cell"
-          d={voronoiGrid.renderCell(i)}
-          on:mouseover={(e) => (dotInfo = [point, i, e])}
-          on:focus={(e) => (dotInfo = [point, i, e])}
-        />
+        {/if}
       {/each}
-    </svg>
-    <p
-      style="font-family: var(--pl-sans);font-size:0.7rem; color:var(--pl-grey); padding-top:1rem;"
+    {:else if index == 1}
+      {#each areas as subsetArea, i}
+        {#if i > 0}
+          <g
+            class="chartlines"
+            pointer-events="none"
+            in:fly={{ y: 10, duration: 500, easing: cubicOut }}
+            out:fly={{ y: -{ y }, duration: 675 }}
+          >
+            {#if dotInfo}
+              <path
+                class="line"
+                fill={colors[i]}
+                fill-opacity={points[dotInfo[1]].color === i ? "0.5" : "0.1"}
+                stroke={colors[i]}
+                d={subsetArea}
+              />
+              <circle
+                cx={xScale(points[dotInfo[1]].x)}
+                cy={yScale(points[dotInfo[1]].y)}
+                r="3"
+                stroke={colors[points[dotInfo[1]].color]}
+                fill="none"
+              />
+            {:else}
+              <path
+                class="line"
+                fill={colors[i]}
+                stroke={colors[i]}
+                d={subsetArea}
+                fill-opacity={fillOpacity}
+                stroke-width={strokeWidth}
+                stroke-linecap={strokeLinecap}
+                stroke-linejoin={strokeLinejoin}
+              />
+            {/if}
+          </g>
+        {/if}
+      {/each}
+    {:else}
+      {#each areas as subsetArea, i}
+        {#if i == 1}
+          <g
+            class="chartlines"
+            pointer-events="none"
+            in:fly={{ y: 10, duration: 500, easing: cubicOut }}
+            out:fly={{ y: -{ y }, duration: 675 }}
+          >
+            {#if dotInfo}
+              <path
+                class="line"
+                fill={colors[i]}
+                fill-opacity={points[dotInfo[1]].color === i ? "0.5" : "0.1"}
+                stroke={colors[i]}
+                d={subsetArea}
+              />
+              <circle
+                cx={xScale(points[dotInfo[1]].x)}
+                cy={yScale(points[dotInfo[1]].y)}
+                r="3"
+                stroke={colors[points[dotInfo[1]].color]}
+                fill="none"
+              />
+            {:else}
+              <path
+                class="line"
+                fill={colors[i]}
+                stroke={colors[i]}
+                d={subsetArea}
+                fill-opacity={fillOpacity}
+                stroke-width={strokeWidth}
+                stroke-linecap={strokeLinecap}
+                stroke-linejoin={strokeLinejoin}
+              />
+            {/if}
+          </g>
+        {/if}
+      {/each}
+    {/if}
+
+    <!-- Y-axis and horizontal grid lines -->
+    <g
+      class="y-axis"
+      transform="translate({marginLeft}, 0)"
+      pointer-events="none"
     >
-      Source: <a
-        href="https://www.epa.gov/facts-and-figures-about-materials-waste-and-recycling/textiles-material-specific-data"
-        >American Apparel and Footwear Association, International Trade
-        Commission, the U.S. Department of Commerce's Office of Textiles and
-        Apparel, and the Council for Textile Recycling.</a
+      <path
+        class="domain"
+        stroke="white"
+        d="M{insetLeft}, {marginTop} V{height - marginBottom + 6}"
+      />
+      {#each yTicks as tick, i}
+        <g class="tick" transform="translate(0, {yScale(tick)})">
+          <line class="tick-start" x1={insetLeft - 6} x2={insetLeft} />
+          {#if horizontalGrid}
+            <line
+              class="tick-grid"
+              x1={insetLeft}
+              x2={width - marginLeft - marginRight}
+            />
+          {/if}
+          <text text-align="right" x="-{marginLeft}" y="5"
+            >{tick * 100 + yFormat}</text
+          >
+        </g>
+      {/each}
+      <text style="fill: var(--pl-white);" x="-{marginLeft}" y={marginTop - 60}
+        >{yLabel}</text
       >
-    </p>
-  </div>
+    </g>
+    <!-- X-axis and vertical grid lines -->
+    <g
+      class="x-axis"
+      transform="translate(0,{height - marginBottom - insetBottom})"
+      pointer-events="none"
+    >
+      <path
+        class="domain"
+        stroke="white"
+        d="M{marginLeft},0.5 H{width - marginRight}"
+      />
+      {#each xTicks as tick, i}
+        <g class="tick" transform="translate({xScale(tick)}, 0)">
+          <line class="tick-start" stroke="black" y2="6" />
+          {#if verticalGrid}
+            <line class="tick-grid" y2={-height} />
+          {/if}
+          <text font-size="8px" x={-marginLeft / 4} y="20"
+            >{xTicksFormatted[i] + xFormat}</text
+          >
+        </g>
+      {/each}
+      <text x={width - marginLeft - marginRight - 40} y={marginBottom}
+        >{xLabel}</text
+      >
+    </g>
+
+    {#each pointsScaled as point, i}
+      <path
+        stroke="none"
+        fill-opacity="0"
+        class="voronoi-cell"
+        d={voronoiGrid.renderCell(i)}
+        on:mouseover={(e) => (dotInfo = [point, i, e])}
+        on:focus={(e) => (dotInfo = [point, i, e])}
+      />
+    {/each}
+  </svg>
+  <p
+    style="font-family: var(--pl-sans);font-size:0.7rem; color:var(--pl-grey); padding-top:1rem;"
+  >
+    Source: <a
+      href="https://www.epa.gov/facts-and-figures-about-materials-waste-and-recycling/textiles-material-specific-data"
+      >American Apparel and Footwear Association, International Trade
+      Commission, the U.S. Department of Commerce's Office of Textiles and
+      Apparel, and the Council for Textile Recycling.</a
+    >
+  </p>
 </div>
 <!-- Tooltip -->
 {#if dotInfo}
@@ -389,7 +385,6 @@
   h1 {
     font-family: var(--pl-serif);
     position: relative;
-    top: 0;
     width: 100%;
     color: var(--pl-white);
     font-weight: 400;
@@ -400,13 +395,6 @@
   .chart-container {
     justify-content: center;
     align-items: center;
-    margin-top: 50px;
-    margin-left: 8 0px;
-  }
-  .parent-container {
-    position: relative;
-    height: 100%;
-    width: 100%;
   }
 
   svg {

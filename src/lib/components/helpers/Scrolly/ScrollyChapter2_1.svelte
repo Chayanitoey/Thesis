@@ -74,18 +74,16 @@
     <div slot="background">
       <div class="background-content">
         {#if index < 2}
-          <p>
-            <img
-              src="https://raw.githubusercontent.com/Chayanitoey/laundry_icons/main/Blazer/Jacket.png"
-              alt="Blazer"
-              style="width:26vw;margin-left:-30vw;z-index:-100;position:absolute;"
-            />
-          </p>
+          <img
+            src="https://raw.githubusercontent.com/Chayanitoey/laundry_icons/main/Blazer/Jacket.png"
+            alt="Blazer"
+            style="width:26vw;margin-left:5.2vw;z-index:-100;position:fixed;align-self:center;"
+          />
           {#if index == 1}
             <img
               src="https://raw.githubusercontent.com/Chayanitoey/laundry_icons/main/Blazer/FabricComposition.png"
               alt="showing fabric compositions of this blazer"
-              style="width:36vw;margin-left:-35.2vw;margin-top:-3.8vh;z-index:100;position:absolute;"
+              style="width:36vw;margin-top:-1vh;z-index:100"
             />
           {/if}
         {:else if index >= 2 && index <= 3}
@@ -99,10 +97,11 @@
                 ,{(index / 2) *
                 (index / 2) *
                 (index / 2) *
-                (index / 2)}; width:36vw;z-index:100;position:absolute;
-                 margin-left:{index == 3
-                ? '-70vw'
-                : '-35.2vw'};margin-top:{index == 3 ? '-70vh' : '-12vh'};"
+                (index / 2)}; width:36vw;z-index:100;
+                 margin-left:{index == 3 ? '-30vw' : '0vw'};margin-top:{index ==
+              3
+                ? '-50vh'
+                : '-10vh'};"
             />
           </p>
         {:else if index == 4}
@@ -261,12 +260,9 @@
   img {
     display: block;
     width: 100%;
-    /* transition: transform 0.25s, visibility 0.25s ease-in; */
     opacity: 1;
     transition: all 0.25s, visibility 0.25s ease-in;
-    /* margin-top: -5vh; */
   }
-  /* margin-top: -10vh; */
 
   .span-line {
     position: absolute;
@@ -318,24 +314,17 @@
   }
   p {
     font-family: var(--pl-sans);
-    justify-content: center;
-    align-items: center;
-    text-align: justify;
+    width: 100%;
     color: var(--pl-white);
     font-weight: 400;
     font-style: normal;
     font-size: 16px;
     line-height: 20px;
     letter-spacing: 0.06em;
-    padding-bottom: 10px;
-    padding-right: 10%;
-    padding-left: 10%;
-
-    /* max-width: 40vw; */
+    vertical-align: middle;
+    position: relative;
   }
-  /* .background-content p {
-    color: var(--pl-black);
-  } */
+
   .p-left {
     justify-content: left;
     align-items: left;
@@ -347,29 +336,29 @@
     padding: 2em 2em;
   }
   [slot="background"] {
-    display: flex;
-    justify-content: right;
-    /* background-color: rgba(250, 250, 250, 1); */
-    align-items: right;
     height: 100vh;
+    height: 100dvh;
     font-size: 16px;
-    padding-top: 10vh;
-    /* this works only for 1920 screen width needs to do break views*/
-    /* margin-top: -23vh; */
+    width: 100%;
+    position: fixed;
+    pointer-events: all;
+    display: grid;
+    place-items: right;
   }
 
   .background-content {
-    /* background-color: hsla(210, 100%, 50%, 0.1); */
-    /* border-top: 2px solid var(--blue3);
-    border-bottom: 2px solid var(--blue3); */
     font-size: 1.4em;
-    max-width: 100vw;
-    max-height: 80vh;
-    overflow: hidden;
-    padding: 1em 4em;
-    /* this works only for 1920 screen width needs to do break views*/
-    /* margin-top: -23vh; */
+    position: relative;
+    pointer-events: none;
+    width: 40%;
+    height: fit-content;
+    justify-self: end;
+    justify-items: center;
+    padding: 3rem;
+    margin-top: 10vh;
+    margin-top: 10dvh;
   }
+
   .left-align-text {
     float: left;
     max-width: 30vw;
@@ -377,31 +366,10 @@
     margin-top: 5vw;
   }
 
-  /* [slot='foreground'] {
-		pointer-events: none;
-		max-width: 640px;
-		margin: 0 auto;
-		font-size: 16px;
-	} */
-
-  /* .step {
-		font-size: 1em;
-		box-sizing: border-box;
-		padding: 1em 1.25em;
-		background-color: hsla(0, 0%, 100%, 0.8);
-		backdrop-filter: blur(10px);
-		border-radius: 1em;
-		border: 1px solid #333;
-		pointer-events: auto;
-	} */
-
   [slot="foreground"] section {
     pointer-events: all;
     height: 80vh;
-    /* padding: 1em; */
-    /* margin: 0 0 2em 0; */
     font-family: var(--sans);
-    /* margin: 0 auto 20vh; */
   }
 
   [slot="foreground"] section:last-of-type {

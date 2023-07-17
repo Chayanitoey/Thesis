@@ -52,6 +52,10 @@
 
 {#if innerWidth > 1300}
   <div class="indicator">
+    <div class="about-this-project">
+      <a href="#">About this project</a>
+    </div>
+    <span style="color:white;opacity: 0.5;">|</span>
     <div class="indicator_chapter">
       {#if scrollIndex > 5 && scrollIndex < 32}
         <a style="opacity:1;" href="#ScrollyChapter1"
@@ -173,6 +177,14 @@
     display: inline;
     font-size: 1rem;
     padding: 1rem;
+  }
+  .about-this-project {
+    color: var(--pl-white);
+    font-family: var(--pl-serif);
+    display: inline;
+    font-size: 1rem;
+    padding: 1rem;
+    align-items: end;
   }
   a {
     color: var(--pl-white);
